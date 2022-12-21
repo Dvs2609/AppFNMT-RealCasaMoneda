@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/obtenerCertificado"
+        android:icon="@drawable/email_svg"
+        android:title="Obtener Certificados" />
+    <item
+        android:id="@+id/citaPrevia"
+        android:icon="@drawable/calendar_day_svg"
+        android:title="Pedir Cita" />
+    <item
+        android:id="@+id/misCertificados"
+        android:icon="@drawable/certificates_svg"
+        android:title="Mis Certificados" />
+    <item
+        android:id="@+id/localizadorOficinas"
+        android:icon="@drawable/search_location_svgrepo_com"
+        android:title="Localizador Oficinas" />
+    <item
+        android:id="@+id/descargarCertificados"
+        android:icon="@drawable/download__svg"
+        android:title="Descargar Certificados" />
+</menu>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppRealCasaMoneda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="a">a</string>
+
+    <!-- Obtein Certificates Fragment Strings-->
+    <string name="welcomeText_ObtainCertificates_fr">Le damos la bienvenida a la Sede Electrónica de la Real Casa de la Moneda</string>
+    <string name="questionCertificates_ObtainCertificates_fr">¿Que certificado desea obtener?</string>
+    <string name="helptxt_ObtainCertificates_fr">Ayuda</string>
+
+    <string name="physicalPerson_cardTxt_ObtainCertificates_fr">Persona Física</string>
+    <string name="representation_cardTxt_ObtainCertificates_fr">representación</string>
+    <string name="publicEmployees_cardTxt_ObtainCertificates_fr">Empleados Públicos</string>
+    <string name="centralizedSignatureRepresentation_cardTxt_ObtainCertificates_fr">Representación con firma centralizada</string>
+    <string name="pseudonymsPublicEmployees_cardTxt_ObtainCertificates_fr">Seudónimo para empleados públicos</string>
+    <string name="otherCases_cardTxt_ObtainCertificates_fr">Otros casos</string>
+
+    <string name="certificatesTitle_ObtainCertificates_fr">Certificados</string>
+    <string name="textGetCertificatesFrg_Description_ObtainCertificates_fr">The FNMT-RMC, as a Certification Service Provider, makes available to you different types of electronic certificates through which you can identify yourself and carry out procedures securely over the Internet.\n\nDepending on the recipient thereof, the FNMT-RCM issues the following types of digital certificates that you can request through our Electronic OFFICE:</string>
+
+    <string name="physicalPersonDropDowntxt_ObtainCertificates_fr">El Certificado FNMT de Persona Física, que se emite sin coste a cualquier ciudadano que esté en posesión de su DNI o NIE, es la certficación electrónica expedida por FNMT-RCM que vincula a su Suscriptor con unos Datos de verificación de Firma y confirma su identidad personal.\n\nEste certificado le permitirá identificarse de forma telemática y firmar o cifrar documentos electrónicos</string>
+    <string name="redirectText_PhyPerson_ObtainCertificates_fr">Obtener Certificado de Persona Física</string>
+
+    <string name="representation_dropdown_title1_ObtainCertificates_fr">Representante de Administrador Único o Solidario</string>
+    <string name="representation_dropdown_title1Descriptiontxt_ObtainCertificates_fr">Certificado de representante para administradores únicos y solidarios es la certificación electronica expedida por la FNMT-RCM que vincula un firmante con unos datos de verificación de firma y confirma su identidad. El firmante actúa en representación de una persona jurídica en calidad de representante legal con su cargo de administrador único o solidario inscrito en el Registro Mercantil</string>
+    <string name="representation_dropdown_title1Redirecttxt_ObtainCertificates_fr">Obtener certificado de Representante de Administrador Único o Solidario</string>
+    <string name="representation_dropdown_title2_ObtainCertificates_fr">Representante de Persona Jurídica</string>
+    <string name="representation_dropdown_title2Descriptiontxt_ObtainCertificates_fr">Certificado de representante de persona jurídica es la certificación electrónica expedida por la FNMT-RCM que vincula un firmante a unos datos de verificación de firma y confirma su identidad. Este certificado sustituye al tradicionalmente utilizado por las Administraciones públicas para el ámbito tributario y que, posteriormente, se extendió para otros usos. Por tanto, este certificado se expide a las personas jurídicas para su uso en sus relaciones con aquellas Administraciones públicas, entidades y organismos públicos, vinculados o dependientes de las mismas.</string>
+    <string name="representation_dropdown_title2RedirectTxt_ObtainCertificates_fr">Obtener certificado de Representante de Persona Jurídica</string>
+    <string name="representation_dropdown_title3_ObtainCertificates_fr">Representante de Entidad sin Personalidad Jurídica</string>
+    <string name="representation_dropdown_title3Descriptiontxt_ObtainCertificates_fr">Certificado de representante de entidad sin personalidad jurídica es la certificación electrónica expedida por la FNMT-RCM a una entidad sin personalidad jurídica que vincula un firmante a unos datos de verificación de firma y confirma su identidad en los trámites tributarios y otros ámbitos admitidos por la legislación vigente.</string>
+    <string name="representation_dropdown_title3redirectTxt_ObtainCertificates_fr">Obtener certificado de Representante de Entidad sin Personalidad Jurídica</string>
+
+    <string name="publicAdministration_cardtxt_ObtainCertificates_fr">Administración Pública</string>
+    <string name="PublicAministration_dropDown_Description_ObtainCertificates_fr">La Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, regula los sistemas de identificación de las Administraciones Públicas, así como los sistemas de firma electrónica del personal al servicio de las Administraciones Públicas y de sello electrónico para la actuación administrativa automatizada.\n\nSi desea utilizar alguno de los sistemas previstos en a citada Ley 40/2015, y por tanto está interesado en que su Administración cuente con el correspondiente acuerdo con la FNMT-RCM para la provisión de los mismos, puede dirigir su consulta a comercial.ceres@fnmt.es .</string>
+    <string name="PublicAministration_dropDown_RedirectTxt_ObtainCertificates_fr">Obtener Certificado de Sector Público</string>
+
+    <string name="componentCertificates_cardTxt_ObtainCertificates_fr">Component Certificates</string>
+    <string name="ComponentCertificates_dropDown_Description_ObtainCertificates_fr">La FNMT-RCM también emite certificados electrónicos para la identificación de servidores o aplicaciones informáticas heredando la confianza de la FNMT-RCM como Autoridad de certificación. Dentro de esta categoría ponemos a su disposición certificados de firma y certificados de sello de entidad</string>
+    <string name="ComponentCertificates_dropDown_RedirectTxt_ObtainCertificates_fr">Obtener Certificado de Componente</string>
+
+    <string name="technicalSupport_cardTxt_ObteinCertificates_fr">Contactar con Soporte Técnico</string>
+    <!-- End of Obtein Certificates Fragment Strings-->
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">AppRealCasaMoneda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="a">a</string>
+
+    <!-- Obtein Certificates Fragment Strings-->
+    <string name="welcomeText_ObtainCertificates_fr">Welcome to the Electronic Office of the Real Casa de la Moneda</string>
+    <string name="questionCertificates_ObtainCertificates_fr">What certificate do you want to obtain?</string>
+    <string name="helptxt_ObtainCertificates_fr">Help</string>
+
+    <string name="physicalPerson_cardTxt_ObtainCertificates_fr">Physical Person</string>
+    <string name="representation_cardTxt_ObtainCertificates_fr">Representation</string>
+    <string name="publicEmployees_cardTxt_ObtainCertificates_fr">Public Employees</string>
+    <string name="centralizedSignatureRepresentation_cardTxt_ObtainCertificates_fr">Representation with centralized signature</string>
+    <string name="pseudonymsPublicEmployees_cardTxt_ObtainCertificates_fr">Pseudonym for public employees</string>
+    <string name="otherCases_cardTxt_ObtainCertificates_fr">Other Cases</string>
+
+    <string name="certificatesTitle_ObtainCertificates_fr">Certificates</string>
+    <string name="textGetCertificatesFrg_Description_ObtainCertificates_fr">The FNMT-RMC, as a Certification Service Provider, makes available to you different types of electronic certificates through which you can identify yourself and carry out procedures securely over the Internet.\n\nDepending on the recipient thereof, the FNMT-RCM issues the following types of digital certificates that you can request through our Electronic OFFICE:</string>
+
+    <string name="physicalPersonDropDowntxt_ObtainCertificates_fr">The FNMT Physical Person Certificate, which is issued free of charge to any citizen who holds a DNI or NIE, is the electronic certification issued by FNMT-RCM that links its Subscriber with Signature Verification Data and confirms their personal identity.\n\nThis certificate will allow you to identify yourself electronically and sign or encrypt electronic documents</string>
+    <string name="redirectText_PhyPerson_ObtainCertificates_fr">Get Certificates of Physical Person</string>
+
+    <string name="representation_dropdown_title1_ObtainCertificates_fr">Representative of Sole or Joint Administrator</string>
+    <string name="representation_dropdown_title1Descriptiontxt_ObtainCertificates_fr">Certificate of representative for sole and joint administrators is the electronic certification issued by FNMT-RCM that links a signer with signature verification data and confirms their identity. The signer acts on behalf of a legal person in the capacity of legal representative with their position of sole or joint administrator registered in the Commercial Register</string>
+    <string name="representation_dropdown_title1Redirecttxt_ObtainCertificates_fr">Obtain certificate of Representative of Sole or Joint Administrator</string>
+    <string name="representation_dropdown_title2_ObtainCertificates_fr">Representative of Legal Person</string>
+    <string name="representation_dropdown_title2Descriptiontxt_ObtainCertificates_fr">Certificate of representative of legal person is the electronic certification issued by FNMT-RCM that links a signer to signature verification data and confirms their identity. This certificate replaces the one traditionally used by public administrations for the tax field and that, later, was extended for other uses. Therefore, this certificate is issued to legal persons for use in their relations with those public administrations, entities and public bodies, linked or dependent on them.</string>
+    <string name="representation_dropdown_title2RedirectTxt_ObtainCertificates_fr">Obtain certificate of Representative of Legal Person</string>
+    <string name="representation_dropdown_title3_ObtainCertificates_fr">Representative of Entity without Legal Personality</string>
+    <string name="representation_dropdown_title3Descriptiontxt_ObtainCertificates_fr">Certificate of representative of entity without legal personality is the electronic certification issued by FNMT-RCM to an entity without legal personality that links a signer to signature verification data and confirms their identity in tax procedures and other areas admitted by current legislation.</string>
+    <string name="representation_dropdown_title3redirectTxt_ObtainCertificates_fr">Obtain certificate of Representative of Entity without Legal Personality</string>
+
+    <string name="publicAdministration_cardtxt_ObtainCertificates_fr">Public Administration</string>
+    <string name="PublicAministration_dropDown_Description_ObtainCertificates_fr">Law 40/2015, of October 1, on the Legal Regime of the Public Sector, regulates the identification systems of the Public Administrations, as well as the electronic signature systems of the personnel serving the Public Administrations and the electronic seal for automated administrative action.\n\nIf you wish to use any of the systems provided for in the aforementioned Law 40/2015, and therefore are interested in your Administration having the corresponding agreement with FNMT-RCM for the provision of the same, you can direct your query to comercial.ceres@fnmt.es .</string>
+    <string name="PublicAministration_dropDown_RedirectTxt_ObtainCertificates_fr">Obtain Public Sector Certificate</string>
+
+    <string name="componentCertificates_cardTxt_ObtainCertificates_fr">Component Certificates</string>
+    <string name="ComponentCertificates_dropDown_Description_ObtainCertificates_fr">FNMT-RCM also issues electronic certificates for the identification of servers or computer applications inheriting the trust of FNMT-RCM as a Certification Authority. Within this category we make available to you signature certificates and entity seal certificates</string>
+    <string name="ComponentCertificates_dropDown_RedirectTxt_ObtainCertificates_fr">Obtain Component Certificate</string>
+
+    <string name="technicalSupport_cardTxt_ObteinCertificates_fr">Contact technical support</string>
+    <!-- End of Obtein Certificates Fragment Strings-->
+</resources>
