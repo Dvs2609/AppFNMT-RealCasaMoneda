@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ObtenerCertificado">
+
+    <RelativeLayout
+        android:id="@+id/gridGetCertificates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp">
+
+        <TextView
+            android:id="@+id/oc_init_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paso 2:"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/oc_init2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Solicitar el certificado"
+            android:textColor="@color/black"
+            android:layout_below="@+id/oc_init_txt"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/right_arrow_svg"
+            app:tint="@color/icon_arrow_svg" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oc_init2_txt"
+            android:text="Obtener certificados/Persona física/Solicitar certificado"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:id="@+id/RLrequestStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/txt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aporte la siguiente información"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/question_svg"
+                app:tint="@color/icons_svg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/helptxt_ObtainCertificates_fr"
+                android:textColor="@color/icons_svg"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/step2_1_txt_dni"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="45dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="Nº del documento de identificación"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/step2_1_txt_dni"
+                android:background="#EFEFF0"
+                android:cardCornerRadius="8dp"
+                android:cardElevation="8dp">
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

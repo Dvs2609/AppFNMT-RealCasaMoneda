@@ -12,7 +12,7 @@
     <string name="helptxt_ObtainCertificates_fr">Ayuda</string>
 
     <string name="physicalPerson_cardTxt_ObtainCertificates_fr">Persona Física</string>
-    <string name="representation_cardTxt_ObtainCertificates_fr">representación</string>
+    <string name="representation_cardTxt_ObtainCertificates_fr">Representación</string>
     <string name="publicEmployees_cardTxt_ObtainCertificates_fr">Empleados Públicos</string>
     <string name="centralizedSignatureRepresentation_cardTxt_ObtainCertificates_fr">Representación con firma centralizada</string>
     <string name="pseudonymsPublicEmployees_cardTxt_ObtainCertificates_fr">Seudónimo para empleados públicos</string>

@@ -1,5 +1,6 @@
 package com.example.apprealcasamoneda.fragments
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.ShapeDrawable
@@ -11,8 +12,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import com.example.apprealcasamoneda.MainActivity
+import com.example.apprealcasamoneda.R
+import com.example.apprealcasamoneda.databinding.FragmentCitaPreviaBinding
 import com.example.apprealcasamoneda.databinding.FragmentObtenerCertificadoBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,7 +57,7 @@ class ObtenerCertificado  : Fragment(){
         binding.iconPhysicalDropdown?.setOnClickListener{
             binding.txtPhysicalPersonDropdown?.let { it1 ->
                 showHide(binding.RLPhysicalPersonDropdown,
-                    it1
+                    it1, binding.iconPhysicalDropdown!!
                 )
             }
         }
@@ -60,7 +65,7 @@ class ObtenerCertificado  : Fragment(){
         binding.iconRepresentateDropdown?.setOnClickListener{
             binding.txtRepresentationDropdown?.let { it2 ->
                 showHide(binding.RLRepresentationDropdown,
-                    it2
+                    it2, binding.iconRepresentateDropdown!!
                 )
             }
         }
@@ -68,22 +73,35 @@ class ObtenerCertificado  : Fragment(){
         binding.iconPublicAdministrationDropdown?.setOnClickListener{
             binding.txtPublicAdministrationDropdown?.let { it3 ->
                 showHide(binding.RLPublicAdministrationDropdown,
-                    it3
+                    it3, binding.iconPublicAdministrationDropdown!!
                 )
             }
+
         }
 
         binding.iconComponentCertificatesDropdown?.setOnClickListener{
             binding.txtComponentCertificatesDropdown?.let { it4 ->
                 showHide(binding.RLComponentCertificatesDropdown,
-                    it4
+                    it4, binding.iconComponentCertificatesDropdown!!
                 )
             }
+        }
+
+
+        class  NewFragment : Fragment() {
+
+        }
+
+        binding.rectangularLYPhysicalPerson?.setOnClickListener{
+
+            val transition = fragmentManager?.beginTransaction()
+            val newFr = NewFragment()
+            transition?.replace(R.id.scrollviewPhysicalPerson, newFr)?.commit()
         }
         return binding.root
     }
 
-    private fun showHide(relativeLayout: RelativeLayout?, textView: TextView) {
+    private fun showHide(relativeLayout: RelativeLayout?, textView: TextView, imageView: ImageView) {
         val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
         //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
 
@@ -93,6 +111,7 @@ class ObtenerCertificado  : Fragment(){
                 relativeLayout.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.VISIBLE
                 textView.visibility = View.VISIBLE
+                imageView.rotation = 90f
 
 
             }else{
@@ -100,6 +119,7 @@ class ObtenerCertificado  : Fragment(){
                 //textView.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.GONE
                 textView.visibility = View.GONE
+                imageView.rotation = 0f
             }
         }
     }

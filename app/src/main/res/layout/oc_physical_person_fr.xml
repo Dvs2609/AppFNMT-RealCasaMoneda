@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollviewPhysicalPerson"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ObtenerCertificado">
+
+    <RelativeLayout
+        android:id="@+id/gridGetCertificates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp">
+
+        <TextView
+            android:id="@+id/oc_init_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Obtener certificado de \npersona física"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/right_arrow_svg"
+            app:tint="@color/icon_arrow_svg" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oc_init_txt"
+            android:text="Obtener certificados/Persona física"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:id="@+id/RLselectStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_below="@+id/txt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccione el paso a realizar"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/question_svg"
+                app:tint="@color/icons_svg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/helptxt_ObtainCertificates_fr"
+                android:textColor="@color/icons_svg"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:id="@+id/PhysicalPerson_StepsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RLselectStep"
+
+            android:columnCount="1"
+            android:rowCount="4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_row="0"
+                android:layout_rowWeight="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#EFEFF0"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/icons_svg"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="Configuración previa"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/right_arrow_svg"
+                        app:tint="@color/icon_arrow_svg" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_row="1"
+                android:layout_rowWeight="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#EFEFF0"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2"
+                        android:textStyle="bold"
+                        android:textColor="@color/icons_svg"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="Solicitar certificado"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/right_arrow_svg"
+                        app:tint="@color/icon_arrow_svg" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_row="2"
+                android:layout_rowWeight="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#EFEFF0"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3"
+                        android:textStyle="bold"
+                        android:textColor="@color/icons_svg"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="Acreditar identidad previa"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/right_arrow_svg"
+                        app:tint="@color/icon_arrow_svg" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PhysicalPerson_lastStep"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_row="3"
+                android:layout_rowWeight="0"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#EFEFF0"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="4"
+                        android:textStyle="bold"
+                        android:textColor="@color/icons_svg"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="30sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="Descargar certificado"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/right_arrow_svg"
+                        app:tint="@color/icon_arrow_svg" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/PhysicalPerson_StepsGrid">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/physicalPerson_cardTxt_ObtainCertificates_fr"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="El Certificado digital FNMT de Persona Física es la certificación electrónica expedida por la FNMT-RCM que vincula a su suscriptor con unos Datos de verificación de Firma y confirma su identidad.\n\nEste certificado, también conocido como Certificado de Ciudadano o de Usuario, es un documento digital que contiene sus datos identificativos. Le permitirá identificarse en Internet e intercambiar información con otras personas y organismos con la garantía de que sólo Ud. y su interlocutor pueden acceder a ella."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:columnCount="1"
+                android:rowCount="4">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxtQst1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="¿Quien puedo obtener el Certificado de Persona Física?"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:id="@+id/iconQst1Dropdown"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/RL_Qst1_Dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/txtRepresentationDropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Cualquier ciudadano español o extranjero, mayor de edad o menor emancipado que esté en posesión de su DNI o NIE, podrá solicitar y obtener su certificado digital de forma gratuita para firmar y acreditar su identidad de forma segura en Internet."/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxtQst2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="¿Quien puede obtener un Certificado digital?"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:id="@+id/iconRepresentateDropdown"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/RL_Qs2_Dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/iconQst2Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Existen 2 formas distintas para obtener su Certificado digital de Persona Física como archivo descargable en su ordenador:"/>
+
+                            <TextView
+                                android:id="@+id/iconQst2_1_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:layout_below="@+id/iconQst2Dropdown"
+                                android:drawablePadding="10dp"
+                                app:drawableStart="@drawable/dot_svg"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="· Con acreditación presencial en una oficina."/>
+
+                            <TextView
+                                android:id="@+id/iconQst2_2_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:layout_below="@+id/iconQst2_1_Dropdown"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Utilizando su DNIe."/>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rectangularLYRepresentation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iconQst2_2_Dropdown"
+                                android:background="@drawable/rectangular_shape"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="280dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:backgroundTint="#EFEFF0"
+                                    android:text="Obtener certificado software"
+                                    android:textAlignment="viewStart"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/icons_svg"
+                                    android:textSize="16sp"
+                                    tools:ignore="RtlCompat" />
+
+                                <ImageView
+                                    android:id="@+id/iconRepresentateGoToCertificates"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="50dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/right_arrow_svg"
+                                    app:tint="@color/icon_arrow_svg" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxtQst3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="¿Para que sirve?"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:id="@+id/iconQst3Dropdown"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/RL_Qst3_Dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/txtQs3Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="El Certificado digital de Persona Física le permitirá realizar trámites de forma segura con la Administración Pública y Entidades Privadas a través de Internet, como por ejemplo:"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_1_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Presentación y liquidación de impuestos"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_2_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_1_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Presentación de recursos y reclamaciones"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_3_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_2_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Cumplimentación de los datos del censo de población y viviendas"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_4_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_3_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Consulta e inscripción en el padrón municipal"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_5_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_4_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Consulta de multas de circulación"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_6_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_5_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Consulta y trámites para solicitud de subvenciones"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_7_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_6_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Consulta de asignación de colegios electorales"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_8_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_7_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Actuaciones comunicadas"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_9_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txtQs3_8_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Firma electrónica de documentos y formularios oficiales"/>
+
+                            <TextView
+                                android:id="@+id/txtQs3_10_Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/txtQs3_9_Dropdown"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Gracias a su Certificado FNMT de Persona Física podrá olvidarse de desplazamientos y esperas innecesarias."/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxtQst4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="¿Dónde puedo usar mi Certficado?"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:id="@+id/iconQs4Dropdown"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/RL_Qs4_Dropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/iconQst4Dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:visibility="visible"
+                                android:layout_marginTop="20dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="En el siguiente enlace, se detallan algunos de los servicios ofrecidos al ciudadano por Organismos y Entidades. \n\nEl acceso a las páginas web seguras requiere que el navegador desde donde acceda tenga instalado el certificado."/>
+
+
+                            <RelativeLayout
+                                android:id="@+id/rectangularLYQst4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iconQst4Dropdown"
+                                android:background="@drawable/rectangular_shape"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="280dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:backgroundTint="#EFEFF0"
+                                    android:text="Servicios ofrecidos al ciudadano por Organismos y Entidades"
+                                    android:textAlignment="viewStart"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/icons_svg"
+                                    android:textSize="16sp"
+                                    tools:ignore="RtlCompat" />
+
+                                <ImageView
+                                    android:id="@+id/iconRepresentateGoToServices"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="50dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/right_arrow_svg"
+                                    app:tint="@color/icon_arrow_svg" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

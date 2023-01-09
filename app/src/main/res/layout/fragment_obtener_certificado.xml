@@ -30,7 +30,7 @@
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -46,9 +46,9 @@
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="45dp"
                     android:layout_marginTop="4dp"
                     android:src="@drawable/question_svg"
                     app:tint="@color/icons_svg" />
@@ -57,11 +57,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
                     android:text="@string/helptxt_ObtainCertificates_fr"
                     android:textColor="@color/icons_svg"
                     android:textSize="18sp" />
 
-            </LinearLayout>
+            </RelativeLayout>
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -441,6 +443,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/certificatesTitle_ObtainCertificates_fr"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 

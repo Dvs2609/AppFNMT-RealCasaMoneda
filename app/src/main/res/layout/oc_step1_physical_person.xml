@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ObtenerCertificado">
+
+    <RelativeLayout
+        android:id="@+id/gridGetCertificates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp">
+
+            <TextView
+                android:id="@+id/oc_init_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paso 1:"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/oc_init2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Configuración previa"
+                android:textColor="@color/black"
+                android:layout_below="@+id/oc_init_txt"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/right_arrow_svg"
+                app:tint="@color/icon_arrow_svg" />
+
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oc_init2_txt"
+                android:text="Obtener certificados/Persona física/Configuración previa"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/oc_Step1_textDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/txt"
+                android:textSize="18sp"
+                android:text="Antes de comenzar con el proceso de solicitud de su Certificado, deberá asegurarse de que su equipo tiene instalado el software necesario para la generación de claves. \n\nPor favor, lea y siga atentamente las siguientes instrucciones para evitar posibles errores durante el proceso de obtención de su certificado:"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/oc_Step1_textDesc"
+                android:columnCount="1"
+                android:rowCount="5">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxt_step1_reminder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="Recordatorios imprescindibles"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RLPhysicalPersonDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/txt_step1_text1_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="No formatear el ordenador, entre el proceso de solicitud y el de descarga del certificado.ado." />
+
+                            <TextView
+                                android:id="@+id/txt_step1_text12_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:drawablePadding="10dp"
+                                android:layout_below="@+id/txt_step1_text1_Dropdown"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Se debe realizar todo el proceso de obtención desde el mismo equipo y mismo usuario."
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                app:drawableTopCompat="40dp" />
+
+                            <TextView
+                                android:id="@+id/txt_step1_text13_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:drawablePadding="10dp"
+                                android:layout_below="@+id/txt_step1_text12_Dropdown"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Es importante leer atentamente la Declaración de Prácticas de Certificación previamente a la solicitud del certificado. En ella se encuentran las condiciones bajo las cuales se prestan los servicios de certificación."
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                app:drawableTopCompat="40dp" />
+
+                            <RelativeLayout
+                                android:id="@+id/rectangularLYPhysicalPerson"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_step1_text13_Dropdown"
+                                android:background="@drawable/rectangular_shape"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="50dp"
+                                    android:backgroundTint="#EFEFF0"
+                                    android:textColor="@color/icons_svg"
+                                    android:layout_marginStart="10dp"
+                                    android:textAlignment="viewStart"
+                                    android:textAllCaps="false"
+                                    android:layout_marginTop="7dp"
+                                    android:textSize="16sp"
+                                    android:text="Declaración de Prácticas de Certificación"
+                                    tools:ignore="RtlCompat" />
+
+                                <ImageView
+                                    android:id="@+id/iconStep1GoToDeclaration"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/right_arrow_svg"
+                                    app:tint="@color/icon_arrow_svg" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxt_step1_browsers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="1"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="Navegadores compatibles"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RLRemainderDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/txt_step1_text2_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Última versión de cualquiera de los siguientes navegadores:"/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text21_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txt_step1_text2_Dropdown"
+                                android:textSize="18sp"
+                                android:text="Mozilla Firefox"/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text23_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txt_step1_text21_Dropdown"
+                                android:textSize="18sp"
+                                android:text="Google Chrome"/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text24_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txt_step1_text23_Dropdown"
+                                android:textSize="18sp"
+                                android:text="Microsoft EDGE"/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text25_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txt_step1_text24_Dropdown"
+                                android:textSize="18sp"
+                                android:text="Opera"/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text26_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:drawablePadding="10dp"
+                                app:drawableLeftCompat="@drawable/dot_svg"
+                                android:layout_below="@+id/txt_step1_text25_Dropdown"
+                                android:textSize="18sp"
+                                android:text="Safari"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardtxt_step1_stwneeded"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_rowWeight="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="#EFEFF0"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:textSize="19sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/icons_svg"
+                                android:text="Recordatorios imprescindibles"
+                                app:tint="@color/icons_svg"/>
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/RLSoftwareNecesaryDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible">
+                            <TextView
+                                android:id="@+id/txt_step1_text3_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="CONFIGURADOR FNMT-RCM\n\nLa Fábrica Nacional de Moneda y Timbre ha desarrollado esta aplicación para solicitar las claves necesarias en la obtención de un certificado digital. Puede ser ejecutada en cualquier navegador y sistema Operativo."/>
+
+                            <TextView
+                                android:id="@+id/txt_step1_text4_Dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/txt_step1_text3_Dropdown"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:text="Una vez descargado e instalado el software no es necesario hacer nada, este se ejecutará cuando el navegador lo requiera."/>
+
+                            <RelativeLayout
+                                android:id="@+id/rectangularLY"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_step1_text4_Dropdown"
+                                android:background="@drawable/rectangular_shape"
+                                android:layout_marginTop="15dp">
+
+                                <TextView
+                                    android:layout_width="250dp"
+                                    android:layout_height="50dp"
+                                    android:backgroundTint="#EFEFF0"
+                                    android:textColor="@color/icons_svg"
+                                    android:layout_marginStart="10dp"
+                                    android:textAlignment="viewStart"
+                                    android:textAllCaps="false"
+                                    android:layout_marginTop="7dp"
+                                    android:textSize="16sp"
+                                    android:text="Área de Descarga de Configurador FNMT"
+                                    tools:ignore="RtlCompat" />
+
+
+                                <ImageView
+                                    android:id="@+id/iconStep1GoToDownloadArea"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:src="@drawable/right_arrow_svg"
+                                    app:tint="@color/icon_arrow_svg" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </GridLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
