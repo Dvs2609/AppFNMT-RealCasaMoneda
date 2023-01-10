@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/citaPrevia">
+    app:startDestination="@id/obtenerCertificado">
 
     <fragment
         android:id="@+id/obtenerCertificado"
@@ -32,4 +32,27 @@
         android:label="fragment_descargar_certificados"
         tools:layout="@layout/fragment_descargar_certificados" />
 
+    <fragment
+        android:id="@+id/physicalPerson"
+        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.PhysicalPerson"
+        android:label="fragment_physical_person"
+        tools:layout="@layout/fr_oc_physical_person" />
+
+    <fragment
+        android:id="@+id/step1Ppc"
+        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step1_PPC"
+        android:label="fragment_step1_ppc"
+        tools:layout="@layout/fr_oc_step1_physical_person"/>
+
+    <fragment
+        android:id="@+id/step2Ppc"
+        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step2_PPC"
+        android:label="fragment_step2_ppc"
+        tools:layout="@layout/fr_oc_step2_physical_person"/>
+
+    <fragment
+        android:id="@+id/step3Ppc"
+        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step3_PPC"
+        android:label="fragment_step3_ppc"
+        tools:layout="@layout/fr_oc_step3_physical_person"/>
 </navigation>

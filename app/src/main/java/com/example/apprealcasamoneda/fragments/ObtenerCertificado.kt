@@ -8,6 +8,7 @@ import android.graphics.drawable.shapes.RectShape
 import android.graphics.drawable.shapes.RoundRectShape
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,7 @@ import com.example.apprealcasamoneda.MainActivity
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FragmentCitaPreviaBinding
 import com.example.apprealcasamoneda.databinding.FragmentObtenerCertificadoBinding
+import com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.PhysicalPerson
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -50,6 +52,7 @@ class ObtenerCertificado  : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         binding = FragmentObtenerCertificadoBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
@@ -88,15 +91,12 @@ class ObtenerCertificado  : Fragment(){
         }
 
 
-        class  NewFragment : Fragment() {
-
-        }
-
         binding.rectangularLYPhysicalPerson?.setOnClickListener{
-
             val transition = fragmentManager?.beginTransaction()
-            val newFr = NewFragment()
-            transition?.replace(R.id.scrollviewPhysicalPerson, newFr)?.commit()
+            val physicalPerson = PhysicalPerson()
+            transition?.replace(R.id.mainContainer, physicalPerson)
+            transition?.addToBackStack(null)
+            transition?.commit()
         }
         return binding.root
     }

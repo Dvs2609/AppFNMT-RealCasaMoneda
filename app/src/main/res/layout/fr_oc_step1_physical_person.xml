@@ -138,8 +138,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:text="Se debe realizar todo el proceso de obtención desde el mismo equipo y mismo usuario."
-                                app:drawableLeftCompat="@drawable/dot_svg"
-                                app:drawableTopCompat="40dp" />
+                                app:drawableLeftCompat="@drawable/dot_svg"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text13_Dropdown"
@@ -151,8 +150,7 @@
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
                                 android:text="Es importante leer atentamente la Declaración de Prácticas de Certificación previamente a la solicitud del certificado. En ella se encuentran las condiciones bajo las cuales se prestan los servicios de certificación."
-                                app:drawableLeftCompat="@drawable/dot_svg"
-                                app:drawableTopCompat="40dp" />
+                                app:drawableLeftCompat="@drawable/dot_svg" />
 
                             <RelativeLayout
                                 android:id="@+id/rectangularLYPhysicalPerson"
@@ -164,14 +162,14 @@
 
                                 <TextView
                                     android:layout_width="250dp"
-                                    android:layout_height="50dp"
+                                    android:layout_height="45dp"
                                     android:backgroundTint="#EFEFF0"
                                     android:textColor="@color/icons_svg"
-                                    android:layout_marginStart="10dp"
+                                    android:layout_marginStart="13dp"
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
-                                    android:layout_marginTop="7dp"
-                                    android:textSize="16sp"
+                                    android:layout_marginTop="0dp"
+                                    android:textSize="17sp"
                                     android:text="Declaración de Prácticas de Certificación"
                                     tools:ignore="RtlCompat" />
 
@@ -179,7 +177,7 @@
                                     android:id="@+id/iconStep1GoToDeclaration"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginTop="10dp"
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentEnd="true"
                                     android:src="@drawable/right_arrow_svg"
