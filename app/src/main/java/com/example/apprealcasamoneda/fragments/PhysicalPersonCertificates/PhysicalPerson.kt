@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.RelativeLayout
+import android.widget.TextView
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcPhysicalPersonBinding
 
@@ -59,9 +63,55 @@ class PhysicalPerson : Fragment() {
             transition?.addToBackStack(null)
             transition?.commit()
         }
+
+        binding.GoToStep4.setOnClickListener{
+            val step4Ppc = Step4_PPC()
+            transition?.replace(R.id.mainContainer, step4Ppc)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+
+
+        binding.iconQst1Dropdown?.setOnClickListener{
+            showHide(binding.RLQst1Dropdown, binding.iconQst1Dropdown)
+        }
+
+        binding.iconQs2Dropdown?.setOnClickListener{
+            showHide(binding.RLQs2Dropdown, binding.iconQs2Dropdown)
+        }
+
+        binding.iconQst3Dropdown?.setOnClickListener{
+            showHide(binding.RLQst3Dropdown, binding.iconQst3Dropdown)
+        }
+
+        binding.iconQs4Dropdown?.setOnClickListener{
+            showHide(binding.RLQs4Dropdown, binding.iconQs4Dropdown)
+        }
         return binding.root
 
 
+    }
+
+
+    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
+        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
+        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
+
+        if (relativeLayout != null) {
+            if (relativeLayout.visibility == View.GONE ){
+
+                relativeLayout.startAnimation(fadeInAnimation)
+                relativeLayout.visibility = View.VISIBLE
+                imageView.rotation = 90f
+
+
+            }else{
+
+                //textView.startAnimation(fadeInAnimation)
+                relativeLayout.visibility = View.GONE
+                imageView.rotation = 0f
+            }
+        }
     }
 
     companion object {

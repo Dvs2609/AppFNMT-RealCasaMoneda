@@ -17,7 +17,7 @@
             android:id="@+id/oc_init_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paso 2:"
+            android:text="@string/oc_pp_step2"
             android:textColor="@color/black"
             android:textSize="22sp" />
         <TextView
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Solicitar el certificado"
+            android:text="@string/oc_pp_step2_title"
             android:textColor="@color/black"
             android:layout_below="@+id/oc_init_txt"
             android:textSize="22sp" />
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/oc_init2_txt"
-            android:text="Obtener certificados/Persona física/Solicitar certificado"
+            android:text="@string/oc_pp_step2_nav"
             android:textSize="13sp" />
 
         <RelativeLayout
@@ -58,9 +58,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aporte la siguiente información"
+                android:text="@string/oc_pp_step2_form_title"
                 android:textColor="@color/black"
-                android:textSize="17sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="18dp"
@@ -90,7 +90,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_marginBottom="10dp"
-                android:text="Nº del documento de identificación"/>
+                android:text="@string/oc_pp_step2_form_txt_dn1"/>
 
             <RelativeLayout
                 android:id="@+id/step2_set_DNI"
@@ -125,7 +125,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_marginBottom="10dp"
-                android:text="Primer apellido"/>
+                android:text="@string/oc_pp_step2_form_txt_surname"/>
 
             <RelativeLayout
                 android:id="@+id/step2_set_surname"
@@ -160,7 +160,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_marginBottom="10dp"
-                android:text="Correo electrónico"/>
+                android:text="@string/oc_pp_step2_form_txt_email"/>
 
             <RelativeLayout
                 android:id="@+id/step2_set_email"
@@ -195,7 +195,7 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_marginBottom="10dp"
-                android:text="Confirma correo electrónico"/>
+                android:text="@string/oc_pp_step2_form_txt_confirm_email"/>
 
             <RelativeLayout
                 android:id="@+id/step2_set_confirm_email"
@@ -224,13 +224,18 @@
             <RelativeLayout
                 android:id="@+id/Accept_Terms"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:elevation="8dp"
                 android:layout_below="@+id/step2_set_confirm_email">
 
                 <androidx.appcompat.widget.SwitchCompat
                     android:id="@+id/step2_switch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    app:track="@drawable/switch_track_shape"
+                    android:thumb="@drawable/switch_shape"/>
 
                 <TextView
                     android:id="@+id/step2_txt_terms1"
@@ -239,26 +244,52 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginStart="5dp"
                     android:layout_toEndOf="@id/step2_switch"
-                    android:text="Acepto los"/>
+                    android:text="@string/oc_pp_step2_accept_terms"/>
 
-                <TextView
-                    android:id="@+id/step2_txt_terms2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginTop="13dp"
-                    android:layout_toEndOf="@id/step2_txt_terms1"
-                    android:text="terminos y coniciones" />
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="13dp"
                     android:layout_marginStart="10dp"
-                    android:layout_toRightOf="@+id/step2_txt_terms2"
+                    android:layout_toRightOf="@+id/step2_txt_terms1"
                     android:src="@drawable/right_arrow_svg"
                     app:tint="@color/icon_arrow_svg" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rectangularLYstep2_Send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:layout_below="@+id/Accept_Terms"
+                android:background="@drawable/rectangular_blue_shape"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/check_svg"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#EFEFF0"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="35dp"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="2dp"
+                    android:textSize="19sp"
+                    android:text="@string/oc_pp_step2_send_petition"
+                    tools:ignore="RtlCompat" />
 
             </RelativeLayout>
 

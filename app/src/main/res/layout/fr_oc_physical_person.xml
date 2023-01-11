@@ -17,7 +17,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:id="@+id/oc_init_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Obtener certificado de \npersona física"
+        android:text="@string/oc_pp_title"
         android:textColor="@color/black"
         android:textSize="22sp" />
 
@@ -35,7 +35,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/oc_init_txt"
-        android:text="Obtener certificados/Persona física"
+        android:text="@string/oc_pp_nav"
         android:textSize="13sp" />
 
     <RelativeLayout
@@ -49,7 +49,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seleccione el paso a realizar"
+            android:text="@string/oc_pp_title_steps"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
@@ -80,7 +80,6 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/RLselectStep"
-
         android:columnCount="1"
         android:rowCount="4">
 
@@ -118,7 +117,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
-                    android:text="Configuración previa"
+                    android:text="@string/oc_pp_step1_title"
                     android:layout_marginLeft="70dp"
                     android:layout_marginTop="30dp"
                     android:layout_alignParentLeft="true"
@@ -173,7 +172,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
-                    android:text="Solicitar certificado"
+                    android:text="@string/oc_pp_step2_title"
                     android:layout_marginLeft="70dp"
                     android:layout_marginTop="30dp"
                     android:layout_alignParentLeft="true"
@@ -228,7 +227,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
-                    android:text="Acreditar identidad previa"
+                    android:text="@string/oc_pp_step3_title"
                     android:layout_marginLeft="70dp"
                     android:layout_marginTop="30dp"
                     android:layout_alignParentLeft="true"
@@ -284,7 +283,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerVertical="true"
-                    android:text="Descargar certificado"
+                    android:text="@string/oc_pp_step4_title"
                     android:layout_marginLeft="70dp"
                     android:layout_marginTop="30dp"
                     android:layout_alignParentLeft="true"
@@ -292,6 +291,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:textSize="18sp"/>
 
                 <ImageView
+                    android:id="@+id/GoToStep4"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_centerVertical="true"
@@ -324,7 +324,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"
-            android:text="El Certificado digital FNMT de Persona Física es la certificación electrónica expedida por la FNMT-RCM que vincula a su suscriptor con unos Datos de verificación de Firma y confirma su identidad.\n\nEste certificado, también conocido como Certificado de Ciudadano o de Usuario, es un documento digital que contiene sus datos identificativos. Le permitirá identificarse en Internet e intercambiar información con otras personas y organismos con la garantía de que sólo Ud. y su interlocutor pueden acceder a ella."
+            android:text="@string/oc_pp_desc_txt"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -332,6 +332,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="55dp"
             android:columnCount="1"
             android:rowCount="4">
 
@@ -369,14 +370,14 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="¿Quien puedo obtener el Certificado de Persona Física?"
+                            android:text="@string/oc_pp_dropdown1_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
                             android:id="@+id/iconQst1Dropdown"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="13dp"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/right_arrow_svg"
@@ -387,17 +388,17 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:id="@+id/RL_Qst1_Dropdown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <TextView
-                            android:id="@+id/txtRepresentationDropdown"
+                            android:id="@+id/txtQs1Dropdown"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Cualquier ciudadano español o extranjero, mayor de edad o menor emancipado que esté en posesión de su DNI o NIE, podrá solicitar y obtener su certificado digital de forma gratuita para firmar y acreditar su identidad de forma segura en Internet."/>
+                            android:text="@string/oc_pp_dropdown1_text"/>
 
                     </RelativeLayout>
 
@@ -440,14 +441,14 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="¿Quien puede obtener un Certificado digital?"
+                            android:text="@string/oc_pp_dropdown2_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
-                            android:id="@+id/iconRepresentateDropdown"
+                            android:id="@+id/iconQs2Dropdown"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="13dp"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/right_arrow_svg"
@@ -455,53 +456,53 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
 
                     </RelativeLayout>
                     <RelativeLayout
-                        android:id="@+id/RL_Qs2_Dropdown"
+                        android:id="@+id/RLQs2_Dropdown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <TextView
-                            android:id="@+id/iconQst2Dropdown"
+                            android:id="@+id/txtQst2Dropdown"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Existen 2 formas distintas para obtener su Certificado digital de Persona Física como archivo descargable en su ordenador:"/>
+                            android:text="@string/oc_pp_dropdown2_text"/>
 
                         <TextView
-                            android:id="@+id/iconQst2_1_Dropdown"
+                            android:id="@+id/txtQst2_1_Dropdown"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:visibility="visible"
-                            android:layout_below="@+id/iconQst2Dropdown"
+                            android:layout_below="@+id/txtQst2Dropdown"
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Con acreditación presencial en una oficina."/>
+                            android:text="@string/oc_pp_dropdown2_txtlist1"/>
 
                         <TextView
-                            android:id="@+id/iconQst2_2_Dropdown"
+                            android:id="@+id/txtQst2_2_Dropdown"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:visibility="visible"
-                            android:layout_below="@+id/iconQst2_1_Dropdown"
+                            android:layout_below="@+id/txtQst2_1_Dropdown"
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Utilizando su DNIe."/>
+                            android:text="@string/oc_pp_dropdown2_txtlist2"/>
 
 
                         <RelativeLayout
                             android:id="@+id/rectangularLYRepresentation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/iconQst2_2_Dropdown"
+                            android:layout_below="@+id/txtQst2_2_Dropdown"
                             android:background="@drawable/rectangular_shape"
                             android:layout_marginTop="15dp">
 
@@ -511,7 +512,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="3dp"
                                 android:backgroundTint="#EFEFF0"
-                                android:text="Obtener certificado software"
+                                android:text="@string/oc_pp_dropdown2_go_to_softwCertificate"
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
                                 android:textColor="@color/icons_svg"
@@ -571,14 +572,14 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="¿Para que sirve?"
+                            android:text="@string/oc_pp_dropdown3_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
                             android:id="@+id/iconQst3Dropdown"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="4dp"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/right_arrow_svg"
@@ -589,7 +590,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:id="@+id/RL_Qst3_Dropdown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/txtQs3Dropdown"
@@ -598,7 +599,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="El Certificado digital de Persona Física le permitirá realizar trámites de forma segura con la Administración Pública y Entidades Privadas a través de Internet, como por ejemplo:"/>
+                            android:text="@string/oc_pp_dropdown3_text1"/>
 
                         <TextView
                             android:id="@+id/txtQs3_1_Dropdown"
@@ -610,7 +611,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Presentación y liquidación de impuestos"/>
+                            android:text="@string/oc_pp_dropdown3_list1"/>
 
                         <TextView
                             android:id="@+id/txtQs3_2_Dropdown"
@@ -622,7 +623,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Presentación de recursos y reclamaciones"/>
+                            android:text="@string/oc_pp_dropdown3_list2"/>
 
                         <TextView
                             android:id="@+id/txtQs3_3_Dropdown"
@@ -634,7 +635,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Cumplimentación de los datos del censo de población y viviendas"/>
+                            android:text="@string/oc_pp_dropdown3_list3"/>
 
                         <TextView
                             android:id="@+id/txtQs3_4_Dropdown"
@@ -646,7 +647,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Consulta e inscripción en el padrón municipal"/>
+                            android:text="@string/oc_pp_dropdown3_list4"/>
 
                         <TextView
                             android:id="@+id/txtQs3_5_Dropdown"
@@ -658,7 +659,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Consulta de multas de circulación"/>
+                            android:text="@string/oc_pp_dropdown3_list5"/>
 
                         <TextView
                             android:id="@+id/txtQs3_6_Dropdown"
@@ -670,7 +671,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Consulta y trámites para solicitud de subvenciones"/>
+                            android:text="@string/oc_pp_dropdown3_list6"/>
 
                         <TextView
                             android:id="@+id/txtQs3_7_Dropdown"
@@ -682,7 +683,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Consulta de asignación de colegios electorales"/>
+                            android:text="@string/oc_pp_dropdown3_list7"/>
 
                         <TextView
                             android:id="@+id/txtQs3_8_Dropdown"
@@ -694,7 +695,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Actuaciones comunicadas"/>
+                            android:text="@string/oc_pp_dropdown3_list8"/>
 
                         <TextView
                             android:id="@+id/txtQs3_9_Dropdown"
@@ -706,7 +707,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Firma electrónica de documentos y formularios oficiales"/>
+                            android:text="@string/oc_pp_dropdown3_list9"/>
 
                         <TextView
                             android:id="@+id/txtQs3_10_Dropdown"
@@ -716,7 +717,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Gracias a su Certificado FNMT de Persona Física podrá olvidarse de desplazamientos y esperas innecesarias."/>
+                            android:text="@string/oc_pp_dropdown3_text2"/>
 
                     </RelativeLayout>
 
@@ -759,14 +760,14 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="¿Dónde puedo usar mi Certficado?"
+                            android:text="@string/oc_pp_dropdown4_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
                             android:id="@+id/iconQs4Dropdown"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="4dp"
                             android:layout_alignParentTop="true"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/right_arrow_svg"
@@ -777,7 +778,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:id="@+id/RL_Qs4_Dropdown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <TextView
                             android:id="@+id/iconQst4Dropdown"
@@ -787,7 +788,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="En el siguiente enlace, se detallan algunos de los servicios ofrecidos al ciudadano por Organismos y Entidades. \n\nEl acceso a las páginas web seguras requiere que el navegador desde donde acceda tenga instalado el certificado."/>
+                            android:text="@string/oc_pp_dropdown4_text"/>
 
 
                         <RelativeLayout
@@ -804,7 +805,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="3dp"
                                 android:backgroundTint="#EFEFF0"
-                                android:text="Servicios ofrecidos al ciudadano por Organismos y Entidades"
+                                android:text="@string/oc_pp_dropdown3_go_to_services"
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
                                 android:textColor="@color/icons_svg"

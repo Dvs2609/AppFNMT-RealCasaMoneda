@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.RelativeLayout
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
 import com.example.apprealcasamoneda.databinding.FrOcStep3PhysicalPersonBinding
@@ -40,9 +43,37 @@ class Step3_PPC : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FrOcStep3PhysicalPersonBinding.inflate(inflater, container, false)
-        val transition = fragmentManager?.beginTransaction()
 
+
+        binding.step3IconDropdown1?.setOnClickListener{
+            showHide(binding.RLStep3Dropdown, binding.step3IconDropdown1)
+        }
+
+        binding.step3IconDropdown2?.setOnClickListener{
+            showHide(binding.RLStep3Dropdown2, binding.step3IconDropdown2)
+        }
         return binding.root
+    }
+
+    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
+        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
+        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
+
+        if (relativeLayout != null) {
+            if (relativeLayout.visibility == View.GONE ){
+
+                relativeLayout.startAnimation(fadeInAnimation)
+                relativeLayout.visibility = View.VISIBLE
+                imageView.rotation = 90f
+
+
+            }else{
+
+                //textView.startAnimation(fadeInAnimation)
+                relativeLayout.visibility = View.GONE
+                imageView.rotation = 0f
+            }
+        }
     }
 
     companion object {

@@ -459,6 +459,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="55dp"
                 android:columnCount="1"
                 android:rowCount="5">
 
@@ -518,7 +519,7 @@
                                 android:id="@+id/txtPhysicalPersonDropdown"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:visibility="gone"
+                                android:visibility="visible"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"

@@ -17,7 +17,7 @@
             android:id="@+id/oc_init_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paso 3:"
+            android:text="@string/oc_pp_step3"
             android:textColor="@color/black"
             android:textSize="22sp" />
         <TextView
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Acreditar identidad"
+            android:text="@string/oc_pp_step3_title"
             android:textColor="@color/black"
             android:layout_below="@+id/oc_init_txt"
             android:textSize="22sp" />
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/oc_init2_txt"
-            android:text="Obtener certificados/Persona física/Solicitar certificado"
+            android:text="@string/oc_pp_step3_nav"
             android:textSize="13sp" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:lineSpacingExtra="4dp"
             android:layout_below="@+id/txt"
             android:textSize="15sp"
-            android:text="AVISO: Ante la situación actual de la evolución del COVID 19 no todas las oficinas de acreditación están prestando servicio de forma habitual, por este motivo y para evitar desplazamientos innecesarios, es recomendable que antes de acudir se pongan en contacto con el organismo en cuestión para verificar que sigue prestando este servicio. Disculpen las molestias."/>
+            android:text="@string/oc_pp_step2_notice"/>
 
         <TextView
             android:id="@+id/oc_Step3_textDesc"
@@ -67,7 +67,7 @@
             android:textColor="@color/black"
             android:layout_below="@+id/oc_Step3_notice"
             android:textSize="17sp"
-            android:text="Tras haber realizado la configuración previa (paso 1) y haber completado la solicitud de su certificado (paso 2), ya estará en posesión de su Código de Solicitud. Para continuar el solicitante y futuro titular del certificado deberá acudir personalmente a una Oficina de Acreditación de Identidad para acreditar su propia identidad.\n\nSi por cualquier circunstancia no pudiera hacerlo personalmente, podrá ir una tercera persona en su nombre. pero se le exigirá la previa legitimación de su firma del contrato ante notario."/>
+            android:text="@string/oc_pp_step3_text"/>
 
         <RelativeLayout
             android:id="@+id/step3_goTo1"
@@ -83,7 +83,7 @@
                 android:layout_marginTop="10dp"
                 android:textSize="16sp"
                 android:textColor="@color/icons_svg"
-                android:text="Más información sobre la legitimación de firma ante notario"
+                android:text="@string/oc_pp_step3_go_to_more_info"
                 android:layout_marginStart="15dp"/>
 
             <ImageView
@@ -112,7 +112,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/icons_svg"
-                android:text="¿Se puede solicitar un certificado de representación de personas físicas?"
+                android:text="@string/oc_pp_step3_go_to_qst_request_certf"
                 android:layout_marginStart="15dp"/>
 
             <ImageView
@@ -135,13 +135,14 @@
             android:lineSpacingExtra="4dp"
             android:layout_below="@+id/step3_goTo2"
             android:textSize="15sp"
-            android:text="NOTA: Cuando acredite su identidad en una oficina de acreditación de identidad tendrá inmediatamente disponible la descarga de su certificado por lo que le recomendamos descargarlo lo antes posible."/>
+            android:text="@string/oc_pp_step3_note"/>
 
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="40dp"
             android:layout_below="@+id/step3_note"
             android:columnCount="1"
             android:rowCount="2">
@@ -180,10 +181,11 @@
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="Documentación necesaria para acreditar identidad"
+                            android:text="@string/oc_pp_step3_dropdown1_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
+                            android:id="@+id/step3_icon_dropdown1"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginTop="13dp"
@@ -206,7 +208,7 @@
                             android:layout_marginTop="15dp"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Sólo podrán solicitar el certificado los mayores de 18 años o menores emancipados.\n\nEl solicitante del certificado deberá presentarse en una de nuestras Oficinas de Acreditación de Identidad para acreditar sus datos por el documento de identidad válido, vigente y en formato original o en su defecto, una fotocopia compulsada oficialmente."/>
+                            android:text="@string/oc_pp_step3_dropdown1_text1"/>
 
                         <TextView
                             android:id="@+id/txt_step3_title1_Dropdown"
@@ -217,7 +219,7 @@
                             android:layout_below="@+id/txt_step3_desc_Dropdown"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Ciudadano de nacionalidad española: "/>
+                            android:text="@string/oc_pp_step3_dropdown1_titlelist1"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t1_text1_Dropdown"
@@ -229,7 +231,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title1_Dropdown"
                             android:textSize="18sp"
-                            android:text="El código de solicitud que le ha sido remitido a su cuenta de correo electronico y"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list1"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t1_text2_Dropdown"
@@ -241,7 +243,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t1_text1_Dropdown"
                             android:textSize="18sp"
-                            android:text="El Documento Nacional de Identidad (DNI), pasaporte o carné de conducir"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list2"/>
 
                         <TextView
                             android:id="@+id/txt_step3_title2_Dropdown"
@@ -252,7 +254,7 @@
                             android:layout_below="@+id/txt_step3_t1_text2_Dropdown"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Ciudadano de nacionalidad española: "/>
+                            android:text="@string/oc_pp_step3_dropdown1_titlelist2"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t2_text1_Dropdown"
@@ -264,7 +266,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title2_Dropdown"
                             android:textSize="18sp"
-                            android:text="El código de solicitud que le ha sido remitido a su cuenta de correo electrónico y"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list3"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t2_text2_Dropdown"
@@ -276,7 +278,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text1_Dropdown"
                             android:textSize="18sp"
-                            android:text="Documento Nacional de Identificación de Extranjeros donde conste el NIE junto con Pasaporte o documento de identidad de país de origen, o"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list4"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t2_text3_Dropdown"
@@ -288,7 +290,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text2_Dropdown"
                             android:textSize="18sp"
-                            android:text="Certificado de Ciudadano de la Unión donde conste el NIE junto con Pasaporte o documento de identidad de país de origen, o"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list5"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t2_text4_Dropdown"
@@ -300,7 +302,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text3_Dropdown"
                             android:textSize="18sp"
-                            android:text="Documento oficial de concesión del NIF/NIE, junto con el pasaporte o el documento de identidad del país de origen."/>
+                            android:text="@string/oc_pp_step3_dropdown1_list6"/>
 
                         <TextView
                             android:id="@+id/txt_step3_title3_Dropdown"
@@ -311,7 +313,7 @@
                             android:layout_below="@+id/txt_step3_t2_text4_Dropdown"
                             android:textColor="@color/black"
                             android:textSize="18sp"
-                            android:text="Ciudadano extranjero: "/>
+                            android:text="@string/oc_pp_step3_dropdown1_ltitleist3"/>
 
                         <TextView
                             android:id="@+id/txt_step3_t3_text1_Dropdown"
@@ -323,7 +325,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title3_Dropdown"
                             android:textSize="18sp"
-                            android:text="El código de solicitud que le ha sido remitido a su cuenta de correo electrónico y"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list7"/>
                         <TextView
                             android:id="@+id/txt_step3_t3_text2_Dropdown"
                             android:layout_width="match_parent"
@@ -334,7 +336,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t3_text1_Dropdown"
                             android:textSize="18sp"
-                            android:text="Tarjeta Roja/Verde/Blanca de Identificación de Extranjeros donde consta el NIE junto con el pasaporte, o"/>
+                            android:text="@string/oc_pp_step3_dropdown1_list8"/>
                         <TextView
                             android:id="@+id/txt_step3_t3_text3_Dropdown"
                             android:layout_width="match_parent"
@@ -345,7 +347,7 @@
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t3_text2_Dropdown"
                             android:textSize="18sp"
-                            android:text="Documento oficial de concesión del NIF/NIE junto con el pasaporte. "/>
+                            android:text="@string/oc_pp_step3_dropdown1_list9"/>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -386,10 +388,11 @@
                             android:textSize="19sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
-                            android:text="¿Donde puede acreditar su identidad?"
+                            android:text="@string/oc_pp_step3_dropdown2_title"
                             app:tint="@color/icons_svg"/>
 
                         <ImageView
+                            android:id="@+id/step3_icon_dropdown2"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_marginTop="13dp"
@@ -414,7 +417,7 @@
                             android:textColor="@color/black"
                             android:lineSpacingExtra="4dp"
                             android:textSize="15sp"
-                            android:text="NOTA: Este certificado NO puede solicitarse a través de las oficinas de Correos"/>
+                            android:text="@string/oc_pp_step3_dropdown2_note1"/>
 
                         <TextView
                             android:id="@+id/txt_step3_text1_Dropdown2"
@@ -424,7 +427,7 @@
                             android:layout_below="@+id/step3_Dropdown2_note1"
                             android:textColor="@color/black"
                             android:textSize="17sp"
-                            android:text="La FNMT ha habilitado más de 2.400 Oficinas de Acreditación de Identidad distribuidas por todo el territorio nacional.\n\nPara su comodidad, puede usted hacer uso de nuestro servicio LOCALIZADOR DE OFICINAS."/>
+                            android:text="@string/oc_pp_step3_dropdown2_text1"/>
 
                         <RelativeLayout
                             android:id="@+id/rectangularLY_Dropdown2"
@@ -444,7 +447,7 @@
                                 android:textAllCaps="false"
                                 android:layout_marginTop="10dp"
                                 android:textSize="17sp"
-                                android:text="Localizador de oficinas"
+                                android:text="@string/oc_pp_step3_dropdown2_go_to_localizer"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView
@@ -468,7 +471,7 @@
                             android:layout_below="@+id/rectangularLY_Dropdown2"
                             android:lineSpacingExtra="4dp"
                             android:textSize="15sp"
-                            android:text="NOTA: En las oficinas de la AEAT, Seguridad Social y en otras oficinas se requiere de cita previa, consulte con la propia oficina."/>
+                            android:text="@string/oc_pp_step3_dropdown2_note2"/>
 
                         <TextView
                             android:id="@+id/txt_step3_text3_Dropdown2"
@@ -478,7 +481,7 @@
                             android:layout_below="@+id/step3_Dropdown2_note2"
                             android:textColor="@color/black"
                             android:textSize="17sp"
-                            android:text="Si se encuentra en el extranjero podrá dirigirse a las Oficinas Consulares de carrera de España en el extranjero, no siendo posible en los registros aduaneros.\n\nPuede consultar las Oficinas Consulares de España en el extranjero donde puede gestionarse la obtención del certificado de persona física."/>
+                            android:text="@string/oc_pp_step3_dropdown2_text2"/>
 
                         <RelativeLayout
                             android:id="@+id/rectangularLY_2_Dropdown2"
@@ -498,7 +501,7 @@
                                 android:textAllCaps="false"
                                 android:layout_marginTop="0dp"
                                 android:textSize="17sp"
-                                android:text="Oficinas Consulares de España en el extranjero"
+                                android:text="@string/oc_pp_step3_dropdown2_go_to_consular_offices"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView

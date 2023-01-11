@@ -44,4 +44,114 @@
 
     <string name="technicalSupport_cardTxt_ObteinCertificates_fr">Contactar con Soporte Técnico</string>
     <!-- End of Obtein Certificates Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - Fragment Strings-->
+    <string name="oc_pp_title">Obtener certificado de \npersona física</string>
+    <string name="oc_pp_nav">Obtener certificados/Persona física</string>
+    <string name="oc_pp_title_steps">Seleccione el paso a realizar</string>
+    <string name="oc_pp_step1_title">Configuración previa</string>
+    <string name="oc_pp_step2_title">Solicitar certificado</string>
+    <string name="oc_pp_step3_title">Acreditar identidad previa</string>
+    <string name="oc_pp_step4_title">Descargar certificado</string>
+    <string name="oc_pp_desc_txt">El Certificado digital FNMT de Persona Física es la certificación electrónica expedida por la FNMT-RCM que vincula a su suscriptor con unos Datos de verificación de Firma y confirma su identidad.\n\nEste certificado, también conocido como Certificado de Ciudadano o de Usuario, es un documento digital que contiene sus datos identificativos. Le permitirá identificarse en Internet e intercambiar información con otras personas y organismos con la garantía de que sólo Ud. y su interlocutor pueden acceder a ella.</string>
+    <string name="oc_pp_dropdown1_title">¿Quien puedo obtener el Certificado de Persona Física?</string>
+    <string name="oc_pp_dropdown2_title">¿Quien puede obtener un Certificado digital?</string>
+    <string name="oc_pp_dropdown3_title">¿Para que sirve?</string>
+    <string name="oc_pp_dropdown4_title">¿Dónde puedo usar mi Certficado?</string>
+    <string name="oc_pp_dropdown1_text">Cualquier ciudadano español o extranjero, mayor de edad o menor emancipado que esté en posesión de su DNI o NIE, podrá solicitar y obtener su certificado digital de forma gratuita para firmar y acreditar su identidad de forma segura en Internet.</string>
+    <string name="oc_pp_dropdown2_text">Existen 2 formas distintas para obtener su Certificado digital de Persona Física como archivo descargable en su ordenador:</string>
+    <string name="oc_pp_dropdown2_txtlist1">Con acreditación presencial en una oficina.</string>
+    <string name="oc_pp_dropdown2_txtlist2">Utilizando su DNIe.</string>
+    <string name="oc_pp_dropdown2_go_to_softwCertificate">Obtener certificado software</string>
+    <string name="oc_pp_dropdown3_text1">El Certificado digital de Persona Física le permitirá realizar trámites de forma segura con la Administración Pública y Entidades Privadas a través de Internet, como por ejemplo:</string>
+    <string name="oc_pp_dropdown3_list1">Presentación y liquidación de impuestos</string>
+    <string name="oc_pp_dropdown3_list2">Presentación de recursos y reclamaciones</string>
+    <string name="oc_pp_dropdown3_list3">Cumplimentación de los datos del censo de población y viviendas</string>
+    <string name="oc_pp_dropdown3_list4">Consulta e inscripción en el padrón municipal</string>
+    <string name="oc_pp_dropdown3_list5">Consulta de multas de circulación</string>
+    <string name="oc_pp_dropdown3_list6">Consulta y trámites para solicitud de subvenciones</string>
+    <string name="oc_pp_dropdown3_list7">Consulta de asignación de colegios electorales</string>
+    <string name="oc_pp_dropdown3_list8">Actuaciones comunicadas</string>
+    <string name="oc_pp_dropdown3_list9">Firma electrónica de documentos y formularios oficiales</string>
+    <string name="oc_pp_dropdown3_text2">Gracias a su Certificado FNMT de Persona Física podrá olvidarse de desplazamientos y esperas innecesarias.</string>
+    <string name="oc_pp_dropdown4_text">En el siguiente enlace, se detallan algunos de los servicios ofrecidos al ciudadano por Organismos y Entidades. \n\nEl acceso a las páginas web seguras requiere que el navegador desde donde acceda tenga instalado el certificado.</string>
+    <string name="oc_pp_dropdown3_go_to_services">Servicios ofrecidos al ciudadano por Organismos y Entidades</string>
+    <!-- ObteinCertificates - Physical Person - Fragment Strings-->
+
+
+    <!-- ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
+    <string name="oc_pp_step1">Paso 1:</string>
+    <string name="oc_pp_step1_nav">Obtener certificados/Persona física/Configuración previa</string>
+    <string name="oc_pp_step1_text">Antes de comenzar con el proceso de solicitud de su Certificado, deberá asegurarse de que su equipo tiene instalado el software necesario para la generación de claves. \n\nPor favor, lea y siga atentamente las siguientes instrucciones para evitar posibles errores durante el proceso de obtención de su certificado:</string>
+    <string name="oc_pp_step1_dropdown1_title">Recordatorios imprescindibles</string>
+    <string name="oc_pp_step1_dropdown1_txtlist1">No formatear el ordenador, entre el proceso de solicitud y el de descarga del certificado.ado.</string>
+    <string name="oc_pp_step1_dropdown1_txtlist2">Se debe realizar todo el proceso de obtención desde el mismo equipo y mismo usuario.</string>
+    <string name="oc_pp_step1_dropdown1_txtlist3">Es importante leer atentamente la Declaración de Prácticas de Certificación previamente a la solicitud del certificado. En ella se encuentran las condiciones bajo las cuales se prestan los servicios de certificación.</string>
+    <string name="oc_pp_step1_dropdown1_go_to_practice_declaration">Declaración de Prácticas de Certificación</string>
+    <string name="oc_pp_step1_dropdown2_title">Navegadores compatibles</string>
+    <string name="oc_pp_step1_dropdown2_text">Última versión de cualquiera de los siguientes navegadores:</string>
+    <string name="oc_pp_step1_dropdown2_txtlist1">Mozilla Firefox</string>
+    <string name="oc_pp_step1_dropdown2_txtlist2">Google Chrome</string>
+    <string name="oc_pp_step1_dropdown2_txtlist3">Microsoft EDGE</string>
+    <string name="oc_pp_step1_dropdown2_txtlist4">Opera</string>
+    <string name="oc_pp_step1_dropdown2_txtlist5">Safari</string>
+    <string name="oc_pp_step1_dropdown3_title">Software Necesario para la solicitud de certificado</string>
+    <string name="oc_pp_step1_dropdown3_text1">CONFIGURADOR FNMT-RCM\n\nLa Fábrica Nacional de Moneda y Timbre ha desarrollado esta aplicación para solicitar las claves necesarias en la obtención de un certificado digital. Puede ser ejecutada en cualquier navegador y sistema Operativo.</string>
+    <string name="oc_pp_step1_dropdown3_text2">Una vez descargado e instalado el software no es necesario hacer nada, este se ejecutará cuando el navegador lo requiera.</string>
+    <string name="oc_pp_step1_dropdown3_go_to_download_area">Área de Descarga de Configurador FNMT</string>
+    <!-- End ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
+    <string name="oc_pp_step2">Paso 2:</string>
+    <string name="oc_pp_step2_nav">Obtener certificados/Persona física/Solicitar certificado</string>
+    <string name="oc_pp_step2_form_title">Aporte la siguiente información</string>
+    <string name="oc_pp_step2_form_txt_dn1">Nº del documento de identificación</string>
+    <string name="oc_pp_step2_form_txt_surname">Primer apellido</string>
+    <string name="oc_pp_step2_form_txt_confirm_email">Confirma correo electrónico</string>
+    <string name="oc_pp_step2_form_txt_email">Correo electrónico</string>
+    <string name="oc_pp_step2_accept_terms">Acepto los terminos y coniciones</string>
+    <string name="oc_pp_step2_send_petition">Enviar Petición</string>
+    <!-- End ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
+
+
+    <!-- ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
+    <string name="oc_pp_step3">Paso 3:</string>
+    <string name="oc_pp_step3_nav">Obtener certificados/Persona física/Solicitar certificado</string>
+    <string name="oc_pp_step2_notice">AVISO: Ante la situación actual de la evolución del COVID 19 no todas las oficinas de acreditación están prestando servicio de forma habitual, por este motivo y para evitar desplazamientos innecesarios, es recomendable que antes de acudir se pongan en contacto con el organismo en cuestión para verificar que sigue prestando este servicio. Disculpen las molestias.</string>
+    <string name="oc_pp_step3_text">Tras haber realizado la configuración previa (paso 1) y haber completado la solicitud de su certificado (paso 2), ya estará en posesión de su Código de Solicitud. Para continuar el solicitante y futuro titular del certificado deberá acudir personalmente a una Oficina de Acreditación de Identidad para acreditar su propia identidad.\n\nSi por cualquier circunstancia no pudiera hacerlo personalmente, podrá ir una tercera persona en su nombre. pero se le exigirá la previa legitimación de su firma del contrato ante notario.</string>
+    <string name="oc_pp_step3_go_to_more_info">Más información sobre la legitimación de firma ante notario</string>
+    <string name="oc_pp_step3_go_to_qst_request_certf">¿Se puede solicitar un certificado de representación de personas físicas?</string>
+    <string name="oc_pp_step3_note">NOTA: Cuando acredite su identidad en una oficina de acreditación de identidad tendrá inmediatamente disponible la descarga de su certificado por lo que le recomendamos descargarlo lo antes posible.</string>
+    <string name="oc_pp_step3_dropdown1_title">Documentación necesaria para acreditar identidad</string>
+    <string name="oc_pp_step3_dropdown1_text1">Sólo podrán solicitar el certificado los mayores de 18 años o menores emancipados.\n\nEl solicitante del certificado deberá presentarse en una de nuestras Oficinas de Acreditación de Identidad para acreditar sus datos por el documento de identidad válido, vigente y en formato original o en su defecto, una fotocopia compulsada oficialmente.</string>
+    <string name="oc_pp_step3_dropdown1_titlelist1">Ciudadano de nacionalidad española:</string>
+    <string name="oc_pp_step3_dropdown1_list1">El código de solicitud que le ha sido remitido a su cuenta de correo electronico y</string>
+    <string name="oc_pp_step3_dropdown1_list2">El Documento Nacional de Identidad (DNI), pasaporte o carné de conducir</string>
+    <string name="oc_pp_step3_dropdown1_titlelist2">Ciudadano de nacionalidad española:</string>
+    <string name="oc_pp_step3_dropdown1_list3">El código de solicitud que le ha sido remitido a su cuenta de correo electrónico y</string>
+    <string name="oc_pp_step3_dropdown1_list4">Documento Nacional de Identificación de Extranjeros donde conste el NIE junto con Pasaporte o documento de identidad de país de origen, o</string>
+    <string name="oc_pp_step3_dropdown1_list5">Certificado de Ciudadano de la Unión donde conste el NIE junto con Pasaporte o documento de identidad de país de origen, o</string>
+    <string name="oc_pp_step3_dropdown1_list6">Documento oficial de concesión del NIF/NIE, junto con el pasaporte o el documento de identidad del país de origen.</string>
+    <string name="oc_pp_step3_dropdown1_ltitleist3">Ciudadano extranjero:</string>
+    <string name="oc_pp_step3_dropdown1_list7">El código de solicitud que le ha sido remitido a su cuenta de correo electrónico y</string>
+    <string name="oc_pp_step3_dropdown1_list8">Tarjeta Roja/Verde/Blanca de Identificación de Extranjeros donde consta el NIE junto con el pasaporte, o</string>
+    <string name="oc_pp_step3_dropdown1_list9">Documento oficial de concesión del NIF/NIE junto con el pasaporte.</string>
+    <string name="oc_pp_step3_dropdown2_title">¿Donde puede acreditar su identidad?</string>
+    <string name="oc_pp_step3_dropdown2_note1">NOTA: Este certificado NO puede solicitarse a través de las oficinas de Correos</string>
+    <string name="oc_pp_step3_dropdown2_text1">La FNMT ha habilitado más de 2.400 Oficinas de Acreditación de Identidad distribuidas por todo el territorio nacional.\n\nPara su comodidad, puede usted hacer uso de nuestro servicio LOCALIZADOR DE OFICINAS.</string>
+    <string name="oc_pp_step3_dropdown2_go_to_localizer">Localizador de oficinas</string>
+    <string name="oc_pp_step3_dropdown2_note2">NOTA: En las oficinas de la AEAT, Seguridad Social y en otras oficinas se requiere de cita previa, consulte con la propia oficina.</string>
+    <string name="oc_pp_step3_dropdown2_text2">Si se encuentra en el extranjero podrá dirigirse a las Oficinas Consulares de carrera de España en el extranjero, no siendo posible en los registros aduaneros.\n\nPuede consultar las Oficinas Consulares de España en el extranjero donde puede gestionarse la obtención del certificado de persona física.</string>
+    <string name="oc_pp_step3_dropdown2_go_to_consular_offices">Oficinas Consulares de España en el extranjero</string>
+    <!-- End ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
+    <string name="oc_pp_step4">Paso 4:</string>
+    <string name="oc_pp_step4_nav">Obtener certificados/Persona física/Descargar certificado</string>
+    <string name="oc_pp_step4_text">Para descargar el certificado debe usar el mismo ordenador y el mismo usuario con el que realizó la Solicitud e introducir los datos requeridos exactamente tal y como los introdujo entonces.\n\nPara descargar e instalar su certificado introduzca la siguiente información:</string>
+    <string name="oc_pp_step4_txt_dni">Nº del documento de identificación</string>
+    <string name="oc_pp_step4_txt_surname">Primer apellido</string>
+    <string name="oc_pp_step4_form_cod_request">Código de solicitud</string>
+    <string name="oc_pp_step4_download_terms">Descargar Términos y Condiciones</string>
+    <!-- End ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
 </resources>

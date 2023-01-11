@@ -58,36 +58,21 @@ class ObtenerCertificado  : Fragment(){
         // Inflate the layout for this fragment
 
         binding.iconPhysicalDropdown?.setOnClickListener{
-            binding.txtPhysicalPersonDropdown?.let { it1 ->
-                showHide(binding.RLPhysicalPersonDropdown,
-                    it1, binding.iconPhysicalDropdown!!
-                )
-            }
+            showHide(binding.RLPhysicalPersonDropdown, binding.iconPhysicalDropdown)
         }
 
         binding.iconRepresentateDropdown?.setOnClickListener{
-            binding.txtRepresentationDropdown?.let { it2 ->
-                showHide(binding.RLRepresentationDropdown,
-                    it2, binding.iconRepresentateDropdown!!
-                )
-            }
+            showHide(binding.RLRepresentationDropdown, binding.iconRepresentateDropdown)
         }
+
 
         binding.iconPublicAdministrationDropdown?.setOnClickListener{
-            binding.txtPublicAdministrationDropdown?.let { it3 ->
-                showHide(binding.RLPublicAdministrationDropdown,
-                    it3, binding.iconPublicAdministrationDropdown!!
-                )
-            }
-
+            showHide(binding.RLPublicAdministrationDropdown, binding.iconPublicAdministrationDropdown)
         }
 
+
         binding.iconComponentCertificatesDropdown?.setOnClickListener{
-            binding.txtComponentCertificatesDropdown?.let { it4 ->
-                showHide(binding.RLComponentCertificatesDropdown,
-                    it4, binding.iconComponentCertificatesDropdown!!
-                )
-            }
+            showHide(binding.RLComponentCertificatesDropdown, binding.iconComponentCertificatesDropdown)
         }
 
 
@@ -101,7 +86,7 @@ class ObtenerCertificado  : Fragment(){
         return binding.root
     }
 
-    private fun showHide(relativeLayout: RelativeLayout?, textView: TextView, imageView: ImageView) {
+    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
         val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
         //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
 
@@ -110,7 +95,6 @@ class ObtenerCertificado  : Fragment(){
 
                 relativeLayout.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.VISIBLE
-                textView.visibility = View.VISIBLE
                 imageView.rotation = 90f
 
 
@@ -118,7 +102,6 @@ class ObtenerCertificado  : Fragment(){
 
                 //textView.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.GONE
-                textView.visibility = View.GONE
                 imageView.rotation = 0f
             }
         }

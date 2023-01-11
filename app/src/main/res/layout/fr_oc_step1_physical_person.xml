@@ -17,7 +17,7 @@
                 android:id="@+id/oc_init_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paso 1:"
+                android:text="@string/oc_pp_step1"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
             <TextView
@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:text="Configuración previa"
+                android:text="@string/oc_pp_step1_title"
                 android:textColor="@color/black"
                 android:layout_below="@+id/oc_init_txt"
                 android:textSize="22sp" />
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/oc_init2_txt"
-                android:text="Obtener certificados/Persona física/Configuración previa"
+                android:text="@string/oc_pp_step1_nav"
                 android:textSize="13sp" />
 
             <TextView
@@ -55,12 +55,13 @@
                 android:textColor="@color/black"
                 android:layout_below="@+id/txt"
                 android:textSize="18sp"
-                android:text="Antes de comenzar con el proceso de solicitud de su Certificado, deberá asegurarse de que su equipo tiene instalado el software necesario para la generación de claves. \n\nPor favor, lea y siga atentamente las siguientes instrucciones para evitar posibles errores durante el proceso de obtención de su certificado:"/>
+                android:text="@string/oc_pp_step1_text"/>
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp"
                 android:layout_below="@+id/oc_Step1_textDesc"
                 android:columnCount="1"
                 android:rowCount="5">
@@ -99,10 +100,11 @@
                                 android:textSize="19sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
-                                android:text="Recordatorios imprescindibles"
+                                android:text="@string/oc_pp_step1_dropdown1_title"
                                 app:tint="@color/icons_svg"/>
 
                             <ImageView
+                                android:id="@+id/step1_icon_dropdown1"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -113,10 +115,10 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/RLPhysicalPersonDropdown"
+                            android:id="@+id/RLReminderDropdown"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="visible">
+                            android:visibility="gone">
                             <TextView
                                 android:id="@+id/txt_step1_text1_Dropdown"
                                 android:layout_width="match_parent"
@@ -126,7 +128,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="No formatear el ordenador, entre el proceso de solicitud y el de descarga del certificado.ado." />
+                                android:text="@string/oc_pp_step1_dropdown1_txtlist1" />
 
                             <TextView
                                 android:id="@+id/txt_step1_text12_Dropdown"
@@ -137,7 +139,7 @@
                                 android:layout_below="@+id/txt_step1_text1_Dropdown"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="Se debe realizar todo el proceso de obtención desde el mismo equipo y mismo usuario."
+                                android:text="@string/oc_pp_step1_dropdown1_txtlist2"
                                 app:drawableLeftCompat="@drawable/dot_svg"/>
 
                             <TextView
@@ -149,7 +151,7 @@
                                 android:layout_below="@+id/txt_step1_text12_Dropdown"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="Es importante leer atentamente la Declaración de Prácticas de Certificación previamente a la solicitud del certificado. En ella se encuentran las condiciones bajo las cuales se prestan los servicios de certificación."
+                                android:text="@string/oc_pp_step1_dropdown1_txtlist3"
                                 app:drawableLeftCompat="@drawable/dot_svg" />
 
                             <RelativeLayout
@@ -170,7 +172,7 @@
                                     android:textAllCaps="false"
                                     android:layout_marginTop="0dp"
                                     android:textSize="17sp"
-                                    android:text="Declaración de Prácticas de Certificación"
+                                    android:text="@string/oc_pp_step1_dropdown1_go_to_practice_declaration"
                                     tools:ignore="RtlCompat" />
 
                                 <ImageView
@@ -224,10 +226,11 @@
                                 android:textSize="19sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
-                                android:text="Navegadores compatibles"
+                                android:text="@string/oc_pp_step1_dropdown2_title"
                                 app:tint="@color/icons_svg"/>
 
                             <ImageView
+                                android:id="@+id/step1_icon_dropdown2"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -238,10 +241,10 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/RLRemainderDropdown"
+                            android:id="@+id/RLBrowsersDropdown"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="visible">
+                            android:visibility="gone">
                             <TextView
                                 android:id="@+id/txt_step1_text2_Dropdown"
                                 android:layout_width="match_parent"
@@ -249,7 +252,7 @@
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="Última versión de cualquiera de los siguientes navegadores:"/>
+                                android:text="@string/oc_pp_step1_dropdown2_text"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text21_Dropdown"
@@ -261,7 +264,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text2_Dropdown"
                                 android:textSize="18sp"
-                                android:text="Mozilla Firefox"/>
+                                android:text="@string/oc_pp_step1_dropdown2_txtlist1"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text23_Dropdown"
@@ -273,7 +276,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text21_Dropdown"
                                 android:textSize="18sp"
-                                android:text="Google Chrome"/>
+                                android:text="@string/oc_pp_step1_dropdown2_txtlist2"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text24_Dropdown"
@@ -285,7 +288,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text23_Dropdown"
                                 android:textSize="18sp"
-                                android:text="Microsoft EDGE"/>
+                                android:text="@string/oc_pp_step1_dropdown2_txtlist3"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text25_Dropdown"
@@ -297,7 +300,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text24_Dropdown"
                                 android:textSize="18sp"
-                                android:text="Opera"/>
+                                android:text="@string/oc_pp_step1_dropdown2_txtlist4"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text26_Dropdown"
@@ -309,7 +312,7 @@
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text25_Dropdown"
                                 android:textSize="18sp"
-                                android:text="Safari"/>
+                                android:text="@string/oc_pp_step1_dropdown2_txtlist5"/>
 
                         </RelativeLayout>
 
@@ -344,19 +347,21 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="300dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
                                 android:textSize="19sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
-                                android:text="Recordatorios imprescindibles"
+                                android:text="@string/oc_pp_step1_dropdown3_title"
                                 app:tint="@color/icons_svg"/>
 
                             <ImageView
+                                android:id="@+id/step1_icon_dropdown3"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
+                                android:layout_marginTop="15dp"
                                 android:layout_alignParentTop="true"
                                 android:layout_alignParentEnd="true"
                                 android:src="@drawable/right_arrow_svg"
@@ -376,7 +381,7 @@
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="CONFIGURADOR FNMT-RCM\n\nLa Fábrica Nacional de Moneda y Timbre ha desarrollado esta aplicación para solicitar las claves necesarias en la obtención de un certificado digital. Puede ser ejecutada en cualquier navegador y sistema Operativo."/>
+                                android:text="@string/oc_pp_step1_dropdown3_text1"/>
 
                             <TextView
                                 android:id="@+id/txt_step1_text4_Dropdown"
@@ -387,7 +392,7 @@
                                 android:layout_below="@+id/txt_step1_text3_Dropdown"
                                 android:textColor="@color/black"
                                 android:textSize="18sp"
-                                android:text="Una vez descargado e instalado el software no es necesario hacer nada, este se ejecutará cuando el navegador lo requiera."/>
+                                android:text="@string/oc_pp_step1_dropdown3_text2"/>
 
                             <RelativeLayout
                                 android:id="@+id/rectangularLY"
@@ -399,7 +404,7 @@
 
                                 <TextView
                                     android:layout_width="250dp"
-                                    android:layout_height="50dp"
+                                    android:layout_height="wrap_content"
                                     android:backgroundTint="#EFEFF0"
                                     android:textColor="@color/icons_svg"
                                     android:layout_marginStart="10dp"
@@ -407,7 +412,7 @@
                                     android:textAllCaps="false"
                                     android:layout_marginTop="7dp"
                                     android:textSize="16sp"
-                                    android:text="Área de Descarga de Configurador FNMT"
+                                    android:text="@string/oc_pp_step1_dropdown3_go_to_download_area"
                                     tools:ignore="RtlCompat" />
 
 
@@ -415,7 +420,7 @@
                                     android:id="@+id/iconStep1GoToDownloadArea"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginTop="13dp"
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentEnd="true"
                                     android:src="@drawable/right_arrow_svg"

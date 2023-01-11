@@ -43,4 +43,113 @@
 
     <string name="technicalSupport_cardTxt_ObteinCertificates_fr">Contact technical support</string>
     <!-- End of Obtein Certificates Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - Fragment Strings-->
+    <string name="oc_pp_title">Obtain physical person certificate</string>
+    <string name="oc_pp_nav">Obtain certificates/Physical person</string>
+    <string name="oc_pp_title_steps">Select step to perform</string>
+    <string name="oc_pp_step1_title">Preconfiguration</string>
+    <string name="oc_pp_step2_title">Apply for certificate</string>
+    <string name="oc_pp_step3_title">Accredit previous identity</string>
+    <string name="oc_pp_step4_title">Download certificate</string>
+    <string name="oc_pp_desc_txt">The FNMT Digital Certificate for Physical Person is the electronic certification issued by FNMT-RCM that links its subscriber with Verification Data of Signature and confirms their identity.\n\nThis certificate, also known as Citizen or User Certificate, is a digital document that contains your identifying data. It will allow you to identify yourself on the Internet and exchange information with other people and organizations with the guarantee that only you and your interlocutor can access it.</string>
+    <string name="oc_pp_dropdown1_title">Who can obtain the Physical Person Certificate?</string>
+    <string name="oc_pp_dropdown2_title">Who can obtain a digital certificate?</string>
+    <string name="oc_pp_dropdown3_title">What is it for?</string>
+    <string name="oc_pp_dropdown4_title">Where can I use my certificate?</string>
+    <string name="oc_pp_dropdown1_text">Any Spanish or foreign citizen, over age or emancipated minor who is in possession of their ID or NIE, can apply for and obtain their digital certificate for free to sign and accredit their identity securely on the Internet.</string>
+    <string name="oc_pp_dropdown2_text">There are 2 distinct ways to obtain your Physical Person Digital Certificate as a downloadable file on your computer:</string>
+    <string name="oc_pp_dropdown2_txtlist1">With in-person accreditation at an office.</string>
+    <string name="oc_pp_dropdown2_txtlist2">Using your DNIe.</string>
+    <string name="oc_pp_dropdown2_go_to_softwCertificate">Obtain software certificate</string>
+    <string name="oc_pp_dropdown3_text1">The Physical Person Digital Certificate will allow you to securely perform procedures with Public Administration and Private Entities via the Internet, such as:</string>
+    <string name="oc_pp_dropdown3_list1">Presentation and liquidation of taxes</string>
+    <string name="oc_pp_dropdown3_list2">Presentation of appeals and claims</string>
+    <string name="oc_pp_dropdown3_list3">Completion of population and housing census data</string>
+    <string name="oc_pp_dropdown3_list4">Consultation and registration in the municipal registry</string>
+    <string name="oc_pp_dropdown3_list5">Consultation of traffic fines</string>
+    <string name="oc_pp_dropdown3_list6">Consultation and procedures for grant applications</string>
+    <string name="oc_pp_dropdown3_list7">Consultation of electoral college assignments</string>
+    <string name="oc_pp_dropdown3_list8">Reported actions</string>
+    <string name="oc_pp_dropdown3_list9">Electronic signature of official documents and forms</string>
+    <string name="oc_pp_dropdown3_text2">Thanks to your FNMT Physical Person Certificate you can forget about unnecessary travel and waiting.</string>
+    <string name="oc_pp_dropdown4_text">In the following link, some of the services offered to citizens by Organizations and Entities are detailed. \n\nAccessing secure websites requires that the browser from which you access has the certificate installed.</string>
+    <string name="oc_pp_dropdown3_go_to_services">Services offered to citizens by Organizations and Entities</string>
+    <!--End ObteinCertificates - Physical Person - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
+    <string name="oc_pp_step1">Step 1:</string>
+    <string name="oc_pp_step1_nav">Obtain certificates/Physical person/Preconfiguration</string>
+    <string name="oc_pp_step1_text">Before beginning the process of applying for your Certificate, you must ensure that your computer has the necessary software installed for key generation. \n\nPlease read and carefully follow the following instructions to avoid possible errors during the certificate obtaining process:</string>
+    <string name="oc_pp_step1_dropdown1_title">Essential reminders</string>
+    <string name="oc_pp_step1_dropdown1_txtlist1">Do not format the computer, between the application and download of the certificate process.</string>
+    <string name="oc_pp_step1_dropdown1_txtlist2">The entire obtaining process must be done on the same computer and by the same user.</string>
+    <string name="oc_pp_step1_dropdown1_txtlist3">It is important to carefully read the Certification Practices Declaration prior to requesting the certificate. The conditions under which certification services are provided are found in it.</string>
+    <string name="oc_pp_step1_dropdown1_go_to_practice_declaration">Certification Practices Declaration</string>
+    <string name="oc_pp_step1_dropdown2_title">Compatible browsers</string>
+    <string name="oc_pp_step1_dropdown2_text">Latest version of any of the following browsers:</string>
+    <string name="oc_pp_step1_dropdown2_txtlist1">Mozilla Firefox</string>
+    <string name="oc_pp_step1_dropdown2_txtlist2">Google Chrome</string>
+    <string name="oc_pp_step1_dropdown2_txtlist3">Microsoft EDGE</string>
+    <string name="oc_pp_step1_dropdown2_txtlist4">Opera</string>
+    <string name="oc_pp_step1_dropdown2_txtlist5">Safari</string>
+    <string name="oc_pp_step1_dropdown3_title">Software needed for certificate application</string>
+    <string name="oc_pp_step1_dropdown3_text1">FNMT-RCM CONFIGURATOR\n\nThe National Mint and Stamp Factory has developed this application to request the necessary keys in obtaining a digital certificate. It can be executed on any browser and operating system.</string>
+    <string name="oc_pp_step1_dropdown3_text2">Once downloaded and installed, the software does not need to be done anything, it will be executed when the browser requires it.</string>
+    <string name="oc_pp_step1_dropdown3_go_to_download_area">FNMT Configurator Download Area</string>
+    <!-- End ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
+    <string name="oc_pp_step2">Step 2:</string>
+    <string name="oc_pp_step2_nav">Obtain certificates/Physical person/Apply for certificate</string>
+    <string name="oc_pp_step2_form_title">Provide the following information</string>
+    <string name="oc_pp_step2_form_txt_dn1">ID document number</string>
+    <string name="oc_pp_step2_form_txt_surname">First surname</string>
+    <string name="oc_pp_step2_form_txt_confirm_email">Confirm email</string>
+    <string name="oc_pp_step2_form_txt_email">Email</string>
+    <string name="oc_pp_step2_accept_terms">I accept the terms and conditions</string>
+    <string name="oc_pp_step2_send_petition">Submit Request</string>
+    <!-- End ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
+    <string name="oc_pp_step3">Step 3:</string>
+    <string name="oc_pp_step3_nav">Obtain certificates/Individual/Request certificate</string>
+    <string name="oc_pp_step2_notice">NOTICE: Due to the current situation with COVID-19, not all accreditation offices are operating as usual, so it is recommended to contact the relevant agency before going in order to verify that they are still providing this service. We apologize for any inconvenience.</string>
+    <string name="oc_pp_step3_text">After completing the previous setup (step 1) and submitting your certificate request (step 2), you will possess your Request Code. To continue, the requestor and future certificate holder must personally go to an Identity Accreditation Office to prove their identity.\n\nIf for any reason you are unable to do so, a third party may go on your behalf, but their signature on the contract must be legitimized by a notary beforehand.</string>
+    <string name="oc_pp_step3_go_to_more_info">More information on signature legitimization by a notary</string>
+    <string name="oc_pp_step3_go_to_qst_request_certf">Can I request a certificate of representation for individuals?</string>
+    <string name="oc_pp_step3_note">NOTE: Once you have proven your identity at an identity accreditation office, you will be able to immediately download your certificate, so we recommend that you do so as soon as possible.</string>
+    <string name="oc_pp_step3_dropdown1_title">Documentation required to prove identity</string>
+    <string name="oc_pp_step3_dropdown1_text1"> Only those 18 years or older or emancipated minors will be able to request the certificate. The certificate applicant must present themselves at one of our Identity Accreditation Offices to verify their information using a valid, current, and original form of identification, or, in the absence of this, an officially certified photocopy.</string>
+    <string name="oc_pp_step3_dropdown1_titlelist1">Spanish Citizen:</string>
+    <string name="oc_pp_step3_dropdown1_list1">The request code that was sent to their email account and</string>
+    <string name="oc_pp_step3_dropdown1_list2">The National Identity Document (DNI), passport, or driver\'s license.</string>
+    <string name="oc_pp_step3_dropdown1_titlelist2">Non-Spanish Citizen:</string>
+    <string name="oc_pp_step3_dropdown1_list3">The request code that was sent to their email account and</string>
+    <string name="oc_pp_step3_dropdown1_list4">National Identification Document for Foreigners showing the NIE, along with passport or identification document from country of origin, or</string>
+    <string name="oc_pp_step3_dropdown1_list5">Union Citizen Certificate showing the NIE, along with passport or identification document from country of origin, or</string>
+    <string name="oc_pp_step3_dropdown1_list6">Official document granting the NIF/NIE, along with passport or identification document from country of origin.</string>
+    <string name="oc_pp_step3_dropdown1_ltitleist3">Non-Spanish Citizen:</string>
+    <string name="oc_pp_step3_dropdown1_list7">The request code that was sent to their email account and</string>
+    <string name="oc_pp_step3_dropdown1_list8">Red/Green/White Identification Card for Foreigners showing the NIE, along with passport, or</string>
+    <string name="oc_pp_step3_dropdown1_list9">Official document granting the NIF/NIE along with passport.</string>
+    <string name="oc_pp_step3_dropdown2_title">Where can you verify your identity?</string>
+    <string name="oc_pp_step3_dropdown2_note1">NOTE: This certificate cannot be requested through Post Office offices.</string>
+    <string name="oc_pp_step3_dropdown2_text1">FNMT has enabled more than 2,400 Identity Accreditation Offices throughout the country. You can use our OFFICE LOCATOR service for your convenience.</string>
+    <string name="oc_pp_step3_dropdown2_go_to_localizer">Office locator</string>
+    <string name="oc_pp_step3_dropdown2_note2">NOTE: Appointments are required at AEAT, Social Security, and other offices. Please check with the office directly.</string>
+    <string name="oc_pp_step3_dropdown2_text2">If you are abroad, you can go to the Spanish Consular Career Offices abroad. However, it is not possible at Customs offices. You can check the Spanish Consular Offices abroad where you can obtain the certificate for individuals.</string>
+    <string name="oc_pp_step3_dropdown2_go_to_consular_offices">Spanish Consular Offices abroad</string>
+
+    <!-- End ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
+
+    <!-- ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
+    <string name="oc_pp_step4">Step 4:</string>
+    <string name="oc_pp_step4_nav">Obtain Certificates/Individual/Download Certificate</string>
+    <string name="oc_pp_step4_text">To download the certificate, you must use the same computer and the same user as the one used for the Request and enter the required information exactly as it was entered then. To download and install your certificate, enter the following information:</string>
+    <string name="oc_pp_step4_txt_dni">ID document number</string>
+    <string name="oc_pp_step4_txt_surname">First surname</string>
+    <string name="oc_pp_step4_form_cod_request">Request code</string>
+    <string name="oc_pp_step4_download_terms">Download Terms and Conditions</string>
+    <!-- End ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
 </resources>
