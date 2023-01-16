@@ -1,5 +1,7 @@
 package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +11,14 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.fragment.findNavController
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcPhysicalPersonBinding
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +34,7 @@ class PhysicalPerson : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private lateinit var navController: NavController
     private lateinit var binding: FrOcPhysicalPersonBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,15 +52,36 @@ class PhysicalPerson : Fragment() {
         binding = FrOcPhysicalPersonBinding.inflate(inflater, container, false)
         val transition = fragmentManager?.beginTransaction()
 
+
+        val sharedPreferences = requireContext().getSharedPreferences("preference",Context.MODE_PRIVATE)
+        val language = sharedPreferences.getString("language","en")
+        if(language == "en"){
+            binding.navOcPp.text =  resources.getString(R.string.oc_pp_nav)
+        }else{
+            val conf = Configuration(resources.configuration)
+            conf.locale = Locale("es")
+            val resources = requireContext().createConfigurationContext(conf).resources
+            binding.navOcPp.text =  resources.getString(R.string.oc_pp_nav)
+        }
+
+
+
         binding.GoToStep1.setOnClickListener{
             val step1Ppc = Step1_PPC()
+            val bundle = Bundle()
+            bundle.putString("key2", "physical")
+            step1Ppc.arguments = bundle
             transition?.replace(R.id.mainContainer, step1Ppc)
             transition?.addToBackStack(null)
             transition?.commit()
+
         }
 
         binding.GoToStep2.setOnClickListener{
             val step2Ppc = Step2_PPC()
+            val bundle = Bundle()
+            bundle.putString("key2", "physical")
+            step2Ppc.arguments = bundle
             transition?.replace(R.id.mainContainer, step2Ppc)
             transition?.addToBackStack(null)
             transition?.commit()
@@ -59,6 +89,9 @@ class PhysicalPerson : Fragment() {
 
         binding.GoToStep3.setOnClickListener{
             val step3Ppc = Step3_PPC()
+            val bundle = Bundle()
+            bundle.putString("key2", "physical")
+            step3Ppc.arguments = bundle
             transition?.replace(R.id.mainContainer, step3Ppc)
             transition?.addToBackStack(null)
             transition?.commit()
@@ -66,6 +99,9 @@ class PhysicalPerson : Fragment() {
 
         binding.GoToStep4.setOnClickListener{
             val step4Ppc = Step4_PPC()
+            val bundle = Bundle()
+            bundle.putString("key2", "physical")
+            step4Ppc.arguments = bundle
             transition?.replace(R.id.mainContainer, step4Ppc)
             transition?.addToBackStack(null)
             transition?.commit()
@@ -86,6 +122,10 @@ class PhysicalPerson : Fragment() {
 
         binding.iconQs4Dropdown?.setOnClickListener{
             showHide(binding.RLQs4Dropdown, binding.iconQs4Dropdown)
+        }
+
+        binding.ocPpCross.setOnClickListener{
+            navController.navigateUp()
         }
         return binding.root
 

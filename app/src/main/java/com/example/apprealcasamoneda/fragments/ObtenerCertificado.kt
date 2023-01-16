@@ -21,6 +21,7 @@ import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FragmentCitaPreviaBinding
 import com.example.apprealcasamoneda.databinding.FragmentObtenerCertificadoBinding
 import com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.PhysicalPerson
+import com.example.apprealcasamoneda.fragments.RepresentativeCertificates.Representative
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,6 +76,14 @@ class ObtenerCertificado  : Fragment(){
             showHide(binding.RLComponentCertificatesDropdown, binding.iconComponentCertificatesDropdown)
         }
 
+        binding.iconGoToRepresentation.setOnClickListener{
+            val transition = fragmentManager?.beginTransaction()
+            val representative = Representative()
+            transition?.replace(R.id.mainContainer, representative)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+
 
         binding.rectangularLYPhysicalPerson?.setOnClickListener{
             val transition = fragmentManager?.beginTransaction()
@@ -83,6 +92,7 @@ class ObtenerCertificado  : Fragment(){
             transition?.addToBackStack(null)
             transition?.commit()
         }
+
         return binding.root
     }
 

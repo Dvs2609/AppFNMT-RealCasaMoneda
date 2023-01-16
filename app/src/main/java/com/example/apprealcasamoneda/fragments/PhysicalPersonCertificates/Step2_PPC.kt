@@ -1,6 +1,16 @@
 package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
 
+import android.content.Context
+import android.content.Intent
+import android.graphics.Color
+import android.net.LocalServerSocket
+import android.net.Uri
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.TextPaint
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +18,7 @@ import android.view.ViewGroup
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
 import com.example.apprealcasamoneda.databinding.FrOcStep2PhysicalPersonBinding
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,7 +50,45 @@ class Step2_PPC : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FrOcStep2PhysicalPersonBinding.inflate(inflater, container, false)
-        val transition = fragmentManager?.beginTransaction()
+
+        val redirectTerms = getString(R.string.oc_pp_step2_accept_terms)
+
+        val spannableString = SpannableString(redirectTerms)
+        val clickableSpan = object : ClickableSpan(){
+            override fun updateDrawState(ds: TextPaint) {
+                super.updateDrawState(ds)
+                ds.color = Color.BLUE
+                ds.isUnderlineText = false
+            }
+            override fun onClick(widget: View) {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+                startActivity(browserIntent)
+            }
+        }
+
+        val term_es = "términos y condiciones"
+        val term_en = "terms and conditions"
+        val acceptTerms:String
+        val currentLanguage = Locale.getDefault().language
+        if(currentLanguage == "en"){
+            val startIndex = redirectTerms.indexOf(term_en)
+            val endIndex = startIndex + term_en.length
+            spannableString.setSpan(clickableSpan,startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        }
+
+        binding.step2TxtTerms1.text = spannableString
+        binding.step2TxtTerms1.movementMethod = LinkMovementMethod.getInstance()
+
+        val navValue = arguments?.getString("key")
+        val navValue2 = arguments?.getString("key2")
+        val sharedPreferences = requireContext().getSharedPreferences("preference", Context.MODE_PRIVATE)
+        val language = sharedPreferences.getString("language","en")
+
+        when {
+            navValue == "representative" -> binding.txtNavStep2.text = resources.getString(R.string.oc_repre_step2_nav)
+            navValue2 == "physical" -> binding.txtNavStep2.text = resources.getString(R.string.oc_pp_step2_nav)
+            else -> binding.txtNavStep2.text = "Error"
+        }
 
         return binding.root
     }

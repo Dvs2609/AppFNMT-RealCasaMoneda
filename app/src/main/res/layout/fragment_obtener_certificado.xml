@@ -37,23 +37,24 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:text="@string/questionCertificates_ObtainCertificates_fr"
                     android:textColor="@color/black"
                     android:textSize="17sp" />
 
                 <ImageView
+                    android:id="@+id/iconHelp"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="45dp"
+                    android:layout_toStartOf="@+id/txtHelp"
                     android:layout_marginTop="4dp"
                     android:src="@drawable/question_svg"
                     app:tint="@color/icons_svg" />
 
                 <TextView
+                    android:id="@+id/txtHelp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -64,6 +65,7 @@
                     android:textSize="18sp" />
 
             </RelativeLayout>
+
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,6 +167,7 @@
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/iconGoToRepresentation"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"

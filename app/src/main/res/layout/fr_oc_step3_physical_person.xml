@@ -31,12 +31,13 @@
             android:textSize="22sp" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:id="@+id/oc_pp_cross_step3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="15dp"
-            android:src="@drawable/right_arrow_svg"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/cross_svg"
             app:tint="@color/icon_arrow_svg" />
 
         <TextView
@@ -381,7 +382,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="320dp"
+                            android:layout_width="290dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"

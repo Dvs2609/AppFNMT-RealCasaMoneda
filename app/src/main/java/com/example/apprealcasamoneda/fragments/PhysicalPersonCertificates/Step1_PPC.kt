@@ -1,5 +1,7 @@
 package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +12,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,6 +55,17 @@ class Step1_PPC : Fragment() {
 
         binding.step1IconDropdown3?.setOnClickListener{
             showHide(binding.RLSoftwareNecesaryDropdown, binding.step1IconDropdown3)
+        }
+
+        val navValue = arguments?.getString("key")
+        val navValue2 = arguments?.getString("key2")
+        val sharedPreferences = requireContext().getSharedPreferences("preference", Context.MODE_PRIVATE)
+        val language = sharedPreferences.getString("language","en")
+
+        when {
+            navValue == "representative" -> binding.txtNavStep1.text = resources.getString(R.string.oc_repre_step1_nav)
+            navValue2 == "physical" -> binding.txtNavStep1.text = resources.getString(R.string.oc_pp_step1_nav)
+            else -> binding.txtNavStep1.text = "Error"
         }
 
         return binding.root

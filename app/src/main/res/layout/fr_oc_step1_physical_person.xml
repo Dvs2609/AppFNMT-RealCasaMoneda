@@ -31,16 +31,17 @@
                 android:textSize="22sp" />
 
             <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:id="@+id/oc_pp_cross_step1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="15dp"
-                android:src="@drawable/right_arrow_svg"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/cross_svg"
                 app:tint="@color/icon_arrow_svg" />
 
             <TextView
-                android:id="@+id/txt"
+                android:id="@+id/txtNav_step1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/oc_init2_txt"
@@ -53,7 +54,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="35dp"
                 android:textColor="@color/black"
-                android:layout_below="@+id/txt"
+                android:layout_below="@+id/txtNav_step1"
                 android:textSize="18sp"
                 android:text="@string/oc_pp_step1_text"/>
 
@@ -373,7 +374,7 @@
                             android:id="@+id/RLSoftwareNecesaryDropdown"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:visibility="visible">
+                            android:visibility="gone">
                             <TextView
                                 android:id="@+id/txt_step1_text3_Dropdown"
                                 android:layout_width="match_parent"
@@ -410,7 +411,7 @@
                                     android:layout_marginStart="10dp"
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
-                                    android:layout_marginTop="7dp"
+                                    android:layout_marginTop="3dp"
                                     android:textSize="16sp"
                                     android:text="@string/oc_pp_step1_dropdown3_go_to_download_area"
                                     tools:ignore="RtlCompat" />
@@ -420,7 +421,7 @@
                                     android:id="@+id/iconStep1GoToDownloadArea"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
-                                    android:layout_marginTop="13dp"
+                                    android:layout_marginTop="8dp"
                                     android:layout_alignParentTop="true"
                                     android:layout_alignParentEnd="true"
                                     android:src="@drawable/right_arrow_svg"
@@ -432,8 +433,6 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
 
             </GridLayout>
 

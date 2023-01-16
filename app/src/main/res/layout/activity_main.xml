@@ -22,11 +22,31 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/swicht_es"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginLeft="100dp"
-            android:text="ES|EN" />
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="120dp"
+            android:text="ES " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:text="|" />
+
+        <TextView
+            android:id="@+id/swicht_en"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:textSize="17sp"
+            android:text=" EN" />
 
     </LinearLayout>
 

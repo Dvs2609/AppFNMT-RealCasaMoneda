@@ -22,16 +22,17 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:textSize="22sp" />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:id="@+id/oc_pp_cross"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:src="@drawable/right_arrow_svg"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/cross_svg"
         app:tint="@color/icon_arrow_svg" />
 
     <TextView
-        android:id="@+id/txt"
+        android:id="@+id/navOcPp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/oc_init_txt"
@@ -43,27 +44,28 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:layout_below="@+id/txt"
+        android:layout_below="@+id/navOcPp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/oc_pp_title_steps"
             android:textColor="@color/black"
             android:textSize="17sp" />
 
         <ImageView
+            android:id="@+id/iconHelp"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="40dp"
+            android:layout_toStartOf="@+id/txtHelp"
             android:layout_marginTop="4dp"
             android:src="@drawable/question_svg"
             app:tint="@color/icons_svg" />
 
         <TextView
+            android:id="@+id/txtHelp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
