@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="bottom_nav_bg">#FEDBD0</color>
-    <color name="nav_color_selected_item">#220006</color>
-    <color name="bottom_nav_item">#8C706D</color>
+    <color name="nav_color_selected_item">#00529E</color>
+    <color name="bottom_nav_item">#6A6A6A</color>
 
     <color name="icons_svg">#0C3D6A</color>
     <color name="icon_arrow_svg">#00529E</color>

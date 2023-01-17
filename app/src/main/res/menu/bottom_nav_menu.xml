@@ -5,7 +5,7 @@
     <item
         android:id="@+id/obtenerCertificado"
         android:icon="@drawable/email_svg"
-        android:title="Obtener Certificados" />
+        android:title="Obtener\n\nCertificados" />
     <item
         android:id="@+id/citaPrevia"
         android:icon="@drawable/calendar_day_svg"

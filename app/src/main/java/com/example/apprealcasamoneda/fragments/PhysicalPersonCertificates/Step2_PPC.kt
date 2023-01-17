@@ -68,12 +68,23 @@ class Step2_PPC : Fragment() {
 
         val term_es = "términos y condiciones"
         val term_en = "terms and conditions"
+
+
         val acceptTerms:String
         val currentLanguage = Locale.getDefault().language
-        if(currentLanguage == "en"){
+
+        if(currentLanguage == "es"){
+            val redirectTerms = getString(R.string.oc_pp_step2_accept_terms)
+            val startIndex = redirectTerms.indexOf(term_es)
+            val endIndex = startIndex + term_es.length
+            spannableString.setSpan(clickableSpan,startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        }else{
+            val redirectTerms = getString(R.string.oc_pp_step2_accept_terms)
             val startIndex = redirectTerms.indexOf(term_en)
             val endIndex = startIndex + term_en.length
             spannableString.setSpan(clickableSpan,startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
         }
 
         binding.step2TxtTerms1.text = spannableString

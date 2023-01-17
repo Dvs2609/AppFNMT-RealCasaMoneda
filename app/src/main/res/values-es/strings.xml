@@ -82,7 +82,7 @@
     <!-- ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
     <string name="oc_pp_step1">Paso 1:</string>
     <string name="oc_pp_step1_nav">Obtener certificados/Persona física/Configuración previa</string>
-    <string name="oc_repre_step1_nav">Obtener certificados/Representate/Configuración previa</string>
+    <string name="oc_repre_step1_nav">Obtener certificados/Representate/Administrador/Configuración previa</string>
     <string name="oc_pp_step1_text">Antes de comenzar con el proceso de solicitud de su Certificado, deberá asegurarse de que su equipo tiene instalado el software necesario para la generación de claves. \n\nPor favor, lea y siga atentamente las siguientes instrucciones para evitar posibles errores durante el proceso de obtención de su certificado:</string>
     <string name="oc_pp_step1_dropdown1_title">Recordatorios imprescindibles</string>
     <string name="oc_pp_step1_dropdown1_txtlist1">No formatear el ordenador, entre el proceso de solicitud y el de descarga del certificado.ado.</string>
@@ -105,13 +105,13 @@
     <!-- ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
     <string name="oc_pp_step2">Paso 2:</string>
     <string name="oc_pp_step2_nav">Obtener certificados/Persona física/Solicitar certificado</string>
-    <string name="oc_repre_step2_nav">Obtener certificados/Representante/Solicitar certificado</string>
+    <string name="oc_repre_step2_nav">Obtener certificados/Representante/Administrador/Solicitar certificado</string>
     <string name="oc_pp_step2_form_title">Aporte la siguiente información</string>
     <string name="oc_pp_step2_form_txt_dn1">Nº del documento de identificación</string>
     <string name="oc_pp_step2_form_txt_surname">Primer apellido</string>
     <string name="oc_pp_step2_form_txt_confirm_email">Confirma correo electrónico</string>
     <string name="oc_pp_step2_form_txt_email">Correo electrónico</string>
-    <string name="oc_pp_step2_accept_terms">Acepto los términos y coniciones</string>
+    <string name="oc_pp_step2_accept_terms">Acepto los <a href='https://www.google.com'>términos y condiciones</a></string>
     <string name="oc_pp_step2_send_petition">Enviar Petición</string>
     <!-- End ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
 
@@ -150,7 +150,7 @@
     <!-- ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
     <string name="oc_pp_step4">Paso 4:</string>
     <string name="oc_pp_step4_nav">Obtener certificados/Persona física/Descargar certificado</string>
-    <string name="oc_repre_step4_nav">Obtener certificados/Representante/Descargar certificado</string>
+    <string name="oc_repre_step4_nav">Obtener certificados/Representante/Administrador/Descargar certificado</string>
     <string name="oc_pp_step4_text">Para descargar el certificado debe usar el mismo ordenador y el mismo usuario con el que realizó la Solicitud e introducir los datos requeridos exactamente tal y como los introdujo entonces.\n\nPara descargar e instalar su certificado introduzca la siguiente información:</string>
     <string name="oc_pp_step4_txt_dni">Nº del documento de identificación</string>
     <string name="oc_pp_step4_txt_surname">Primer apellido</string>
@@ -185,7 +185,8 @@
     <!-- End ObteinCertificates - Representative - Fragment Strings-->
 
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
-    <string name="oc_repre_unq_admin_title">Obtener certificado de Representante para Administrados Único o Solidario</string>
+    <string name="oc_repre_uniq_admin_nav">Obtener Certificado/Representante/Administrador</string>
+    <string name="oc_repre_unq_admin_title">Obtener certificado de Representante para <b>Administrados Único o Solidario</b></string>
     <string name="oc_repre_unq_admin_dropdown1_title">¿Quién puede solicitar este certificado?</string>
     <string name="oc_repre_unq_admin_dropdown1_text">Este certificado puede ser obtenido por: sociedades anónimas (A) y limitadas (B) si el representante de la sociedad es administrador único o solidario, tenga inscritas sus facultades de Representación en el Registro Mercantil y éstas no hayan sido revocadas. En dicho Registro tiene que constar el NIF actual de la Entidad, el órgano de administración, el NIF o NIE correcto (9 caracteres) del administrador único o solidario, el cargo específico (administrador único o administrador solidario), fecha de nombramiento, duración del cargo (vigente o indefinida), inscripción y fecha de inscripción.\n\nIMPORTANTE: Este certificado NO puede ser solicitado por administradores mancomunados, apoderados, consejeros, presidentes, administradores conjuntos, liquidadores ni sociedades que tengan como administrador a otra sociedad, debiendo en estos casos solicitar un certificado de representación de persona jurídica.</string>
     <string name="oc_repre_unq_admin_dropdown1_go_to_help">Ayuda: ¿Qué certificado de representación debo solicitar?</string>

@@ -72,7 +72,7 @@
         android:background="@color/white"
 
         app:itemIconTint="@drawable/bottom_nav_colors"
-        app:itemTextColor="@drawable/bottom_nav_colors"
+        app:itemTextColor="@color/black"
 
         app:menu="@menu/bottom_nav_menu"
 

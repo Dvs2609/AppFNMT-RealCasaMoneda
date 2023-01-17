@@ -23,9 +23,9 @@
 
     <fragment
         android:id="@+id/localizadorOficinas"
-        android:name="com.example.apprealcasamoneda.fragments.LocalizadorOficinas"
+        android:name="com.example.apprealcasamoneda.fragments.OfficeLocator"
         android:label="fragment_localizador_oficinas"
-        tools:layout="@layout/fragment_localizador_oficinas" />
+        tools:layout="@layout/fr_office_locator" />
     <fragment
         android:id="@+id/descargarCertificados"
         android:name="com.example.apprealcasamoneda.fragments.DescargarCertificados"
@@ -55,4 +55,5 @@
         android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step3_PPC"
         android:label="fragment_step3_ppc"
         tools:layout="@layout/fr_oc_step3_physical_person"/>
+
 </navigation>

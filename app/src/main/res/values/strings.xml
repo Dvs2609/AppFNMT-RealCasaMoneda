@@ -80,7 +80,7 @@
     <!-- ObteinCertificates - Physical Person - STEP1 - Fragment Strings-->
     <string name="oc_pp_step1">Step 1:</string>
     <string name="oc_pp_step1_nav">Obtain certificates/Physical person/Preconfiguration</string>
-    <string name="oc_repre_step1_nav">Obtain certificates/Representative/Preconfiguration</string>
+    <string name="oc_repre_step1_nav">Obtain certificates/Representative/Administrator/Preconfiguration</string>
     <string name="oc_pp_step1_text">Before beginning the process of applying for your Certificate, you must ensure that your computer has the necessary software installed for key generation. \n\nPlease read and carefully follow the following instructions to avoid possible errors during the certificate obtaining process:</string>
     <string name="oc_pp_step1_dropdown1_title">Essential reminders</string>
     <string name="oc_pp_step1_dropdown1_txtlist1">Do not format the computer, between the application and download of the certificate process.</string>
@@ -103,7 +103,7 @@
     <!-- ObteinCertificates - Physical Person - STEP2 - Fragment Strings-->
     <string name="oc_pp_step2">Step 2:</string>
     <string name="oc_pp_step2_nav">Obtain certificates/Physical person/Apply for certificate</string>
-    <string name="oc_repre_step2_nav">Obtain certificates/Representative/Apply for certificate</string>
+    <string name="oc_repre_step2_nav">Obtain certificates/Representative/Administrator/Apply for certificate</string>
     <string name="oc_pp_step2_form_title">Provide the following information</string>
     <string name="oc_pp_step2_form_txt_dn1">ID document number</string>
     <string name="oc_pp_step2_form_txt_surname">First surname</string>
@@ -148,7 +148,7 @@
     <!-- ObteinCertificates - Physical Person - STEP4 - Fragment Strings-->
     <string name="oc_pp_step4">Step 4:</string>
     <string name="oc_pp_step4_nav">Obtain Certificates/Physical Person/Download Certificate</string>
-    <string name="oc_repre_step4_nav">Obtain Certificates/Representative/Download Certificate</string>
+    <string name="oc_repre_step4_nav">Obtain Certificates/Representative/Administrator/Download Certificate</string>
     <string name="oc_pp_step4_text">To download the certificate, you must use the same computer and the same user as the one used for the Request and enter the required information exactly as it was entered then. To download and install your certificate, enter the following information:</string>
     <string name="oc_pp_step4_txt_dni">ID document number</string>
     <string name="oc_pp_step4_txt_surname">First surname</string>
@@ -159,36 +159,37 @@
 
     <!-- ObteinCertificates - Representative - Fragment Strings-->
     <string name="txt_oc_repre_nav">Obtain Certificates/Representative</string>
-    <string name="oc_repre_title">Obtener certificado de <b>Representante</b></string>
-    <string name="oc_repre_grid_Uniq_Admin_title">Para administrador Único o Solidario</string>
-    <string name="oc_repre_grid_Jurid_Person_title">Para Persona Jurídica</string>
-    <string name="oc_repre_grid_NoJurid_Entity_title">Para entidad sin Personalidad Jurídica</string>
-    <string name="oc_repre_grid_Options_title">Otras opciones</string>
-    <string name="oc_repre_title1">Tipos de Certificado</string>
-    <string name="oc_repre_text">La FNMT-RCM emite tres tipos de certificados de representante que son cualificados de acuerdo al Reglamento (UE) Nº 910/2014, del Parlamento Europeo y del Consejo, de 23 de julio de 2014, relativo a la identificación electrónica y los servicios de confianza para las transacciones electrónicas en el mercado interior.\n\n<b>Importante:</b> Los representantes que sean administrador único/solidario de la entidad NO deben solicitar certificado de representante de persona jurídica. Deben solicitar el certificado de administrador único o solidario.</string>
-    <string name="oc_repre_go_to_help">Ayuda: ¿Que certificado de representación debo solicitar?</string>
-    <string name="oc_repre_dropdown1_title">Para Administrador Único o Solidario</string>
-    <string name="oc_repre_dropdown1_text">El Real Decreto Legislativo 1/2010, de 2 de julio, por el que se aprueba el texto refundido de la Ley de Sociedades de capital, establece, en su artículo 210, que \'la administración de la sociedad se podrá confiar a un administrador único, a varios administradores que actúen de forma solidario o de forma conjunta o a un consejo de administración\'.\n\nPor tanto, administrador único será, como su propio nombre indica, cuando existe un solo administrador. Por su parte, administrador solidario puede darse cuando, existiendo más de un administrador, estos no son mancomunados. Administrador solidario es aquél que puede tomar las decisiones por sí solo, sin necesitar la concurrencia de voluntad del resto de administradores. En consecuencia, administrador mancomunado será aquél que requiere el consentimiento o la firma del resto de administradores para poder ejercer sus funciones.\n\nEste certificado se expide a los administradores únicos o solidarios como representantes de las personas jurídicas para sus relaciones con las administraciones públicas y en la contratación de bienes o servicios propios o concernientes a su giro o tráfico ordinario.\n\nEste certificado puede ser obtenido por: sociedades anónimas (A) y limitadas (B) si el representante de la sociedad es administrador único o solidario inscrito correctamente en el Registro Mercantil.</string>
-    <string name="oc_repre_dropdown1_go_to_request_unq_admin">Solicitar Certificado de Representante para Administrador Único o Solidario</string>
-    <string name="oc_repre_dropdown2_text">Se expide a las personas físicas como representantes de las personas jurídicas para su uso en sus relaciones con las Administraciones públicas, entidades y organismos públicos, vinculados o dependientes de las mismas.</string>
-    <string name="oc_repre_dropdown2_go_to_request_juridic">Solicitar Certificado de Representante para Persona Jurídica</string>
-    <string name="oc_repre_dropdown3_text">Se expide a las personas físicas como representantes de las entidades sin personalidad jurídica en el ámbito tributario y otros previstos en la legislación vigente.\n\nEste certificado se expide a las personas físicas como representantes de las entidades sin personalidad Jurídicas para su uso en sus relaciones con aquellas Administraciones Públicas, Entidades y Organismos Públicos, vinculados o dependientes de las mismas.</string>
-    <string name="oc_repre_dropdown3_go_to_request_nojuridic">Solicitar Certificado de Representante para Entidad sin Personalidad Jurídica</string>
-    <string name="oc_repre_title2">¿Para qué sirve?</string>
-    <string name="oc_repre_dropdown3_title2_list1">Agilizar y abaratar gestiones con la Administración Pública.</string>
-    <string name="oc_repre_dropdown3_title2_list2">Aumento de la productividad y competitividad de la empresa.</string>
-    <string name="oc_repre_dropdown3_title2_list3">Simplificación y automatización de la gestión documental.</string>
-    <string name="oc_repre_dropdown3_title2_list4">Reducción de errores al eliminar precedimientos manuales.</string>
-    <string name="oc_repre_dropdown3_title2_list5">Favorecer la eliminación de documentos impresos.</string>
-    <string name="oc_repre_dropdown3_title2_list6">Dar cumplimiento a las obligaciones legales.</string>
+    <string name="oc_repre_title">Obtain <b>Representative</b> certificate</string>
+    <string name="oc_repre_grid_Uniq_Admin_title">For Single or Solidary Administrator</string>
+    <string name="oc_repre_grid_Jurid_Person_title">For Legal Entity</string>
+    <string name="oc_repre_grid_NoJurid_Entity_title">For Non-Legal Entity</string>
+    <string name="oc_repre_grid_Options_title">Other options</string>
+    <string name="oc_repre_title1">Types of Certificates</string>
+    <string name="oc_repre_text">FNMT-RCM issues three types of representative certificates that are qualified according to Regulation (EU) No 910/2014, of the European Parliament and of the Council, of July 23, 2014, on electronic identification and trust services for electronic transactions in the internal market.\n\n<b>Important:</b> Representatives who are the sole/solidary administrator of the entity should not request a representative certificate for legal entities. They should request the single or solidary administrator certificate.</string>
+    <string name="oc_repre_go_to_help">Help: What representative certificate should I request?</string>
+    <string name="oc_repre_dropdown1_title">For Single or Solidary Administrator</string>
+    <string name="oc_repre_dropdown1_text">Royal Legislative Decree 1/2010, of July 2nd, which approves the consolidated text of the Capital Companies Law, establishes in its article 210 that "the management of the company may be entrusted to a single administrator, several administrators acting jointly or solidarily, or a board of directors".\n\nTherefore, a single administrator is, as its name indicates, when there is only one administrator. On the other hand, a solidary administrator may occur when, there are more than one administrator, and they are not joint. A solidary administrator is one who can make decisions alone, without the need for the concurrence of will of the other administrators. Consequently, a joint administrator is one that requires the consent or signature of the other administrators to be able to exercise their functions.\n\nThis certificate is issued to single or solidary administrators as representatives of legal entities for their relationships with public administrations and in the contracting of goods or services that are their own or concerning their ordinary trade or traffic.\n\nThis certificate can be obtained by: anonymous (A) and limited (B) companies if the representative of the company is a properly registered single or solidary administrator in the Commercial Register.</string>
+    <string name="oc_repre_dropdown1_go_to_request_unq_admin">Request Representative Certificate for Single or Solidary Administrator</string>
+    <string name="oc_repre_dropdown2_text">It is issued to individuals as representatives of legal entities for use in their relationships with public administrations, public entities, and organizations linked or dependent on them.</string>
+    <string name="oc_repre_dropdown2_go_to_request_juridic">Request Representative Certificate for Legal Entity</string>
+    <string name="oc_repre_dropdown3_text">It is issued to individuals as representatives of non-legal entities in the tax field and others provided for in current legislation.\n\nThis certificate is issued to individuals as representatives of non-legal entities for use in their relationships with those Public Administrations, Entities and Public Organizations, linked or dependent on them.</string>
+    <string name="oc_repre_dropdown3_go_to_request_nojuridic">Request Representative Certificate for Non-Legal Entity</string>
+    <string name="oc_repre_title2">What is it for?</string>
+    <string name="oc_repre_dropdown3_title2_list1">Speeding up and reducing the cost of procedures with the Public Administration.</string>
+    <string name="oc_repre_dropdown3_title2_list2">Increasing the productivity and competitiveness of the company.</string>
+    <string name="oc_repre_dropdown3_title2_list3">Simplifying and automating document management.</string>
+    <string name="oc_repre_dropdown3_title2_list4">Reduction of errors by eliminating manual procedures.</string>
+    <string name="oc_repre_dropdown3_title2_list5">Promote the elimination of printed documents.</string>
+    <string name="oc_repre_dropdown3_title2_list6">Comply with legal obligations.</string>
     <!-- End ObteinCertificates - Representative - Fragment Strings-->
 
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
-    <string name="oc_repre_unq_admin_title">Obtener certificado de Representante para Administrados Único o Solidario</string>
-    <string name="oc_repre_unq_admin_dropdown1_title">¿Quién puede solicitar este certificado?</string>
-    <string name="oc_repre_unq_admin_dropdown1_text">Este certificado puede ser obtenido por: sociedades anónimas (A) y limitadas (B) si el representante de la sociedad es administrador único o solidario, tenga inscritas sus facultades de Representación en el Registro Mercantil y éstas no hayan sido revocadas. En dicho Registro tiene que constar el NIF actual de la Entidad, el órgano de administración, el NIF o NIE correcto (9 caracteres) del administrador único o solidario, el cargo específico (administrador único o administrador solidario), fecha de nombramiento, duración del cargo (vigente o indefinida), inscripción y fecha de inscripción.\n\nIMPORTANTE: Este certificado NO puede ser solicitado por administradores mancomunados, apoderados, consejeros, presidentes, administradores conjuntos, liquidadores ni sociedades que tengan como administrador a otra sociedad, debiendo en estos casos solicitar un certificado de representación de persona jurídica.</string>
-    <string name="oc_repre_unq_admin_dropdown1_go_to_help">Ayuda: ¿Qué certificado de representación debo solicitar?</string>
-    <string name="oc_repre_unq_admin_dropdown2_title">¿Cómo puedo obtener el certificado?</string>
-    <string name="oc_repre_unq_admin_dropdown2_text">El proceso de obtención del certificado de representante para administradores únicos y solidarios se divide en tres pasos, que deben realizarse en el orden señalado:\n\n1 - Configuración previa. Para solicitar el certificado es necesario instalar el software que se indica en este apartado.\n\n2 - Solicitud vía internet de su Certificado. Este certificado sólo puede pedirse de forma On Line con un certificado de Persona Física de la FNMT-RCM o DNI electrónico.\n\n3 - Descarga de su Certificado. Aproximadamente 1 hora después de que haya solicitado su certificado y haciendo uso de su Código de Solicitud, desde aquí podrá descargar e instalar su certificado, así como realizar el pago y realizar una copia de seguridad (RECOMENDADO).\n\nEl precio de este certificado es de 24 Euros, impuestos no incluidos, y se emite con un periodo de validez de 2 años.\n\nSólo se admite el pago con tarjetas de crédito/débito.\n\nSi lo desea puede adquirir un kit lector+tarjeta criptográfica para dotar a su certificado de mayor seguridad de uso y custodia. Cuando descargue su certificado podrá hacer una copia de seguridad e importarlo a la tarjeta. .</string>
+    <string name="oc_repre_uniq_admin_nav">Obtain Certificates/Representative/Administrator</string>
+    <string name="oc_repre_unq_admin_title">Obtain Representative Certificate for Single or Joint Administrators</string>
+    <string name="oc_repre_unq_admin_dropdown1_title">Who can request this certificate?</string>
+    <string name="oc_repre_unq_admin_dropdown1_text">This certificate can be obtained by anonymous (A) and limited (B) companies if the company\'s representative is a sole or joint administrator, they have the powers of Representation registered in the Mercantile Registry and these have not been revoked. In this Registry, the current NIF of the Entity, the administration body, the correct NIF or NIE (9 characters) of the sole or joint administrator, the specific position (sole administrator or joint administrator), date of appointment, duration of the position (current or indefinite), registration and date of registration must be recorded\n\nIMPORTANT: This certificate cannot be requested by joint administrators, proxies, counselors, presidents, joint administrators, liquidators or companies that have another company as an administrator, in which case a certificate of representation of a legal entity must be requested.</string>
+    <string name="oc_repre_unq_admin_dropdown1_go_to_help">Help: What representative certificate should I request?</string>
+    <string name="oc_repre_unq_admin_dropdown2_title">How can I obtain the certificate?</string>
+    <string name="oc_repre_unq_admin_dropdown2_text">The process of obtaining the certificate of representative for sole and joint administrators is divided into three steps, which must be carried out in the indicated order:\n\n1 - Pre-configuration. To request the certificate it is necessary to install the software indicated in this section\n\n2 - Online request for your Certificate. This certificate can only be requested On Line with a Physical Person Certificate from FNMT-RCM or Electronic ID.\n\n3 - Download your Certificate. Approximately 1 hour after you have requested your certificate and using your Request Code, you can download and install your certificate here, make the payment and make a backup (RECOMMENDED).\n\nThe price of this certificate is 24 Euros, taxes not included, and is issued with a validity period of 2 years.\n\nOnly payment with credit / debit cards is accepted.\n\nIf you wish, you can purchase a reader + cryptographic card to give your certificate greater security of use and custody. When you download your certificate you can make a backup and import it to the card.</string>
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
 </resources>
