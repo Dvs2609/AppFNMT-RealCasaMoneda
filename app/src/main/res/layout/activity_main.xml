@@ -6,16 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/header_Section"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/SplashScreen"
             android:layout_width="190dp"
             android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
             android:layout_marginLeft="15dp"
             android:src="@drawable/logo_realcasamoneda2"
@@ -26,29 +29,34 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:textSize="17sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="120dp"
+            android:textSize="14sp"
+            android:layout_marginRight="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:text="ES " />
 
         <TextView
+            android:id="@+id/divider"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:textSize="17sp"
-            android:layout_marginTop="10dp"
-            android:text="|" />
+            android:layout_toStartOf="@+id/swicht_es"
+            android:text="|"
+            android:layout_marginRight="5dp"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/swicht_en"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/divider"
+            android:layout_marginRight="4dp"
             android:gravity="center_vertical"
-            android:layout_marginTop="10dp"
-            android:textSize="17sp"
-            android:text=" EN" />
+            android:text=" EN"
+            android:textSize="14sp" />
 
-    </LinearLayout>
+    </RelativeLayout>
+
 
     <fragment
         android:id="@+id/mainContainer"
@@ -58,24 +66,22 @@
         app:defaultNavHost='true'
         app:layout_constraintBottom_toTopOf="@+id/BottomNavigationBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_Section"
-        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/nav_graph" />
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/BottomNavigationBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="65dp"
         android:background="@color/white"
 
         app:itemIconTint="@drawable/bottom_nav_colors"
         app:itemTextColor="@color/black"
-
         app:menu="@menu/bottom_nav_menu"
-
+        style="@style/BottomNavigationView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

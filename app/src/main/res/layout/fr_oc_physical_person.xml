@@ -19,10 +19,10 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:layout_height="wrap_content"
         android:text="@string/oc_pp_title"
         android:textColor="@color/black"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/oc_pp_cross"
+        android:id="@+id/oc_pp_crossBack"
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:layout_alignParentTop="true"
@@ -37,7 +37,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
         android:layout_height="wrap_content"
         android:layout_below="@+id/oc_init_txt"
         android:text="@string/oc_pp_nav"
-        android:textSize="13sp" />
+        android:textSize="12sp" />
 
     <RelativeLayout
         android:id="@+id/RLselectStep"
@@ -52,16 +52,16 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:layout_height="wrap_content"
             android:text="@string/oc_pp_title_steps"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:textSize="16sp" />
 
         <ImageView
             android:id="@+id/iconHelp"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
             android:layout_alignParentTop="true"
             android:layout_toStartOf="@+id/txtHelp"
             android:layout_marginTop="4dp"
-            android:src="@drawable/question_svg"
+            android:src="@drawable/icon_question_svg"
             app:tint="@color/icons_svg" />
 
         <TextView
@@ -73,7 +73,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:layout_alignParentTop="true"
             android:text="@string/helptxt_ObtainCertificates_fr"
             android:textColor="@color/icons_svg"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
     </RelativeLayout>
 
@@ -111,9 +111,9 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:textStyle="bold"
                     android:textColor="@color/icons_svg"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="25dp"
-                    android:textSize="30sp"/>
+                    android:textSize="25sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -121,10 +121,10 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_centerVertical="true"
                     android:text="@string/oc_pp_step1_title"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="32dp"
                     android:layout_alignParentLeft="true"
                     android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:textSize="16sp"/>
 
                 <ImageView
                     android:id="@+id/GoToStep1"
@@ -166,9 +166,9 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:textStyle="bold"
                     android:textColor="@color/icons_svg"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="25dp"
-                    android:textSize="30sp"/>
+                    android:textSize="25sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -176,10 +176,10 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_centerVertical="true"
                     android:text="@string/oc_pp_step2_title"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="32dp"
                     android:layout_alignParentLeft="true"
                     android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:textSize="16sp"/>
 
                 <ImageView
                     android:id="@+id/GoToStep2"
@@ -221,9 +221,9 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:textStyle="bold"
                     android:textColor="@color/icons_svg"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginStart="25dp"
-                    android:textSize="30sp"/>
+                    android:textSize="25sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -231,10 +231,10 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_centerVertical="true"
                     android:text="@string/oc_pp_step3_title"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="32dp"
                     android:layout_alignParentLeft="true"
                     android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:textSize="16sp"/>
 
                 <ImageView
                     android:id="@+id/GoToStep3"
@@ -277,9 +277,9 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:textStyle="bold"
                     android:textColor="@color/icons_svg"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginTop="7dp"
+                    android:layout_marginTop="10sp"
                     android:layout_marginStart="25dp"
-                    android:textSize="30sp"/>
+                    android:textSize="25sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -287,10 +287,10 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                     android:layout_centerVertical="true"
                     android:text="@string/oc_pp_step4_title"
                     android:layout_marginLeft="70dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="32dp"
                     android:layout_alignParentLeft="true"
                     android:textColor="@color/black"
-                    android:textSize="18sp"/>
+                    android:textSize="16sp"/>
 
                 <ImageView
                     android:id="@+id/GoToStep4"
@@ -320,7 +320,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:text="@string/physicalPerson_cardTxt_ObtainCertificates_fr"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -328,7 +328,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
             android:layout_marginTop="15dp"
             android:text="@string/oc_pp_desc_txt"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="14sp" />
 
         <GridLayout
             android:layout_width="match_parent"
@@ -365,11 +365,11 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="300dp"
+                            android:layout_width="270dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_dropdown1_title"
@@ -399,7 +399,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown1_text"/>
 
                     </RelativeLayout>
@@ -436,11 +436,11 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="300dp"
+                            android:layout_width="270dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_dropdown2_title"
@@ -470,7 +470,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown2_text"/>
 
                         <TextView
@@ -483,7 +483,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown2_txtlist1"/>
 
                         <TextView
@@ -496,7 +496,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown2_txtlist2"/>
 
 
@@ -518,11 +518,11 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
                                 android:textColor="@color/icons_svg"
-                                android:textSize="16sp"
+                                android:textSize="14sp"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView
-                                android:id="@+id/iconRepresentateGoToCertificates"
+                                android:id="@+id/iconRepresentateGoToDigitalCertificates"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="5dp"
@@ -571,7 +571,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_dropdown3_title"
@@ -600,7 +600,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_height="match_parent"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_text1"/>
 
                         <TextView
@@ -612,7 +612,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list1"/>
 
                         <TextView
@@ -624,7 +624,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_1_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list2"/>
 
                         <TextView
@@ -636,7 +636,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_2_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list3"/>
 
                         <TextView
@@ -648,7 +648,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_3_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list4"/>
 
                         <TextView
@@ -660,7 +660,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_4_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list5"/>
 
                         <TextView
@@ -672,7 +672,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_5_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list6"/>
 
                         <TextView
@@ -684,7 +684,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_6_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list7"/>
 
                         <TextView
@@ -696,7 +696,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_7_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list8"/>
 
                         <TextView
@@ -708,7 +708,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_8_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_list9"/>
 
                         <TextView
@@ -718,7 +718,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_below="@+id/txtQs3_9_Dropdown"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown3_text2"/>
 
                     </RelativeLayout>
@@ -755,11 +755,11 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="300dp"
+                            android:layout_width="270dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_dropdown4_title"
@@ -789,7 +789,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_dropdown4_text"/>
 
 
@@ -802,8 +802,8 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                             android:layout_marginTop="15dp">
 
                             <TextView
-                                android:layout_width="280dp"
-                                android:layout_height="50dp"
+                                android:layout_width="270dp"
+                                android:layout_height="40dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="3dp"
                                 android:backgroundTint="#EFEFF0"
@@ -811,7 +811,7 @@ tools:context=".fragments.PhysicalPersonCertificates.PhysicalPerson">
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
                                 android:textColor="@color/icons_svg"
-                                android:textSize="16sp"
+                                android:textSize="14sp"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView

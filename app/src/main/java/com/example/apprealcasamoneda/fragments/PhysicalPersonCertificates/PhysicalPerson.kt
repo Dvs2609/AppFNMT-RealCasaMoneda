@@ -7,17 +7,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.RelativeLayout
-import android.widget.TextView
+import androidx.activity.OnBackPressedCallback
+import androidx.activity.OnBackPressedDispatcher
+import androidx.activity.addCallback
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.fragment.findNavController
 import com.example.apprealcasamoneda.R
 import com.example.apprealcasamoneda.databinding.FrOcPhysicalPersonBinding
+import com.example.apprealcasamoneda.fragments.BaseFragment
+import com.example.apprealcasamoneda.fragments.PageNotAvailable
+import com.example.apprealcasamoneda.fragments.Steps.DownloadCertificate_Step
+import com.example.apprealcasamoneda.fragments.Steps.PreConfiguration_Step
+import com.example.apprealcasamoneda.fragments.Steps.ProveIdentity_Step
+import com.example.apprealcasamoneda.fragments.Steps.RequestCertificate_Step
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,12 +34,19 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PhysicalPerson.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PhysicalPerson : Fragment() {
+class PhysicalPerson : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var navController: NavController
     private lateinit var binding: FrOcPhysicalPersonBinding
+
+    private var qst1Open = false
+    private var qst2Open = false
+    private var qst3Open = false
+    private var qst4Open = false
+
+    private lateinit var callback: OnBackPressedCallback
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +54,7 @@ class PhysicalPerson : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -67,93 +79,103 @@ class PhysicalPerson : Fragment() {
 
 
         binding.GoToStep1.setOnClickListener{
-            val step1Ppc = Step1_PPC()
+            val preconfigurationStep = PreConfiguration_Step()
             val bundle = Bundle()
             bundle.putString("key2", "physical")
-            step1Ppc.arguments = bundle
-            transition?.replace(R.id.mainContainer, step1Ppc)
+            preconfigurationStep.arguments = bundle
+            transition?.replace(R.id.mainContainer, preconfigurationStep)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
 
         }
 
         binding.GoToStep2.setOnClickListener{
-            val step2Ppc = Step2_PPC()
+            val requestcertificateStep = RequestCertificate_Step()
             val bundle = Bundle()
             bundle.putString("key2", "physical")
-            step2Ppc.arguments = bundle
-            transition?.replace(R.id.mainContainer, step2Ppc)
+            requestcertificateStep.arguments = bundle
+            transition?.replace(R.id.mainContainer, requestcertificateStep)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
         }
 
         binding.GoToStep3.setOnClickListener{
-            val step3Ppc = Step3_PPC()
+            val proveidentityStep = ProveIdentity_Step()
             val bundle = Bundle()
             bundle.putString("key2", "physical")
-            step3Ppc.arguments = bundle
-            transition?.replace(R.id.mainContainer, step3Ppc)
+            proveidentityStep.arguments = bundle
+            transition?.replace(R.id.mainContainer, proveidentityStep)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
         }
 
         binding.GoToStep4.setOnClickListener{
-            val step4Ppc = Step4_PPC()
+            val downloadcertificateStep = DownloadCertificate_Step()
             val bundle = Bundle()
             bundle.putString("key2", "physical")
-            step4Ppc.arguments = bundle
-            transition?.replace(R.id.mainContainer, step4Ppc)
+            downloadcertificateStep.arguments = bundle
+            transition?.replace(R.id.mainContainer, downloadcertificateStep)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
         }
 
 
+
+        val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
+            if (qst1Open) showHide(binding.RLQst1Dropdown, binding.iconQst1Dropdown)
+            if (qst2Open) showHide(binding.RLQs2Dropdown, binding.iconQs2Dropdown)
+            if (qst3Open) showHide(binding.RLQst3Dropdown, binding.iconQst3Dropdown)
+            if (qst4Open) showHide(binding.RLQs4Dropdown, binding.iconQs4Dropdown)
+        }
+
         binding.iconQst1Dropdown?.setOnClickListener{
             showHide(binding.RLQst1Dropdown, binding.iconQst1Dropdown)
+            qst1Open = !qst1Open
         }
+
 
         binding.iconQs2Dropdown?.setOnClickListener{
             showHide(binding.RLQs2Dropdown, binding.iconQs2Dropdown)
+            qst2Open = !qst2Open
         }
 
         binding.iconQst3Dropdown?.setOnClickListener{
             showHide(binding.RLQst3Dropdown, binding.iconQst3Dropdown)
+            qst3Open = !qst3Open
         }
 
         binding.iconQs4Dropdown?.setOnClickListener{
             showHide(binding.RLQs4Dropdown, binding.iconQs4Dropdown)
+            qst3Open = !qst3Open
         }
 
-        binding.ocPpCross.setOnClickListener{
-            navController.navigateUp()
+        binding.ocPpCrossBack.setOnClickListener{
+            val fragmentManager = requireFragmentManager()
+            fragmentManager.popBackStack()
         }
+
+        val notAvailablePage = View.OnClickListener {
+            val pageNotAvailable = PageNotAvailable()
+            val transition = fragmentManager?.beginTransaction()
+            transition?.replace(R.id.mainContainer, pageNotAvailable)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+        binding.iconRepresentateGoToDigitalCertificates.setOnClickListener(notAvailablePage)
+        binding.iconRepresentateGoToServices.setOnClickListener(notAvailablePage)
+
         return binding.root
 
-
     }
 
-
-    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
-        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
-        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
-
-        if (relativeLayout != null) {
-            if (relativeLayout.visibility == View.GONE ){
-
-                relativeLayout.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.VISIBLE
-                imageView.rotation = 90f
-
-
-            }else{
-
-                //textView.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.GONE
-                imageView.rotation = 0f
-            }
-        }
+    override fun onDestroy() {
+        super.onDestroy()
     }
-
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -173,4 +195,5 @@ class PhysicalPerson : Fragment() {
                 }
             }
     }
+
 }

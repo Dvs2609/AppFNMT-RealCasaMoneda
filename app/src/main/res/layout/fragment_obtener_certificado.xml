@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/welcomeText_ObtainCertificates_fr"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -37,20 +37,20 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="280dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:text="@string/questionCertificates_ObtainCertificates_fr"
                     android:textColor="@color/black"
-                    android:textSize="17sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/iconHelp"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
                     android:layout_alignParentTop="true"
                     android:layout_toStartOf="@+id/txtHelp"
                     android:layout_marginTop="4dp"
-                    android:src="@drawable/question_svg"
+                    android:src="@drawable/icon_question_svg"
                     app:tint="@color/icons_svg" />
 
                 <TextView
@@ -62,7 +62,7 @@
                     android:layout_alignParentTop="true"
                     android:text="@string/helptxt_ObtainCertificates_fr"
                     android:textColor="@color/icons_svg"
-                    android:textSize="18sp" />
+                    android:textSize="14sp" />
 
             </RelativeLayout>
 
@@ -103,10 +103,11 @@
                                 android:layout_height="33dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/person_svg"
+                                android:src="@drawable/icon_person_svg"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/GoToPhysicalPersonIcon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -126,7 +127,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/physicalPerson_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -163,7 +164,7 @@
                                 android:layout_height="33dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/employe_src"
+                                android:src="@drawable/icon_employe_src"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
@@ -186,7 +187,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/representation_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -223,10 +224,11 @@
                                 android:layout_height="30dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/institution_svg"
+                                android:src="@drawable/icon_institution_svg"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/public_employees_icon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -245,7 +247,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/publicEmployees_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -282,10 +284,11 @@
                                 android:layout_height="30dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/suitcase_svg"
+                                android:src="@drawable/icon_suitcase_svg"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/repre_centralized_icon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -304,7 +307,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/centralizedSignatureRepresentation_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -341,10 +344,11 @@
                                 android:layout_height="33dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/person_svg"
+                                android:src="@drawable/icon_user_tag_svg"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/pseudonym_icon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -363,7 +367,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/pseudonymsPublicEmployees_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -401,10 +405,11 @@
                                 android:layout_height="30dp"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:src="@drawable/person_svg"
+                                android:src="@drawable/icon_stamp_svg"
                                 app:tint="@color/icons_svg" />
 
                             <ImageView
+                                android:id="@+id/other_cases_icon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_alignParentTop="true"
@@ -423,7 +428,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:text="@string/otherCases_cardTxt_ObtainCertificates_fr"
                                 android:textColor="@color/black"
-                                android:textSize="18sp" />
+                                android:textSize="17sp" />
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -448,14 +453,14 @@
                 android:text="@string/certificatesTitle_ObtainCertificates_fr"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:text="@string/textGetCertificatesFrg_Description_ObtainCertificates_fr"/>
 
             <GridLayout
@@ -497,7 +502,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/physicalPerson_cardTxt_ObtainCertificates_fr"
@@ -525,7 +530,7 @@
                                 android:visibility="visible"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/physicalPersonDropDowntxt_ObtainCertificates_fr"/>
 
                             <RelativeLayout
@@ -545,7 +550,7 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:layout_marginTop="7dp"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:text="@string/redirectText_PhyPerson_ObtainCertificates_fr"
                                     tools:ignore="RtlCompat" />
 
@@ -596,7 +601,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/representation_cardTxt_ObtainCertificates_fr"
@@ -625,7 +630,7 @@
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/icons_svg"
                                     android:textStyle="bold"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title1_ObtainCertificates_fr"/>
 
                                 <TextView
@@ -636,7 +641,7 @@
                                     android:layout_below="@+id/title1Representation"
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title1Descriptiontxt_ObtainCertificates_fr"/>
 
                             <RelativeLayout
@@ -648,8 +653,8 @@
                                 android:layout_marginTop="15dp">
 
                                 <TextView
-                                    android:layout_width="280dp"
-                                    android:layout_height="50dp"
+                                    android:layout_width="260dp"
+                                    android:layout_height="40dp"
                                     android:layout_marginStart="10dp"
                                     android:layout_marginTop="3dp"
                                     android:backgroundTint="#EFEFF0"
@@ -657,7 +662,7 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:textColor="@color/icons_svg"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     tools:ignore="RtlCompat" />
 
                                 <ImageView
@@ -680,7 +685,7 @@
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/icons_svg"
                                     android:textStyle="bold"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title2_ObtainCertificates_fr"/>
 
                                 <TextView
@@ -691,7 +696,7 @@
                                     android:layout_below="@+id/title2Representation"
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title2Descriptiontxt_ObtainCertificates_fr"/>
                                 <RelativeLayout
                                     android:id="@+id/rectangularLYRepresentation2"
@@ -702,8 +707,8 @@
                                     android:layout_marginTop="15dp">
 
                                     <TextView
-                                        android:layout_width="280dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="260dp"
+                                        android:layout_height="40dp"
                                         android:layout_marginStart="10dp"
                                         android:layout_marginTop="3dp"
                                         android:backgroundTint="#EFEFF0"
@@ -711,7 +716,7 @@
                                         android:textAlignment="viewStart"
                                         android:textAllCaps="false"
                                         android:textColor="@color/icons_svg"
-                                        android:textSize="16sp"
+                                        android:textSize="14sp"
                                         tools:ignore="RtlCompat" />
 
                                     <ImageView
@@ -735,7 +740,7 @@
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/icons_svg"
                                     android:textStyle="bold"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title3_ObtainCertificates_fr"/>
 
                                 <TextView
@@ -746,7 +751,7 @@
                                     android:layout_below="@+id/title3Representation"
                                     android:layout_marginTop="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:text="@string/representation_dropdown_title3Descriptiontxt_ObtainCertificates_fr"/>
                                 <RelativeLayout
                                     android:id="@+id/rectangularLYRepresentation3"
@@ -757,8 +762,8 @@
                                     android:layout_marginTop="15dp">
 
                                     <TextView
-                                        android:layout_width="280dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="260dp"
+                                        android:layout_height="40dp"
                                         android:layout_marginStart="10dp"
                                         android:layout_marginTop="3dp"
                                         android:backgroundTint="#EFEFF0"
@@ -766,7 +771,7 @@
                                         android:textAlignment="viewStart"
                                         android:textAllCaps="false"
                                         android:textColor="@color/icons_svg"
-                                        android:textSize="16sp"
+                                        android:textSize="14sp"
                                         tools:ignore="RtlCompat" />
 
                                     <ImageView
@@ -818,7 +823,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/publicAdministration_cardtxt_ObtainCertificates_fr"
@@ -846,7 +851,7 @@
                                 android:visibility="visible"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/PublicAministration_dropDown_Description_ObtainCertificates_fr"/>
 
                             <RelativeLayout
@@ -866,7 +871,7 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:layout_marginTop="7dp"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:text="@string/PublicAministration_dropDown_RedirectTxt_ObtainCertificates_fr"
                                     tools:ignore="RtlCompat" />
 
@@ -917,7 +922,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/componentCertificates_cardTxt_ObtainCertificates_fr"
@@ -945,7 +950,7 @@
                                 android:visibility="visible"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/ComponentCertificates_dropDown_Description_ObtainCertificates_fr"/>
 
                             <RelativeLayout
@@ -965,7 +970,7 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:layout_marginTop="7dp"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:text="@string/ComponentCertificates_dropDown_RedirectTxt_ObtainCertificates_fr"
                                     tools:ignore="RtlCompat" />
 
@@ -1016,7 +1021,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="20sp"
+                                android:textSize="14sp"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/technicalSupport_cardTxt_ObteinCertificates_fr"
                                 app:tint="@color/icons_svg"/>

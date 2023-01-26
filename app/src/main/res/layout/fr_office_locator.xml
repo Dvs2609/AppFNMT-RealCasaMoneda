@@ -6,21 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".fragments.OfficeLocator">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:id="@+id/RLofficeLocator"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <TextView
             android:id="@+id/of_loc_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
+            android:textSize="24sp"
             android:textColor="@color/black"
             android:text="Localizador de Oficinas" />
 
+        <ImageView
+            android:id="@+id/office_locator_closeCross"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/cross_svg"
+            app:tint="@color/icon_arrow_svg" />
 
         <RelativeLayout
             android:id="@+id/of_loc_filter_RL"
@@ -35,19 +45,20 @@
                 android:layout_height="wrap_content"
                 android:text="Dirección"
                 android:layout_marginBottom="8dp"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
             <RelativeLayout
                 android:id="@+id/oc_loc_fil_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/oc_loc_fil_search_txt"
-                android:background="@drawable/corners_relative_layoout">
+                android:background="@drawable/shape_corners_relative_layout">
 
                 <EditText
                     android:layout_width="325dp"
                     android:layout_height="50dp"
                     android:background="#EFEFF0"
+                    android:textSize="16sp"
                     android:layout_marginStart="15dp"/>
 
             </RelativeLayout>
@@ -57,14 +68,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tipos de Oficinas"
+                android:layout_marginTop="15dp"
                 android:layout_below="@+id/oc_loc_fil_search"
                 android:layout_marginBottom="8dp"
-                android:textSize="16sp"/>
+                android:textSize="14sp"/>
 
             <RelativeLayout
                 android:id="@+id/filter_type1"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_below="@+id/oc_loc_fil_types"
                 android:background="@drawable/filter_grey_shape_of_loc">
 
@@ -72,27 +84,29 @@
                     android:id="@+id/icon_type1"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/check_svg"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/icon_check_svg"
                     app:tint="@color/icon_arrow_svg" />
+
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_toRightOf="@+id/icon_type1"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/icon_type1"
+                    android:text="Personas Físicas"
                     android:textColor="@color/black"
-                    android:text="Personas Físicas"/>
+                    android:textSize="16sp" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/filter_type2"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/filter_type1"
                 android:background="@drawable/filter_grey_shape_of_loc">
@@ -105,7 +119,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/check_svg"
+                    android:src="@drawable/icon_check_svg"
                     app:tint="@color/icon_arrow_svg" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -115,13 +129,14 @@
                     android:textColor="@color/black"
                     android:layout_marginEnd="20dp"
                     android:layout_marginStart="10dp"
+                    android:textSize="16sp"
                     android:text="Representante"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/filter_type3"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/filter_type2"
                 android:background="@drawable/filter_grey_shape_of_loc">
@@ -134,7 +149,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/check_svg"
+                    android:src="@drawable/icon_check_svg"
                     app:tint="@color/icon_arrow_svg" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -143,6 +158,7 @@
                     android:layout_marginTop="4dp"
                     android:textColor="@color/black"
                     android:layout_marginEnd="20dp"
+                    android:textSize="16sp"
                     android:layout_marginStart="10dp"
                     android:text="Personas físicas y representante"/>
             </RelativeLayout>
@@ -150,7 +166,7 @@
             <RelativeLayout
                 android:id="@+id/filter_type4"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_below="@+id/filter_type3"
                 android:background="@drawable/filter_grey_shape_of_loc">
@@ -163,7 +179,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true"
-                    android:src="@drawable/check_svg"
+                    android:src="@drawable/icon_check_svg"
                     app:tint="@color/icon_arrow_svg" />
                 <TextView
                     android:layout_width="wrap_content"
@@ -173,6 +189,7 @@
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/black"
                     android:layout_marginStart="10dp"
+                    android:textSize="16sp"
                     android:text="CNMV"/>
             </RelativeLayout>
 
@@ -194,7 +211,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
-                android:src="@drawable/download__svg"
+                android:src="@drawable/icon_download_svg"
                 app:tint="@color/white" />
 
             <TextView
@@ -206,7 +223,7 @@
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:layout_marginTop="2dp"
-                android:textSize="19sp"
+                android:textSize="16sp"
                 android:text="Buscar Oficinas"
                 tools:ignore="RtlCompat" />
 

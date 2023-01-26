@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="@string/oc_pp_step3"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
         <TextView
             android:id="@+id/oc_init2_txt"
             android:layout_width="wrap_content"
@@ -28,10 +28,10 @@
             android:text="@string/oc_pp_step3_title"
             android:textColor="@color/black"
             android:layout_below="@+id/oc_init_txt"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/oc_pp_cross_step3"
+            android:id="@+id/prove_identity_step_backCross"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_alignParentTop="true"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/oc_init2_txt"
             android:text="@string/oc_pp_step3_nav"
-            android:textSize="13sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/oc_Step3_notice"
@@ -56,7 +56,7 @@
             android:textColor="#6A6A6A"
             android:lineSpacingExtra="4dp"
             android:layout_below="@+id/txt"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:text="@string/oc_pp_step2_notice"/>
 
         <TextView
@@ -67,7 +67,7 @@
             android:lineSpacingExtra="4dp"
             android:textColor="@color/black"
             android:layout_below="@+id/oc_Step3_notice"
-            android:textSize="17sp"
+            android:textSize="14sp"
             android:text="@string/oc_pp_step3_text"/>
 
         <RelativeLayout
@@ -76,18 +76,19 @@
             android:layout_height="match_parent"
             android:layout_marginTop="30dp"
             android:layout_below="@+id/oc_Step3_textDesc"
-            android:background="@drawable/corners_relative_layoout">
+            android:background="@drawable/shape_corners_relative_layout">
 
             <TextView
-                android:layout_width="280dp"
+                android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="@color/icons_svg"
                 android:text="@string/oc_pp_step3_go_to_more_info"
                 android:layout_marginStart="15dp"/>
 
             <ImageView
+                android:id="@+id/PI_go_to_more_info"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="19dp"
@@ -105,18 +106,19 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="30dp"
             android:layout_below="@+id/step3_goTo1"
-            android:background="@drawable/corners_relative_layoout">
+            android:background="@drawable/shape_corners_relative_layout">
 
             <TextView
-                android:layout_width="280dp"
-                android:layout_height="55dp"
-                android:textSize="16sp"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:textSize="14sp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/icons_svg"
                 android:text="@string/oc_pp_step3_go_to_qst_request_certf"
                 android:layout_marginStart="15dp"/>
 
             <ImageView
+                android:id="@+id/PI_go_to_Qst1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="19dp"
@@ -135,7 +137,7 @@
             android:textColor="#6A6A6A"
             android:lineSpacingExtra="4dp"
             android:layout_below="@+id/step3_goTo2"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:text="@string/oc_pp_step3_note"/>
 
 
@@ -175,11 +177,11 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="270dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_step3_dropdown1_title"
@@ -208,7 +210,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="15dp"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_text1"/>
 
                         <TextView
@@ -219,7 +221,7 @@
                             android:textStyle="bold"
                             android:layout_below="@+id/txt_step3_desc_Dropdown"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_titlelist1"/>
 
                         <TextView
@@ -231,7 +233,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title1_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list1"/>
 
                         <TextView
@@ -243,7 +245,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t1_text1_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list2"/>
 
                         <TextView
@@ -254,7 +256,7 @@
                             android:textStyle="bold"
                             android:layout_below="@+id/txt_step3_t1_text2_Dropdown"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_titlelist2"/>
 
                         <TextView
@@ -266,7 +268,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title2_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list3"/>
 
                         <TextView
@@ -278,7 +280,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text1_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list4"/>
 
                         <TextView
@@ -290,7 +292,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text2_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list5"/>
 
                         <TextView
@@ -302,7 +304,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t2_text3_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list6"/>
 
                         <TextView
@@ -313,7 +315,7 @@
                             android:textStyle="bold"
                             android:layout_below="@+id/txt_step3_t2_text4_Dropdown"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_ltitleist3"/>
 
                         <TextView
@@ -325,7 +327,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_title3_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list7"/>
                         <TextView
                             android:id="@+id/txt_step3_t3_text2_Dropdown"
@@ -336,7 +338,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t3_text1_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list8"/>
                         <TextView
                             android:id="@+id/txt_step3_t3_text3_Dropdown"
@@ -347,7 +349,7 @@
                             android:drawablePadding="10dp"
                             app:drawableLeftCompat="@drawable/dot_svg"
                             android:layout_below="@+id/txt_step3_t3_text2_Dropdown"
-                            android:textSize="18sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown1_list9"/>
                     </RelativeLayout>
 
@@ -382,11 +384,11 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:layout_width="290dp"
+                            android:layout_width="270dp"
                             android:layout_height="match_parent"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="19sp"
+                            android:textSize="16sp"
                             android:textStyle="bold"
                             android:textColor="@color/icons_svg"
                             android:text="@string/oc_pp_step3_dropdown2_title"
@@ -417,7 +419,7 @@
                             android:layout_marginTop="25dp"
                             android:textColor="@color/black"
                             android:lineSpacingExtra="4dp"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:text="@string/oc_pp_step3_dropdown2_note1"/>
 
                         <TextView
@@ -427,7 +429,7 @@
                             android:layout_marginTop="15dp"
                             android:layout_below="@+id/step3_Dropdown2_note1"
                             android:textColor="@color/black"
-                            android:textSize="17sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown2_text1"/>
 
                         <RelativeLayout
@@ -440,19 +442,19 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="40dp"
+                                android:layout_height="30dp"
                                 android:backgroundTint="#EFEFF0"
                                 android:textColor="@color/icons_svg"
-                                android:layout_marginStart="13dp"
+                                android:layout_marginStart="5dp"
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
-                                android:layout_marginTop="10dp"
-                                android:textSize="17sp"
+                                android:layout_marginTop="7dp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step3_dropdown2_go_to_localizer"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView
-                                android:id="@+id/iconStep1GoToLocalizer"
+                                android:id="@+id/iconPIGoToLocalizer"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="13dp"
@@ -471,17 +473,50 @@
                             android:textColor="@color/black"
                             android:layout_below="@+id/rectangularLY_Dropdown2"
                             android:lineSpacingExtra="4dp"
-                            android:textSize="15sp"
+                            android:textSize="12sp"
                             android:text="@string/oc_pp_step3_dropdown2_note2"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rectangularLY_3_Dropdown2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/step3_Dropdown2_note2"
+                            android:background="@drawable/rectangular_shape"
+                            android:layout_marginTop="15dp">
+
+                            <TextView
+                                android:layout_width="250dp"
+                                android:layout_height="35dp"
+                                android:backgroundTint="#EFEFF0"
+                                android:textColor="@color/icons_svg"
+                                android:layout_marginStart="13dp"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="false"
+                                android:layout_marginTop="0dp"
+                                android:textSize="14sp"
+                                android:text="Oficinas de Acreditación de la Seguridad Social"
+                                tools:ignore="RtlCompat" />
+
+                            <ImageView
+                                android:id="@+id/iconStep3GoToAcreditOffices"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/right_arrow_svg"
+                                app:tint="@color/icon_arrow_svg" />
+
+                        </RelativeLayout>
 
                         <TextView
                             android:id="@+id/txt_step3_text3_Dropdown2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="15dp"
-                            android:layout_below="@+id/step3_Dropdown2_note2"
+                            android:layout_below="@+id/rectangularLY_3_Dropdown2"
                             android:textColor="@color/black"
-                            android:textSize="17sp"
+                            android:textSize="14sp"
                             android:text="@string/oc_pp_step3_dropdown2_text2"/>
 
                         <RelativeLayout
@@ -494,19 +529,19 @@
 
                             <TextView
                                 android:layout_width="250dp"
-                                android:layout_height="45dp"
+                                android:layout_height="35dp"
                                 android:backgroundTint="#EFEFF0"
                                 android:textColor="@color/icons_svg"
                                 android:layout_marginStart="13dp"
                                 android:textAlignment="viewStart"
                                 android:textAllCaps="false"
                                 android:layout_marginTop="0dp"
-                                android:textSize="17sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step3_dropdown2_go_to_consular_offices"
                                 tools:ignore="RtlCompat" />
 
                             <ImageView
-                                android:id="@+id/iconStep3GoToOffces"
+                                android:id="@+id/iconStep3GoToOffices"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_marginTop="10dp"

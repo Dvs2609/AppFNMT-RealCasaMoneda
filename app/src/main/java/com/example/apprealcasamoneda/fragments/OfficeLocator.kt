@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import android.widget.RelativeLayout
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.apprealcasamoneda.R
@@ -25,7 +24,7 @@ private lateinit var binding: FrOfficeLocatorBinding
  * Use the [LocalizadorOficinas.newInstance] factory method to
  * create an instance of this fragment.
  */
-class OfficeLocator : Fragment() {
+class OfficeLocator : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -45,7 +44,13 @@ class OfficeLocator : Fragment() {
         binding = FrOfficeLocatorBinding.inflate(inflater, container, false)
 
         binding.rectangularLYSearchOffice.setOnClickListener{
-            showHide(binding.ofLocFilterRL)
+            show(binding.ofLocFilterRL)
+            binding.officeLocatorCloseCross.visibility = View.VISIBLE
+        }
+
+        binding.officeLocatorCloseCross.setOnClickListener {
+            hide(binding.ofLocFilterRL)
+            binding.officeLocatorCloseCross.visibility = View.GONE
         }
 
         //webView.loadUrl("https://mapaoficinascert.appspot.com")
@@ -69,6 +74,18 @@ class OfficeLocator : Fragment() {
                 view?.evaluateJavascript("document.getElementById('addressBox').style.display='none';") {
                 }
             }
+
+            //para redirigir
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): Boolean {
+                if (request != null) {
+                    view?.loadUrl(request.url.toString())
+                }
+                return true
+            }
+
         }
         webView.loadUrl("https://mapaoficinascert.appspot.com")
 
@@ -101,7 +118,7 @@ class OfficeLocator : Fragment() {
             }
         }
     }
-    private fun showHide(relativeLayout: RelativeLayout?) {
+    private fun show(relativeLayout: RelativeLayout?) {
         val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
         //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
 
@@ -111,10 +128,20 @@ class OfficeLocator : Fragment() {
                 relativeLayout.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.VISIBLE
 
-            }else{
+            }
+        }
+    }
 
-                //textView.startAnimation(fadeInAnimation)
+    private fun hide(relativeLayout: RelativeLayout?) {
+        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
+        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
+
+        if (relativeLayout != null) {
+            if (relativeLayout.visibility == View.VISIBLE ){
+
+                relativeLayout.startAnimation(fadeInAnimation)
                 relativeLayout.visibility = View.GONE
+
             }
         }
     }

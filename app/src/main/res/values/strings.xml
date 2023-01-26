@@ -116,6 +116,7 @@
     <!-- ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
     <string name="oc_pp_step3">Step 3:</string>
     <string name="oc_pp_step3_nav">Obtain certificates/Physical Person/Request certificate</string>
+    <string name="oc_repre_step3_nav">Obtain certificates/Representative/Administrator/Request certificate</string>
     <string name="oc_pp_step2_notice"><b>NOTICE:</b> Due to the current situation with COVID-19, not all accreditation offices are operating as usual, so it is recommended to contact the relevant agency before going in order to verify that they are still providing this service. We apologize for any inconvenience.</string>
     <string name="oc_pp_step3_text">After completing the previous setup (step 1) and submitting your certificate request (step 2), you will possess your Request Code. To continue, the requestor and future certificate holder must personally go to an Identity Accreditation Office to prove their identity.\n\nIf for any reason you are unable to do so, a third party may go on your behalf, but their signature on the contract must be legitimized by a notary beforehand.</string>
     <string name="oc_pp_step3_go_to_more_info">More information on signature legitimization by a notary</string>
@@ -185,11 +186,66 @@
 
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
     <string name="oc_repre_uniq_admin_nav">Obtain Certificates/Representative/Administrator</string>
-    <string name="oc_repre_unq_admin_title">Obtain Representative Certificate for Single or Joint Administrators</string>
+    <string name="oc_repre_unq_admin_title">Obtain Representative Certificate for <b>Single or Joint Administrators</b></string>
     <string name="oc_repre_unq_admin_dropdown1_title">Who can request this certificate?</string>
     <string name="oc_repre_unq_admin_dropdown1_text">This certificate can be obtained by anonymous (A) and limited (B) companies if the company\'s representative is a sole or joint administrator, they have the powers of Representation registered in the Mercantile Registry and these have not been revoked. In this Registry, the current NIF of the Entity, the administration body, the correct NIF or NIE (9 characters) of the sole or joint administrator, the specific position (sole administrator or joint administrator), date of appointment, duration of the position (current or indefinite), registration and date of registration must be recorded\n\nIMPORTANT: This certificate cannot be requested by joint administrators, proxies, counselors, presidents, joint administrators, liquidators or companies that have another company as an administrator, in which case a certificate of representation of a legal entity must be requested.</string>
     <string name="oc_repre_unq_admin_dropdown1_go_to_help">Help: What representative certificate should I request?</string>
     <string name="oc_repre_unq_admin_dropdown2_title">How can I obtain the certificate?</string>
     <string name="oc_repre_unq_admin_dropdown2_text">The process of obtaining the certificate of representative for sole and joint administrators is divided into three steps, which must be carried out in the indicated order:\n\n1 - Pre-configuration. To request the certificate it is necessary to install the software indicated in this section\n\n2 - Online request for your Certificate. This certificate can only be requested On Line with a Physical Person Certificate from FNMT-RCM or Electronic ID.\n\n3 - Download your Certificate. Approximately 1 hour after you have requested your certificate and using your Request Code, you can download and install your certificate here, make the payment and make a backup (RECOMMENDED).\n\nThe price of this certificate is 24 Euros, taxes not included, and is issued with a validity period of 2 years.\n\nOnly payment with credit / debit cards is accepted.\n\nIf you wish, you can purchase a reader + cryptographic card to give your certificate greater security of use and custody. When you download your certificate you can make a backup and import it to the card.</string>
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
+
+    <!-- Request An Appointment - Fragment Strings -->
+    <string name="appointmemtTxt">Appointment Request</string>
+    <string name="appointmemt_dropdown_title">Office</string>
+    <string name="appointmemt_selection">Select</string>
+    <string name="appointmemt_dropdown1_list1">OAC RETIRO\nDaoiz and Velarde 128007 - Madrid</string>
+    <string name="appointmemt_dropdown1_list2">TGSS\nC/ Cáceres, 2-428045 - Madrid</string>
+    <string name="appointmemt_dropdown1_list3">OAC ARGANZUELA\nPaseo de la Chopera 1028045 - Madrid</string>
+    <string name="appointmemt_dropdown1_list4">TGSS\nCalle de Palafox, 428010 - Madrid</string>
+    <string name="appointmemt_dropdown2_title">Procedure</string>
+    <string name="appointmemt_dropdown2_list1">Certificate FNMT (of natural person) / Cl@ve permanente</string>
+    <string name="appointmemt_dropdown2_list2">Submitting documentation for other procedures</string>
+    <string name="appointmemt_dropdown2_list3">Scholarships</string>
+    <string name="appointmemt_dropdown2_list4">TGSS\nCalle de Palafox, 428010 - Madrid</string>
+    <string name="appointmemt_go_to_Continue">Continue</string>
+    <string name="appointmemt_info">If you have previously made an appointment, you can <b>check, modify, or cancel the reservation</b></string>
+    <!-- End Request An Appointment - Fragment Strings -->
+
+    <!-- Request An Appointment - Calendar - Fragment Strings -->
+    <string name="appointmemtxt2">Appointment day and time</string>
+    <string name="appointment_calendar_unavailable">Unavailable</string>
+    <string name="appointment_calendar_available">Available</string>
+    <string name="appointment_calendar_busy">Busy</string>
+    <string name="appointment_calendar_selection">You have selected 11/23/2022</string>
+    <string name="appointmen_calendar_time1">08:30</string>
+    <string name="appointmen_calendar_time2">09:30</string>
+    <string name="appointmen_calendar_time3">10:00</string>
+    <string name="appointmen_calendar_time4">10:30</string>
+    <string name="appointmen_calendar_time5">11:00</string>
+    <string name="appointmen_calendar_time6">12:00</string>
+    <string name="appointmen_calendar_time7">13:00</string>
+    <string name="appointmen_calendar_time8">15:30</string>
+    <string name="appointmen_calendar_time9">16:00</string>
+    <string name="appointmen_calendar_time10">16:30</string>
+    <string name="appointmen_calendar_time11">17:00</string>
+    <string name="appointmen_calendar_time12">18:00</string>
+    <!-- End Request An Appointment - Calendar - Fragment Strings -->
+
+    <!-- Request An Appointment - Form - Fragment Strings -->
+    <string name="appointment_form_name_txt">Name*</string>
+    <string name="appointment_form_name">Name</string>
+    <string name="appointment_form_surname_txt">Surname*</string>
+    <string name="appointment_form_surname">Valencia</string>
+    <string name="appointment_form_dni_txt">ID*</string>
+    <string name="appointment_form_dni">09090909E</string>
+    <string name="appointment_form_tel_txt">Telephone*</string>
+    <string name="appointment_form_tel">600000000</string>
+    <string name="appointment_form_email_txt">Email*</string>
+    <string name="appointment_form_email">diego.valencia@atos.net</string>
+    <string name="appointment_form_go_to_finish">Finish</string>
+    <!-- End Request An Appointment - Form - Fragment Strings -->
+
+
+
+
 </resources>

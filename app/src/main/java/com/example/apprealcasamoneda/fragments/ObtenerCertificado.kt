@@ -17,8 +17,8 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.example.apprealcasamoneda.MainActivity
+import com.example.apprealcasamoneda.fragments.BaseFragment
 import com.example.apprealcasamoneda.R
-import com.example.apprealcasamoneda.databinding.FragmentCitaPreviaBinding
 import com.example.apprealcasamoneda.databinding.FragmentObtenerCertificadoBinding
 import com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.PhysicalPerson
 import com.example.apprealcasamoneda.fragments.RepresentativeCertificates.Representative
@@ -33,7 +33,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [ObtenerCertificado.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ObtenerCertificado  : Fragment(){
+class ObtenerCertificado  : BaseFragment(){
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -80,42 +80,52 @@ class ObtenerCertificado  : Fragment(){
             val transition = fragmentManager?.beginTransaction()
             val representative = Representative()
             transition?.replace(R.id.mainContainer, representative)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
         }
 
+        binding.GoToPhysicalPersonIcon?.setOnClickListener{
+            val transition = fragmentManager?.beginTransaction()
+            val physicalPerson = PhysicalPerson()
+            transition?.replace(R.id.mainContainer, physicalPerson)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
 
         binding.rectangularLYPhysicalPerson?.setOnClickListener{
             val transition = fragmentManager?.beginTransaction()
             val physicalPerson = PhysicalPerson()
             transition?.replace(R.id.mainContainer, physicalPerson)
+            transition?.setReorderingAllowed(true)
             transition?.addToBackStack(null)
             transition?.commit()
         }
 
+        val notAvailablePage = View.OnClickListener {
+            val pageNotAvailable = PageNotAvailable()
+            val transition = fragmentManager?.beginTransaction()
+            transition?.replace(R.id.mainContainer, pageNotAvailable)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+        binding.repreCentralizedIcon.setOnClickListener(notAvailablePage)
+        binding.publicEmployeesIcon.setOnClickListener(notAvailablePage)
+        binding.pseudonymIcon.setOnClickListener(notAvailablePage)
+        binding.otherCasesIcon.setOnClickListener(notAvailablePage)
+        binding.iconRepresentateGoToCertificates2.setOnClickListener(notAvailablePage)
+        binding.iconRepresentateGoToCertificates3.setOnClickListener(notAvailablePage)
+        binding.iconPublicAdministrationGoToCertificates.setOnClickListener(notAvailablePage)
+        binding.iconComponentCertificatesGoToCertificates.setOnClickListener(notAvailablePage)
+        binding.iconSupportDropdown.setOnClickListener(notAvailablePage)
+
+
         return binding.root
     }
 
-    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
-        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
-        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
 
-        if (relativeLayout != null) {
-            if (relativeLayout.visibility == View.GONE ){
-
-                relativeLayout.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.VISIBLE
-                imageView.rotation = 90f
-
-
-            }else{
-
-                //textView.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.GONE
-                imageView.rotation = 0f
-            }
-        }
-    }
 
     companion object {
         /**

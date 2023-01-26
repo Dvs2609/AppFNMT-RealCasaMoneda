@@ -1,7 +1,6 @@
-package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
+package com.example.apprealcasamoneda.fragments.Steps
 
 import android.content.Context
-import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,8 +10,9 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.example.apprealcasamoneda.R
-import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
-import java.util.*
+import com.example.apprealcasamoneda.databinding.FrStepPreConfigurationBinding
+import com.example.apprealcasamoneda.fragments.BaseFragment
+import com.example.apprealcasamoneda.fragments.PageNotAvailable
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,14 +21,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Step1_PPC.newInstance] factory method to
+ * Use the [PreConfiguration_Step.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Step1_PPC : Fragment() {
+class PreConfiguration_Step : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private lateinit var binding: FrOcStep1PhysicalPersonBinding
+    private lateinit var binding: FrStepPreConfigurationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,7 @@ class Step1_PPC : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FrOcStep1PhysicalPersonBinding.inflate(inflater, container, false)
+        binding = FrStepPreConfigurationBinding.inflate(inflater, container, false)
         val transition = fragmentManager?.beginTransaction()
 
         binding.step1IconDropdown1?.setOnClickListener{
@@ -57,41 +57,37 @@ class Step1_PPC : Fragment() {
             showHide(binding.RLSoftwareNecesaryDropdown, binding.step1IconDropdown3)
         }
 
-        val navValue = arguments?.getString("key")
-        val navValue2 = arguments?.getString("key2")
+
         val sharedPreferences = requireContext().getSharedPreferences("preference", Context.MODE_PRIVATE)
         val language = sharedPreferences.getString("language","en")
 
+        val navValue = arguments?.getString("key")
+        val navValue2 = arguments?.getString("key2")
         when {
             navValue == "representative" -> binding.txtNavStep1.text = resources.getString(R.string.oc_repre_step1_nav)
             navValue2 == "physical" -> binding.txtNavStep1.text = resources.getString(R.string.oc_pp_step1_nav)
             else -> binding.txtNavStep1.text = "Error"
         }
 
+        binding.preConfigStepBackCross.setOnClickListener{
+            val fragmentManager = requireFragmentManager()
+            fragmentManager.popBackStack()
+        }
+
+        val notAvailablePage = View.OnClickListener {
+            val pageNotAvailable = PageNotAvailable()
+            val transition = fragmentManager?.beginTransaction()
+            transition?.replace(R.id.mainContainer, pageNotAvailable)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+        binding.iconPreConfigGoToDeclaration.setOnClickListener(notAvailablePage)
+        binding.iconPreConfigGoToDownloadArea.setOnClickListener(notAvailablePage)
+
         return binding.root
     }
 
-
-    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
-        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
-        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
-
-        if (relativeLayout != null) {
-            if (relativeLayout.visibility == View.GONE ){
-
-                relativeLayout.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.VISIBLE
-                imageView.rotation = 90f
-
-
-            }else{
-
-                //textView.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.GONE
-                imageView.rotation = 0f
-            }
-        }
-    }
 
     companion object {
         /**
@@ -105,7 +101,7 @@ class Step1_PPC : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Step1_PPC().apply {
+            PreConfiguration_Step().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

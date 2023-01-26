@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_obtener_certificado" />
     <fragment
         android:id="@+id/citaPrevia"
-        android:name="com.example.apprealcasamoneda.fragments.CitaPrevia"
+        android:name="com.example.apprealcasamoneda.fragments.requestAppointment"
         android:label="fragment_cita_previa"
-        tools:layout="@layout/fragment_cita_previa" />
+        tools:layout="@layout/fr_appointment" />
     <fragment
         android:id="@+id/misCertificados"
-        android:name="com.example.apprealcasamoneda.fragments.MisCertificados"
+        android:name="com.example.apprealcasamoneda.fragments.MyCertificates"
         android:label="fragment_mis_certificados"
-        tools:layout="@layout/fragment_mis_certificados" />
+        tools:layout="@layout/fr_my_certificates" />
 
     <fragment
         android:id="@+id/localizadorOficinas"
@@ -28,9 +28,9 @@
         tools:layout="@layout/fr_office_locator" />
     <fragment
         android:id="@+id/descargarCertificados"
-        android:name="com.example.apprealcasamoneda.fragments.DescargarCertificados"
+        android:name="com.example.apprealcasamoneda.fragments.Steps.DownloadCertificate_Step"
         android:label="fragment_descargar_certificados"
-        tools:layout="@layout/fragment_descargar_certificados" />
+        tools:layout="@layout/fr_step_download_certificate" />
 
     <fragment
         android:id="@+id/physicalPerson"
@@ -40,20 +40,26 @@
 
     <fragment
         android:id="@+id/step1Ppc"
-        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step1_PPC"
+        android:name="com.example.apprealcasamoneda.fragments.Steps.PreConfiguration_Step"
         android:label="fragment_step1_ppc"
-        tools:layout="@layout/fr_oc_step1_physical_person"/>
+        tools:layout="@layout/fr_step_pre_configuration"/>
 
     <fragment
         android:id="@+id/step2Ppc"
-        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step2_PPC"
+        android:name="com.example.apprealcasamoneda.fragments.Steps.RequestCertificate_Step"
         android:label="fragment_step2_ppc"
-        tools:layout="@layout/fr_oc_step2_physical_person"/>
+        tools:layout="@layout/fr_step_request_certificate"/>
 
     <fragment
         android:id="@+id/step3Ppc"
-        android:name="com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates.Step3_PPC"
+        android:name="com.example.apprealcasamoneda.fragments.Steps.ProveIdentity_Step"
         android:label="fragment_step3_ppc"
-        tools:layout="@layout/fr_oc_step3_physical_person"/>
+        tools:layout="@layout/fr_step_prove_identity"/>
+    <fragment
+        android:id="@+id/step4Ppc"
+        android:name="com.example.apprealcasamoneda.fragments.Steps.DownloadCertificate_Step"
+        android:label="fragment_step4_ppc"
+        tools:layout="@layout/fr_step_download_certificate"/>
+
 
 </navigation>

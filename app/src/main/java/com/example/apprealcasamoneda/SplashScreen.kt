@@ -14,6 +14,7 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(LayoutInflater.from(this))
+        supportActionBar?.hide()
         setContentView(binding.root)
         binding.SplashScreenView.alpha = 0f
         binding.SplashScreenView.animate().setDuration(1000).alpha(1f).withEndAction{

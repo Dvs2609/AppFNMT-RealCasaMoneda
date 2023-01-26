@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollviewCalendar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MyCertificates">
+
+    <RelativeLayout
+        android:id="@+id/RLAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appointmemtTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mis Certificados"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:id="@+id/Mycertificate1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/appointmemtTxt"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:backgroundTint="#EFEFF0"
+            android:background="@drawable/rectangular_shape_borders"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/GoToStep4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/icon_certificate_svg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="DARGALLO, SOFIA"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="60000000B"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Emisor: AC FNMT Usuarios"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Válido desde: 25/11/2020 hasta 25/11/2025"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Mycertificate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_below="@+id/Mycertificate1"
+            android:backgroundTint="#EFEFF0"
+            android:background="@drawable/rectangular_shape_borders"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/icon_certificate_svg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="DARGALLO, SOFIA"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="60000000B"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Emisor: AC FNMT Usuarios"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Válido desde: 25/11/2020 hasta 25/11/2025"
+                    android:layout_marginLeft="30dp"                    android:layout_marginTop="2dp"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

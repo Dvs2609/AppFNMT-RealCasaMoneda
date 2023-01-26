@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/oc_pp_step1"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
             <TextView
                 android:id="@+id/oc_init2_txt"
                 android:layout_width="wrap_content"
@@ -28,10 +28,10 @@
                 android:text="@string/oc_pp_step1_title"
                 android:textColor="@color/black"
                 android:layout_below="@+id/oc_init_txt"
-                android:textSize="22sp" />
+                android:textSize="20sp" />
 
             <ImageView
-                android:id="@+id/oc_pp_cross_step1"
+                android:id="@+id/pre_config_step_backCross"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_alignParentTop="true"
@@ -46,16 +46,16 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/oc_init2_txt"
                 android:text="@string/oc_pp_step1_nav"
-                android:textSize="13sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/oc_Step1_textDesc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="20dp"
                 android:textColor="@color/black"
                 android:layout_below="@+id/txtNav_step1"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:text="@string/oc_pp_step1_text"/>
 
             <GridLayout
@@ -98,7 +98,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/oc_pp_step1_dropdown1_title"
@@ -128,7 +128,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown1_txtlist1" />
 
                             <TextView
@@ -139,7 +139,7 @@
                                 android:drawablePadding="10dp"
                                 android:layout_below="@+id/txt_step1_text1_Dropdown"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown1_txtlist2"
                                 app:drawableLeftCompat="@drawable/dot_svg"/>
 
@@ -151,7 +151,7 @@
                                 android:drawablePadding="10dp"
                                 android:layout_below="@+id/txt_step1_text12_Dropdown"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown1_txtlist3"
                                 app:drawableLeftCompat="@drawable/dot_svg" />
 
@@ -172,12 +172,12 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:layout_marginTop="0dp"
-                                    android:textSize="17sp"
+                                    android:textSize="14sp"
                                     android:text="@string/oc_pp_step1_dropdown1_go_to_practice_declaration"
                                     tools:ignore="RtlCompat" />
 
                                 <ImageView
-                                    android:id="@+id/iconStep1GoToDeclaration"
+                                    android:id="@+id/iconPreConfigGoToDeclaration"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="10dp"
@@ -224,7 +224,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/oc_pp_step1_dropdown2_title"
@@ -252,7 +252,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_text"/>
 
                             <TextView
@@ -264,7 +264,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text2_Dropdown"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_txtlist1"/>
 
                             <TextView
@@ -276,7 +276,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text21_Dropdown"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_txtlist2"/>
 
                             <TextView
@@ -288,7 +288,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text23_Dropdown"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_txtlist3"/>
 
                             <TextView
@@ -300,7 +300,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text24_Dropdown"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_txtlist4"/>
 
                             <TextView
@@ -312,7 +312,7 @@
                                 android:drawablePadding="10dp"
                                 app:drawableLeftCompat="@drawable/dot_svg"
                                 android:layout_below="@+id/txt_step1_text25_Dropdown"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown2_txtlist5"/>
 
                         </RelativeLayout>
@@ -348,11 +348,11 @@
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:layout_width="300dp"
+                                android:layout_width="270dp"
                                 android:layout_height="match_parent"
                                 android:layout_alignParentStart="true"
                                 android:layout_alignParentTop="true"
-                                android:textSize="19sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:textColor="@color/icons_svg"
                                 android:text="@string/oc_pp_step1_dropdown3_title"
@@ -381,7 +381,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginTop="15dp"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown3_text1"/>
 
                             <TextView
@@ -392,7 +392,7 @@
                                 android:textStyle="bold"
                                 android:layout_below="@+id/txt_step1_text3_Dropdown"
                                 android:textColor="@color/black"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:text="@string/oc_pp_step1_dropdown3_text2"/>
 
                             <RelativeLayout
@@ -412,13 +412,13 @@
                                     android:textAlignment="viewStart"
                                     android:textAllCaps="false"
                                     android:layout_marginTop="3dp"
-                                    android:textSize="16sp"
+                                    android:textSize="14sp"
                                     android:text="@string/oc_pp_step1_dropdown3_go_to_download_area"
                                     tools:ignore="RtlCompat" />
 
 
                                 <ImageView
-                                    android:id="@+id/iconStep1GoToDownloadArea"
+                                    android:id="@+id/iconPreConfigGoToDownloadArea"
                                     android:layout_width="20dp"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="8dp"

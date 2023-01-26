@@ -1,9 +1,9 @@
-package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
+package com.example.apprealcasamoneda.fragments.Steps
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
-import android.net.LocalServerSocket
 import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableString
@@ -15,27 +15,31 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.RelativeLayout
+import android.widget.Toast
 import com.example.apprealcasamoneda.R
-import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
-import com.example.apprealcasamoneda.databinding.FrOcStep2PhysicalPersonBinding
-import java.util.*
+import com.example.apprealcasamoneda.databinding.FrStepRequestCertificateBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-private lateinit var binding: FrOcStep2PhysicalPersonBinding
+private lateinit var binding: FrStepRequestCertificateBinding
 
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Step2_PPC.newInstance] factory method to
+ * Use the [RequestCertificate_Step.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Step2_PPC : Fragment() {
+class RequestCertificate_Step : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    lateinit var preferences : SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,8 +53,10 @@ class Step2_PPC : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FrOcStep2PhysicalPersonBinding.inflate(inflater, container, false)
+        binding = FrStepRequestCertificateBinding.inflate(inflater, container, false)
 
+        //
+        //Terms and conditions WebView and blue color
         val redirectTerms = getString(R.string.oc_pp_step2_accept_terms)
 
         val spannableString = SpannableString(redirectTerms)
@@ -69,9 +75,10 @@ class Step2_PPC : Fragment() {
         val term_es = "términos y condiciones"
         val term_en = "terms and conditions"
 
-
+        preferences = activity?.getSharedPreferences("preference",Context.MODE_PRIVATE)!!
+        val currentLanguage = preferences?.getString("language", "en")
         val acceptTerms:String
-        val currentLanguage = Locale.getDefault().language
+
 
         if(currentLanguage == "es"){
             val redirectTerms = getString(R.string.oc_pp_step2_accept_terms)
@@ -90,6 +97,8 @@ class Step2_PPC : Fragment() {
         binding.step2TxtTerms1.text = spannableString
         binding.step2TxtTerms1.movementMethod = LinkMovementMethod.getInstance()
 
+        //
+        //NavBar in differents steps and same desing
         val navValue = arguments?.getString("key")
         val navValue2 = arguments?.getString("key2")
         val sharedPreferences = requireContext().getSharedPreferences("preference", Context.MODE_PRIVATE)
@@ -101,7 +110,64 @@ class Step2_PPC : Fragment() {
             else -> binding.txtNavStep2.text = "Error"
         }
 
+        //
+        //Check if the fields in the request are empty and put a red shape
+        val editTextId = binding.rqCIdEditText
+        val RLid = binding.step2SetDNI
+        val iconId = binding.checkIdIcon
+
+        val editTextSurname = binding.rqCSurnameEditText
+        val RLsurname = binding.step2SetSurname
+        val iconSurname = binding.checkSurnameIcon
+
+        val editTextEmail = binding.rqCEmailEditText
+        val RLemail = binding.step2SetEmail
+        val iconEmail = binding.checkEmailIcon
+
+        val editTextConfirmEmail = binding.rqCCemailEditText
+        val RLconfirmEmail = binding.step2SetConfirmEmail
+        val iconConfirmEmail = binding.checkConfirmEmailIcon
+
+        binding.rectangularLYstep2Send.setOnClickListener {
+            val fields = listOf(editTextId, editTextSurname, editTextEmail, editTextConfirmEmail)
+            val relaLayouts = listOf(RLid, RLsurname, RLemail, RLconfirmEmail)
+            val checkIcons = listOf(iconId, iconSurname, iconEmail, iconConfirmEmail)
+            checkFields(fields, relaLayouts, checkIcons)
+        }
+
+        binding.reqCertificateStepBackCross.setOnClickListener{
+            val fragmentManager = requireFragmentManager()
+            fragmentManager.popBackStack()
+        }
+
         return binding.root
+    }
+
+    private fun checkFields(fields: List<EditText>, relaLayouts: List<RelativeLayout>, checkIcons: List<ImageView>) {
+        for (i in 0 until fields.size) {
+            val field = fields[i]
+            val layout = relaLayouts[i]
+            val checkIcon = checkIcons[i]
+            if (field.text.toString().isEmpty()) {
+                layout.setBackgroundResource(R.drawable.shape_corners_red_relative_layout)
+                checkIcon.setImageResource(R.drawable.cross_svg)
+                field.error = "Campo requerido"
+            } else {
+                layout.setBackgroundResource(R.drawable.shape_corners_relative_layout)
+                checkIcon.setImageResource(R.drawable.icon_check_svg)
+                var allFieldsCompleted = true
+                for (i in 0 until fields.size) {
+                    val field = fields[i]
+                    if (field.text.toString().isEmpty()) {
+                        allFieldsCompleted = false
+                        break
+                    }
+                }
+                if (allFieldsCompleted) {
+                    Toast.makeText(context, "Petición enviada correctamente", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 
     companion object {
@@ -116,7 +182,7 @@ class Step2_PPC : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Step2_PPC().apply {
+            RequestCertificate_Step().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

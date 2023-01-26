@@ -38,7 +38,7 @@
     <string name="PublicAministration_dropDown_Description_ObtainCertificates_fr">La Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, regula los sistemas de identificación de las Administraciones Públicas, así como los sistemas de firma electrónica del personal al servicio de las Administraciones Públicas y de sello electrónico para la actuación administrativa automatizada.\n\nSi desea utilizar alguno de los sistemas previstos en a citada Ley 40/2015, y por tanto está interesado en que su Administración cuente con el correspondiente acuerdo con la FNMT-RCM para la provisión de los mismos, puede dirigir su consulta a comercial.ceres@fnmt.es .</string>
     <string name="PublicAministration_dropDown_RedirectTxt_ObtainCertificates_fr">Obtener Certificado de Sector Público</string>
 
-    <string name="componentCertificates_cardTxt_ObtainCertificates_fr">Component Certificates</string>
+    <string name="componentCertificates_cardTxt_ObtainCertificates_fr">Certificados de Componente</string>
     <string name="ComponentCertificates_dropDown_Description_ObtainCertificates_fr">La FNMT-RCM también emite certificados electrónicos para la identificación de servidores o aplicaciones informáticas heredando la confianza de la FNMT-RCM como Autoridad de certificación. Dentro de esta categoría ponemos a su disposición certificados de firma y certificados de sello de entidad</string>
     <string name="ComponentCertificates_dropDown_RedirectTxt_ObtainCertificates_fr">Obtener Certificado de Componente</string>
 
@@ -119,6 +119,7 @@
     <!-- ObteinCertificates - Physical Person - STEP3 - Fragment Strings-->
     <string name="oc_pp_step3">Paso 3:</string>
     <string name="oc_pp_step3_nav">Obtener certificados/Persona física/Solicitar certificado</string>
+    <string name="oc_repre_step3_nav">Obtener certificados/Representante/Administrador/Solicitar certificado</string>
     <string name="oc_pp_step2_notice"><b>AVISO:</b> Ante la situación actual de la evolución del COVID 19 no todas las oficinas de acreditación están prestando servicio de forma habitual, por este motivo y para evitar desplazamientos innecesarios, es recomendable que antes de acudir se pongan en contacto con el organismo en cuestión para verificar que sigue prestando este servicio. Disculpen las molestias.</string>
     <string name="oc_pp_step3_text">Tras haber realizado la configuración previa (paso 1) y haber completado la solicitud de su certificado (paso 2), ya estará en posesión de su Código de Solicitud. Para continuar el solicitante y futuro titular del certificado deberá acudir personalmente a una Oficina de Acreditación de Identidad para acreditar su propia identidad.\n\nSi por cualquier circunstancia no pudiera hacerlo personalmente, podrá ir una tercera persona en su nombre. pero se le exigirá la previa legitimación de su firma del contrato ante notario.</string>
     <string name="oc_pp_step3_go_to_more_info">Más información sobre la legitimación de firma ante notario</string>
@@ -194,4 +195,54 @@
     <string name="oc_repre_unq_admin_dropdown2_text">El proceso de obtención del certificado de representante para administradores únicos y solidarios se divide en tres pasos, que deben realizarse en el orden señalado:\n\n1 - Configuración previa. Para solicitar el certificado es necesario instalar el software que se indica en este apartado.\n\n2 - Solicitud vía internet de su Certificado. Este certificado sólo puede pedirse de forma On Line con un certificado de Persona Física de la FNMT-RCM o DNI electrónico.\n\n3 - Descarga de su Certificado. Aproximadamente 1 hora después de que haya solicitado su certificado y haciendo uso de su Código de Solicitud, desde aquí podrá descargar e instalar su certificado, así como realizar el pago y realizar una copia de seguridad (RECOMENDADO).\n\nEl precio de este certificado es de 24 Euros, impuestos no incluidos, y se emite con un periodo de validez de 2 años.\n\nSólo se admite el pago con tarjetas de crédito/débito.\n\nSi lo desea puede adquirir un kit lector+tarjeta criptográfica para dotar a su certificado de mayor seguridad de uso y custodia. Cuando descargue su certificado podrá hacer una copia de seguridad e importarlo a la tarjeta. .</string>
     <!-- End ObteinCertificates - Representative - Unique Administration - Fragment Strings-->
 
+    <!-- Request An Appointment - Fragment Strings -->
+    <string name="appointmemtTxt">Solicitud Cita Previa</string>
+    <string name="appointmemt_dropdown_title">Oficina</string>
+    <string name="appointmemt_selection">Seleccionar</string>
+    <string name="appointmemt_dropdown1_list1">OAC RETIRO\nlaza Daoiz y Velarde 128007 - Madrid</string>
+    <string name="appointmemt_dropdown1_list2">TGSS\nC/ Cáceres, 2-428045 - Madrid</string>
+    <string name="appointmemt_dropdown1_list3">OAC ARGANZUELA\nPaseo de la Chopera 1028045 - Madrid</string>
+    <string name="appointmemt_dropdown1_list4">TGSS\nCalle de Palafox, 428010 - Madrid</string>
+    <string name="appointmemt_dropdown2_title">Trámite</string>
+    <string name="appointmemt_dropdown2_list1">Certificado FNMT (de persona física) / Cl@ve permanente</string>
+    <string name="appointmemt_dropdown2_list2">Presentación de documentación para otros trámites</string>
+    <string name="appointmemt_dropdown2_list3">Becas</string>
+    <string name="appointmemt_dropdown2_list4">TGSS\nCalle de Palafox, 428010 - Madrid</string>
+    <string name="appointmemt_go_to_Continue">Continuar</string>
+    <string name="appointmemt_info">Si usted ya concertó una cita previa con anterioridad puede <b>comprobar, modificar o anular la reserva</b></string>
+    <!-- End Request An Appointment - Fragment Strings -->
+
+    <!-- Request An Appointment - Calendar - Fragment Strings -->
+    <string name="appointmemtxt2">Día y hora de la cita</string>
+    <string name="appointment_calendar_unavailable">No disponible</string>
+    <string name="appointment_calendar_available">Disponible</string>
+    <string name="appointment_calendar_busy">Ocupado</string>
+    <string name="appointment_calendar_selection">Ha seleccionado 23/11/2022</string>
+    <string name="appointmen_calendar_time1">08:30</string>
+    <string name="appointmen_calendar_time2">09:30</string>
+    <string name="appointmen_calendar_time3">10:00</string>
+    <string name="appointmen_calendar_time4">10:30</string>
+    <string name="appointmen_calendar_time5">11:00</string>
+    <string name="appointmen_calendar_time6">12:00</string>
+    <string name="appointmen_calendar_time7">13:00</string>
+    <string name="appointmen_calendar_time8">15:30</string>
+    <string name="appointmen_calendar_time9">16:00</string>
+    <string name="appointmen_calendar_time10">16:30</string>
+    <string name="appointmen_calendar_time11">17:00</string>
+    <string name="appointmen_calendar_time12">18:00</string>
+    <!-- End Request An Appointment - Calendar - Fragment Strings -->
+
+    <!-- Request An Appointment - Form - Fragment Strings -->
+    <string name="appointment_form_name_txt">Nombre*</string>
+    <string name="appointment_form_name">Nombre</string>
+    <string name="appointment_form_surname_txt">Apellido*</string>
+    <string name="appointment_form_surname">Valencia</string>
+    <string name="appointment_form_dni_txt">DNI*</string>
+    <string name="appointment_form_dni">09090909E</string>
+    <string name="appointment_form_tel_txt">Teléfono*</string>
+    <string name="appointment_form_tel">600000000</string>
+    <string name="appointment_form_email_txt">Correo Electrónico*</string>
+    <string name="appointment_form_email">diego.valencia@atos.net</string>
+    <string name="appointment_form_go_to_finish">Finalizar</string>
+    <!-- End Request An Appointment - Form - Fragment Strings -->
 </resources>

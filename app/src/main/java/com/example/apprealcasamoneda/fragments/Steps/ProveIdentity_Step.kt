@@ -1,4 +1,4 @@
-package com.example.apprealcasamoneda.fragments.PhysicalPersonCertificates
+package com.example.apprealcasamoneda.fragments.Steps
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,23 +9,25 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import com.example.apprealcasamoneda.R
-import com.example.apprealcasamoneda.databinding.FrOcStep1PhysicalPersonBinding
-import com.example.apprealcasamoneda.databinding.FrOcStep3PhysicalPersonBinding
+import com.example.apprealcasamoneda.databinding.FrStepProveIdentityBinding
+import com.example.apprealcasamoneda.fragments.BaseFragment
+import com.example.apprealcasamoneda.fragments.OfficeLocator
+import com.example.apprealcasamoneda.fragments.PageNotAvailable
 
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-private lateinit var binding: FrOcStep3PhysicalPersonBinding
+private lateinit var binding: FrStepProveIdentityBinding
 
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Step3_PPC.newInstance] factory method to
+ * Use the [ProveIdentity_Step.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Step3_PPC : Fragment() {
+class ProveIdentity_Step : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -42,7 +44,7 @@ class Step3_PPC : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FrOcStep3PhysicalPersonBinding.inflate(inflater, container, false)
+        binding = FrStepProveIdentityBinding.inflate(inflater, container, false)
 
 
         binding.step3IconDropdown1?.setOnClickListener{
@@ -52,29 +54,41 @@ class Step3_PPC : Fragment() {
         binding.step3IconDropdown2?.setOnClickListener{
             showHide(binding.RLStep3Dropdown2, binding.step3IconDropdown2)
         }
+
+        binding.proveIdentityStepBackCross.setOnClickListener{
+            val fragmentManager = requireFragmentManager()
+            fragmentManager.popBackStack()
+        }
+
+        binding.iconPIGoToLocalizer.setOnClickListener{
+            val transition = fragmentManager?.beginTransaction()
+            val officeLocator = OfficeLocator()
+            val bundle = Bundle()
+            bundle.putString("key2", "physical")
+            officeLocator.arguments = bundle
+            transition?.replace(R.id.mainContainer, officeLocator)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+
+
+        val notAvailablePage = View.OnClickListener {
+            val pageNotAvailable = PageNotAvailable()
+            val transition = fragmentManager?.beginTransaction()
+            transition?.replace(R.id.mainContainer, pageNotAvailable)
+            transition?.setReorderingAllowed(true)
+            transition?.addToBackStack(null)
+            transition?.commit()
+        }
+        binding.PIGoToMoreInfo.setOnClickListener(notAvailablePage)
+        binding.PIGoToQst1.setOnClickListener(notAvailablePage)
+        binding.iconStep3GoToAcreditOffices.setOnClickListener(notAvailablePage)
+        binding.iconStep3GoToOffices.setOnClickListener(notAvailablePage)
+
         return binding.root
     }
 
-    private fun showHide(relativeLayout: RelativeLayout?, imageView: ImageView) {
-        val fadeInAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_in)
-        //val fadeOutAnimation = AnimationUtils.loadAnimation(context, android.R.anim.fade_out)
-
-        if (relativeLayout != null) {
-            if (relativeLayout.visibility == View.GONE ){
-
-                relativeLayout.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.VISIBLE
-                imageView.rotation = 90f
-
-
-            }else{
-
-                //textView.startAnimation(fadeInAnimation)
-                relativeLayout.visibility = View.GONE
-                imageView.rotation = 0f
-            }
-        }
-    }
 
     companion object {
         /**
@@ -88,7 +102,7 @@ class Step3_PPC : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Step3_PPC().apply {
+            ProveIdentity_Step().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
