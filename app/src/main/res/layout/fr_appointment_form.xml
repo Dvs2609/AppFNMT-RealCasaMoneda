@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollviewCalendar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Appointment.AppointmentForm">
+
+    <RelativeLayout
+        android:id="@+id/RLAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appointmemtTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/appointmemtTxt"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/oappointment_calendar_back_cross"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/cross_svg"
+            app:tint="@color/icon_arrow_svg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/oappointment_calendar_back_cross"
+            android:layout_marginStart="25dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_corners_relative_layout"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="25dp">
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/icon_arrow_svg" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/AppoCalendarTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Certificado FNMT (de persona física) / Cl@ve permanente"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/AppoCalendarTxt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:text="TGSS\n\C/ Cáceres, 2-428045 - Madrid"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/appo_form_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/appointment_form_name_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/appo_form_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_corners_relative_layout">
+
+                <EditText
+                    android:layout_width="320dp"
+                    android:layout_height="45dp"
+                    android:textSize="16sp"
+                    android:background="#EFEFF0"
+                    android:hint="@string/appointment_form_name"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/appo_form_surname_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/appointment_form_surname_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/appo_form_surname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_corners_relative_layout">
+
+                <EditText
+                    android:layout_width="320dp"
+                    android:layout_height="45dp"
+                    android:textSize="16sp"
+                    android:background="#EFEFF0"
+                    android:hint="@string/appointment_form_surname"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/appo_form_dni_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/appointment_form_dni_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/appo_form_dni"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_corners_relative_layout">
+
+                <EditText
+                    android:layout_width="320dp"
+                    android:layout_height="45dp"
+                    android:hint="@string/appointment_form_dni"
+                    android:textSize="16sp"
+                    android:background="#EFEFF0"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/appo_form_tel_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/appointment_form_tel_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/appo_form_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_corners_relative_layout">
+
+                <EditText
+                    android:layout_width="320dp"
+                    android:layout_height="45dp"
+                    android:hint="@string/appointment_form_tel"
+                    android:textSize="16sp"
+                    android:background="#EFEFF0"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/appo_form_email_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/appointment_form_email_txt"/>
+
+            <RelativeLayout
+                android:id="@+id/appo_form_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_corners_relative_layout">
+
+                <EditText
+                    android:layout_width="320dp"
+                    android:layout_height="45dp"
+                    android:textSize="16sp"
+                    android:background="#EFEFF0"
+                    android:hint="@string/appointment_form_email"
+                    android:layout_marginStart="15dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rectangularLYFinish"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:layout_below="@+id/RLselectTime"
+                android:background="@drawable/rectangular_blue_shape"
+                android:layout_marginTop="40dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#EFEFF0"
+                    android:textColor="@color/white"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:text="@string/appointment_form_go_to_finish"
+                    tools:ignore="RtlCompat" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

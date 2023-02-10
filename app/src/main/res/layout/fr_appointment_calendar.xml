@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollviewCalendar"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Appointment.AppointmentCalendar">
+
+    <RelativeLayout
+        android:id="@+id/RLAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/appointmemtTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appointmemtTxt"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/oappointment_calendar_back_cross"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/cross_svg"
+            app:tint="@color/icon_arrow_svg" />
+
+        <TextView
+            android:id="@+id/appointmemt_dropdown_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_below="@+id/appointmemtTxt"
+            android:layout_marginStart="25dp"
+            android:text="@string/appointmemtxt2"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/appointmentInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/appointmemt_dropdown_txt"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/icon_arrow_svg" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/AppoCalendarTxt"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    tools:text="Certificado FNMT (de persona física) / Cl@ve permanente"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/AppoCalendarTxt2"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    tools:text="TGSS\n\C/ Cáceres, 2-428045 - Madrid"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appointmentInfo"/>
+
+        <LinearLayout
+            android:id="@+id/occupacyInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/calendar">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangular_blue_shape"/>
+
+            <TextView
+                android:id="@+id/CalendarLegend1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/appointment_calendar_unavailable"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangular_blue_shape"/>
+
+            <TextView
+                android:id="@+id/CalendarLegend2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/appointment_calendar_available"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/rectangular_blue_shape"/>
+
+            <TextView
+                android:id="@+id/CalendarLegend3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:text="@string/appointment_calendar_busy"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/SelectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/occupacyInfo"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:text="@string/appointment_calendar_selection"
+            android:textSize="14sp" />
+        <RelativeLayout
+            android:id="@+id/RLselectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="35dp"
+            android:layout_below="@+id/SelectTime"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/rectangular_square_borders_grey"
+                android:text="@string/appointmen_calendar_time1"/>
+
+            <TextView
+                android:id="@+id/time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="25dp"
+                android:layout_toRightOf="@id/time1"
+                android:background="@drawable/rectangular_square_borders_grey"
+                android:text="@string/appointmen_calendar_time2"/>
+
+            <TextView
+                android:id="@+id/time3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="25dp"
+                android:layout_toRightOf="@+id/time2"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time3"/>
+
+            <TextView
+                android:id="@+id/time4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="25dp"
+
+                android:layout_toRightOf="@+id/time3"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time4"/>
+
+            <TextView
+                android:id="@+id/time5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/time1"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time5"/>
+
+            <TextView
+                android:id="@+id/time6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@id/time5"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time6"/>
+
+            <TextView
+                android:id="@+id/time7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_toRightOf="@id/time6"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time7"/>
+
+            <TextView
+                android:id="@+id/time8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="25dp"
+                android:layout_toRightOf="@+id/time7"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time8"/>
+
+            <TextView
+                android:id="@+id/time9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/time5"
+                android:background="@drawable/rectangular_square_borders_yellow"
+                android:text="@string/appointmen_calendar_time9"/>
+
+            <TextView
+                android:id="@+id/time10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="104dp"
+                android:layout_toRightOf="@id/time9"
+                android:layout_marginStart="25dp"
+                android:background="@drawable/rectangular_square_borders_blue_dark"
+                android:text="@string/appointmen_calendar_time10"/>
+
+            <TextView
+                android:id="@+id/time11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="104dp"
+                android:layout_marginStart="25dp"
+                android:layout_toRightOf="@id/time10"
+                android:background="@drawable/rectangular_square_borders_blue_light"
+                android:text="@string/appointmen_calendar_time11"/>
+
+            <TextView
+                android:id="@+id/time12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="104dp"
+                android:layout_toRightOf="@+id/time11"
+                android:layout_marginStart="25dp"
+
+                android:background="@drawable/rectangular_square_borders_blue_dark"
+                android:text="@string/appointmen_calendar_time12"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rectangularLYContinue"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            android:layout_below="@+id/RLselectTime"
+            android:background="@drawable/rectangular_blue_shape"
+            android:layout_marginTop="40dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#EFEFF0"
+                android:textColor="@color/white"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:text="@string/appointmemt_go_to_Continue"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

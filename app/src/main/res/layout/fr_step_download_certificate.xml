@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Steps.DownloadCertificate_Step">
+
+    <RelativeLayout
+        android:id="@+id/gridGetCertificates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp">
+
+        <TextView
+            android:id="@+id/oc_step4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oc_pp_step4"
+            android:visibility="visible"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/oc_init2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/oc_pp_step4_title"
+            android:textColor="@color/black"
+            android:layout_below="@+id/oc_step4"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/download_cert_step_backCross"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/cross_svg"
+            app:tint="@color/icon_arrow_svg" />
+
+        <TextView
+            android:id="@+id/txtNav_step4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oc_init2_txt"
+            android:text="@string/oc_pp_step4_nav"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/oc_Step4_textDesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/txtNav_step4"
+            android:textSize="14sp"
+            android:text="@string/oc_pp_step4_text"/>
+
+        <TextView
+            android:id="@+id/step4_1_txt_dni"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/oc_Step4_textDesc"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/oc_pp_step2_form_txt_dn1"/>
+
+        <RelativeLayout
+            android:id="@+id/step_dc_set_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/step4_1_txt_dni"
+            android:background="@drawable/shape_corners_relative_layout">
+
+            <EditText
+                android:id="@+id/dc_id_field"
+                android:layout_width="270dp"
+                android:layout_height="45dp"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"/>
+
+            <ImageView
+                android:id="@+id/dc_id_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@id/dc_id_field"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_check_svg"
+                app:tint="@color/icon_arrow_svg" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/step4_2_txt_surname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/step_dc_set_id"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/oc_pp_step2_form_txt_surname"/>
+
+        <RelativeLayout
+            android:id="@+id/step_dc_set_surname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/step4_2_txt_surname"
+            android:background="@drawable/shape_corners_relative_layout">
+
+            <EditText
+                android:id="@+id/dc_surname_field"
+                android:layout_width="270dp"
+                android:layout_height="45dp"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"/>
+
+            <ImageView
+                android:id="@+id/dc_surname_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@+id/dc_surname_field"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_check_svg"
+                app:tint="@color/icon_arrow_svg" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/step4_3_txt_cod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/step_dc_set_surname"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/oc_pp_step4_form_cod_request"/>
+
+        <RelativeLayout
+            android:id="@+id/step_dc_set_cod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/step4_3_txt_cod"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_corners_relative_layout">
+
+            <EditText
+                android:id="@+id/dc_code_field"
+                android:layout_width="270dp"
+                android:layout_height="45dp"
+                android:textSize="16sp"
+                android:layout_marginStart="15dp"/>
+
+            <ImageView
+                android:id="@+id/dc_code_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_toRightOf="@+id/dc_code_field"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/icon_check_svg"
+                app:tint="@color/icon_arrow_svg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Accept_Terms_step4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="8dp"
+            android:layout_below="@+id/step_dc_set_cod">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/step2_switch"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                app:track="@drawable/switch_track_shape"
+                android:thumb="@drawable/switch_shape"/>
+
+            <TextView
+                android:id="@+id/step_download_txt_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/step2_switch"
+                android:text="@string/oc_pp_step2_accept_terms"/>
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/step_download_txt_terms"
+                android:src="@drawable/right_arrow_svg"
+                app:tint="@color/icon_arrow_svg" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rectangularLYstep4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/Accept_Terms_step4"
+            android:background="@drawable/rectangular_shape"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#EFEFF0"
+                android:textColor="@color/icons_svg"
+                android:layout_marginStart="13dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:layout_marginTop="0dp"
+                android:textSize="16sp"
+                android:text="@string/oc_pp_step4_download_terms"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rectangularLYstep4_Download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:layout_below="@+id/rectangularLYstep4"
+            android:background="@drawable/rectangular_blue_shape"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/icon_download_svg"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="#EFEFF0"
+                android:textColor="@color/white"
+                android:layout_marginStart="35dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:layout_marginTop="2dp"
+                android:textSize="16sp"
+                android:text="@string/oc_pp_step4_title"
+                tools:ignore="RtlCompat" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

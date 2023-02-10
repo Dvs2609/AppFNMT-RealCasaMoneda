@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- we define background color -->
+    <solid android:color="#0C3D6A" />
+
+    <!-- add some padding for text inside -->
+    <padding
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="10dp"
+        android:top="10dp" />
+</shape>
